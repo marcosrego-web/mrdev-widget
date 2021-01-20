@@ -1,4 +1,4 @@
-# Mr.Dev.
+# Mr.Dev.'s Widget
 Mr.Dev. is your provider of developing tools for Wordpress!
 
 He brings you a widget to display categories, tags, posts, pages and custom items with many customizable layouts and options to choose from.
@@ -10,8 +10,6 @@ All tools are optional and you can hide parts of the widgets to specific users o
 
 ### [Themes & Layouts](https://marcosrego.com/en/web-en/mrwidgets-themes/)
 
-
-### [Changelog](https://github.com/marcosrego-web/Mr.Dev./releases)
 ##
 ### Details
 The widget initially comes with the themes ‘None’ and ‘Default’.
