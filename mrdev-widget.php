@@ -63,12 +63,8 @@ class mr_developer extends WP_Widget {
 			__('Mr.Dev.', 'mr_developer'), 
 			array( 
 				'description' => __( 'Displays categories, pages, posts, tags, custom items and more in a variety of layouts and custom options.', 'mr_developer'),
-				'customize_selective_refresh' => true,
-			) 
+			)
 		);
-		if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
-            add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-        }
 	}
 	/*------WIDGET FRONT------*/
 	public function widget( $args, $instance ) {
