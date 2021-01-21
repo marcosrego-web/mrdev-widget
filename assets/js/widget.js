@@ -461,10 +461,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		for (id = 0; id < mrwidsHover.length; id++)  {
 			mrwidsHover[id].addEventListener('mouseover',function(event) {
 				/*itemoptions-hover*/
-				if (event.target.matches('.mr-layout.mr-hover .mr-item')) {
+				if (event.target.matches('.mr-layout.mr-hover > .mr-pages.active > .mr-item')) {
 					mrwidMain(event.target);
 					event.stopPropagation();
-				} else if (event.target.matches('.mr-layout.mr-hover .mr-tab')) {
+				} else if (event.target.matches('.mr-layout.mr-hover > .mr-tabs > .mr-tab')) {
 					const mrwidThis = event.target;
 					mrwidTabsChange(mrwidThis);
 					event.stopPropagation();
@@ -479,13 +479,13 @@ document.addEventListener('DOMContentLoaded', function() {
 					event.target.classList.remove('mr-hovering');
 				}
 				/*itemoptions-hover*/
-				const mrwid = event.target.querySelectorAll('.mr-layout.mr-hover .mr-pages.active .mr-item');
+				const mrwid = event.target.querySelectorAll('.mr-layout.mr-hover > .mr-pages.active > .mr-item');
 				if (mrwid) {
 					for (id = 0; id < mrwid.length; id++)  {
 						mrwid[id].classList.remove('active','inactive');
 					}
 					if(event.target.classList.contains('mr-subitemactive')) {
-						const mrwidSubcats = event.target.querySelectorAll('.mr-pages.active .mr-subitem');
+						const mrwidSubcats = event.target.querySelectorAll('.mr-pages.active > .mr-subitem');
 						if (mrwidSubcats) {
 							for (id = 0; id < mrwidSubcats.length; id++)  {
 								mrwidSubcats[id].classList.add('mr-hide');
