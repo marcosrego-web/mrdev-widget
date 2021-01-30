@@ -214,7 +214,12 @@ defined('ABSPATH') or die;
 									}
 									$content .= '</ul>';
 								} else if($tabs === 3 && $contenttypes != 'custom_items') { //Categories Tabs
-									$catlist = get_terms(array('taxonomy' => 'category', 'hide_empty' => true, 'lang' => '', 'hierarchical' => true,'no_found_rows' => true, 'suppress_filter' => false));
+									if($contenttypes == 'posttype_product') {
+										$taxonomy = 'product_cat';
+									} else {
+										$taxonomy = 'category';
+									}
+									$catlist = get_terms(array('taxonomy' => $taxonomy, 'hide_empty' => true, 'lang' => '', 'hierarchical' => true,'no_found_rows' => true, 'suppress_filter' => false));
 									if ( !empty( $catlist ) ) {
 										$content .= '<ul class="mr-tabs mr-categories mr-flex mr-scroll mr-nobullets">';
 										foreach ( $catlist as $key => $tab) {
@@ -226,7 +231,12 @@ defined('ABSPATH') or die;
 										$content .= '</ul>';
 									}
 								} else if($tabs === 4 && $contenttypes != 'custom_items') { //Tags Tabs
-									$taglist = get_terms(array('taxonomy' => 'post_tag', 'hide_empty' => true, 'lang' => '', 'hierarchical' => true,'no_found_rows' => true, 'suppress_filter' => false));
+									if($contenttypes == 'posttype_product') {
+										$taxonomy = 'product_tag';
+									} else {
+										$taxonomy = 'post_tag';
+									}
+									$taglist = get_terms(array('taxonomy' => $taxonomy, 'hide_empty' => true, 'lang' => '', 'hierarchical' => true,'no_found_rows' => true, 'suppress_filter' => false));
 									if ( !empty( $taglist ) ) {
 										$content .= '<ul class="mr-tabs mr-tags mr-flex mr-scroll mr-nobullets">';
 										foreach ( $taglist as $key => $tab) {
@@ -263,6 +273,7 @@ defined('ABSPATH') or die;
 									} else {
 										$itemtitle = '';
 									}
+									$showitemspecs = null;
 								} else if (strpos($contenttypes, 'taxonomy_') !== false) { //Taxonomies
 									$itemid = $item->term_id;
 									$itemslug = $item->slug;
@@ -284,6 +295,7 @@ defined('ABSPATH') or die;
 									} else {
 										$parentcheck = 0;
 									}
+									$showitemspecs = null;
 								} else if (strpos($contenttypes, 'posttype_') !== false) { //Post types
 									$itemid = $item->ID;
 									//$itemid = $item;
@@ -303,7 +315,12 @@ defined('ABSPATH') or die;
 									$itemparent = $item->post_parent;
 									//$itemparent = get_post_field('post_parent',$itemid);
 									if($tabs === 3 || !empty($parentcats) || $itemstaxonomies === 1 || $itemstaxonomies === 2 || $itemstaxonomies === 4 || $itemstaxonomies === 5) {
-										$itemcats = wp_get_post_categories($itemid);
+										if($contenttypes == 'posttype_product') {
+											$itemcatsterm = 'product_cat';
+										} else {
+											$itemcatsterm = 'category';
+										}
+										$itemcats = wp_get_post_terms($itemid,$itemcatsterm,array('fields'=>'ids'));
 										if($itemcats && !is_array($itemcats)) {
 											$itemcats = array($itemcats);
 										} else if(!$itemcats) {
@@ -313,7 +330,12 @@ defined('ABSPATH') or die;
 										$itemcats = array();
 									}
 									if($tabs === 4 || !empty($parenttags) || $itemstaxonomies === 1 || $itemstaxonomies === 3 || $itemstaxonomies === 4 || $itemstaxonomies === 6) {
-										$itemtags = wp_get_post_tags($itemid, array('fields' => 'ids'));
+										if($contenttypes == 'posttype_product') {
+											$itemtagsterm = 'product_tag';
+										} else {
+											$itemtagsterm = 'post_tag';
+										}
+										$itemtags = wp_get_post_terms($itemid,$itemtagsterm,array('fields'=>'ids'));
 										if($itemtags && !is_array($itemtags)) {
 											$itemtags = array($itemtags);
 										} else if(!$itemtags) {
@@ -327,12 +349,12 @@ defined('ABSPATH') or die;
 									} else {
 										$parentcheck = 0;
 									}
-									if(strpos($contenttypes,'product') !== false /*&& function_exists('get_price')*/) {
-										if ( class_exists( 'WooCommerce' ) ) {
+									if(strpos($contenttypes,'product') !== false && class_exists( 'WooCommerce' )) {
 											$productdata = wc_get_product( $itemid );
 											$productprice = $productdata->get_regular_price();
-											$productsale = $productdata->get_sale_price();
-											$showitemspecs = '<div class="mr-specs">';
+											if(!empty($productprice)) {
+												$productsale = $productdata->get_sale_price();
+												$showitemspecs = '<div class="mr-specs">';
 												$showitemspecs .= '<span class="mr-price">';
 													$showitemspecs .= '<span class="mr-price-regular">';
 														$showitemspecs .= (!empty($productsale)) ? '<del>':'';
@@ -342,8 +364,10 @@ defined('ABSPATH') or die;
 													$showitemspecs .= (!empty($productsale)) ? '<span class="mr-price-sale"><bdi><ins class="mr-flex">'.$currency.'<span class="mr-price-value">'.$productsale.'</span></bdi></ins>' : '';
 													$showitemspecs .= '</span>';
 												$showitemspecs .= '</span>';
-											$showitemspecs .= '</div>';
-										}
+												$showitemspecs .= '</div>';
+											} else {
+												$showitemspecs = null;
+											}
 									} else {
 										$showitemspecs = null;
 									}
@@ -682,7 +706,7 @@ defined('ABSPATH') or die;
 																		if ($i > 0) {
 																			$showitemtaxonomies .= ', ';
 																		}
-																		$showitemtaxonomies .= '<a class="tagid-'.$itemtag.' mr-taxonomy mr-taxonomylink" href="'.get_tag_link($itemtag).'">'.get_tag($itemtag)->name.'</a>';
+																		$showitemtaxonomies .= '<a class="tagid-'.$itemtag.' mr-taxonomy mr-taxonomylink" href="'.get_term_link($itemtag, $itemtagsterm).'">'.get_term($itemtag,$itemtagsterm)->name.'</a>';
 																	}
 																	if($itemstaxonomies === 1 && !empty($itemcats)) {
 																		$showitemtaxonomies .= ' & ';
@@ -696,7 +720,7 @@ defined('ABSPATH') or die;
 																		if ($i > 0) {
 																			$showitemtaxonomies .= ', ';
 																		}
-																		$showitemtaxonomies .= '<a class="catid-'.$itemcat.' mr-taxonomy mr-taxonomylink" href="'.get_category_link($itemcat).'">'.get_cat_name($itemcat).'</a>';
+																		$showitemtaxonomies .= '<a class="catid-'.$itemcat.' mr-taxonomy mr-taxonomylink" href="'.get_term_link($itemcat, $itemcatsterm).'">'.get_term($itemcat,$itemcatsterm)->name.'</a>';
 																	}
 																}
 																if($itemstaxonomies === 4 && !empty($itemtags) || $itemstaxonomies === 6 && !empty($itemtags)) { //Tags
@@ -705,7 +729,7 @@ defined('ABSPATH') or die;
 																		if ($i > 0) {
 																			$showitemtaxonomies .= ', ';
 																		}
-																		$showitemtaxonomies .= '<span class="tagid-'.$itemtag.' mr-taxonomy">'.get_tag($itemtag)->name.'</a>';
+																		$showitemtaxonomies .= '<span class="tagid-'.$itemtag.' mr-taxonomy">'.get_term($itemtag,$itemtagsterm)->name.'</a>';
 																	}
 																	if($itemstaxonomies === 4 && !empty($itemcats)) {
 																		$showitemtaxonomies .= ' & ';
@@ -719,7 +743,7 @@ defined('ABSPATH') or die;
 																		if ($i > 0) {
 																			$showitemtaxonomies .= ', ';
 																		}
-																		$showitemtaxonomies .= '<span class="catid-'.$itemcat.' mr-taxonomy">'.get_cat_name($itemcat).'</span>';
+																		$showitemtaxonomies .= '<span class="catid-'.$itemcat.' mr-taxonomy">'.get_term($itemcat,$itemcatsterm)->name.'</span>';
 																	}
 																}
 																$showitemtaxonomies .= '</small></span>';
