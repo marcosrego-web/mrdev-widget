@@ -121,6 +121,23 @@ defined('ABSPATH') or die;
 							}
 							$contenttype = str_replace('posttype_','',$contenttypes);
 							$itemlist = get_posts(array('post_type' => $contenttype,'post_status'=>'publish','orderby' => $orderby,'order' => $order,'numberposts' => $numberposts, /*'exclude' => $exclude, 'include' => $include ,'fields'=>'ids'*//*,'lang' => $lang,*/ 'no_found_rows' => true, 'suppress_filters' => false));
+							if(strpos($contenttypes,'product') !== false) {
+								if ( class_exists( 'WooCommerce' ) ) {
+									$currencyposition = get_option( 'woocommerce_currency_pos' );
+									$currency = get_woocommerce_currency_symbol();
+									if(strpos($currencyposition, 'right') !== false) {
+										if($currencyposition == 'right_space') {
+											$currency = '&nbsp;'.$currency;
+										}
+										$currency = '<span class="mr-price-currency" style="order:1">'.$currency.'</span>';
+									} else {
+										if($currencyposition == 'left_space') {
+											$currency = $currency.'&nbsp;';
+										}
+										$currency = '<span class="mr-price-currency">'.$currency.'</span>';
+									}
+								}
+							}
 						} else if ($contenttypes === 'custom_items') {
 							$contenttype = 'custom_items';
 							$itemlist = array();
@@ -309,6 +326,26 @@ defined('ABSPATH') or die;
 										$parentcheck = 1;
 									} else {
 										$parentcheck = 0;
+									}
+									if(strpos($contenttypes,'product') !== false /*&& function_exists('get_price')*/) {
+										if ( class_exists( 'WooCommerce' ) ) {
+											$productdata = wc_get_product( $itemid );
+											$productprice = $productdata->get_regular_price();
+											$productsale = $productdata->get_sale_price();
+											$showitemspecs = '<div class="mr-specs">';
+												$showitemspecs .= '<span class="mr-price">';
+													$showitemspecs .= '<span class="mr-price-regular">';
+														$showitemspecs .= (!empty($productsale)) ? '<del>':'';
+														$showitemspecs .= '<bdi class="mr-flex">'.$currency.'<span class="mr-price-value">'.$productprice.'</span></bdi>';
+														$showitemspecs .= (!empty($productsale)) ? '</del>':'';
+													$showitemspecs .= '</span>';
+													$showitemspecs .= (!empty($productsale)) ? '<span class="mr-price-sale"><bdi><ins class="mr-flex">'.$currency.'<span class="mr-price-value">'.$productsale.'</span></bdi></ins>' : '';
+													$showitemspecs .= '</span>';
+												$showitemspecs .= '</span>';
+											$showitemspecs .= '</div>';
+										}
+									} else {
+										$showitemspecs = null;
 									}
 								}
 								if($itemstitlemax != 0) {
@@ -556,16 +593,16 @@ defined('ABSPATH') or die;
 																	} else {
 																		if($imgid != 0) {
 																			$imgsrcset = wp_get_attachment_image_srcset($imgid);
-																			if($imgsrcset) {
-																				$imgsrcset = ' srcset="'.$imgsrcset.'" ';
-																			} else {
+																			if(empty($imgsrcset) || strpos($imgsrcset,'.gif') !== false) {
 																				$imgsrcset = null;
+																			} else {
+																				$imgsrcset = ' srcset="'.$imgsrcset.'" ';
 																			}
 																			$imgalt = $imgdata['alt'];
-																			if($imgalt) {
-																				$imgalt = ' alt="'.$imgalt.'" ';
-																			} else {
+																			if(empty($imgalt)) {
 																				$imgalt = null;
+																			} else {
+																				$imgalt = ' alt="'.$imgalt.'" ';
 																			}
 																		} else {
 																			$imgsrcset = null;
@@ -815,7 +852,7 @@ defined('ABSPATH') or die;
 																	$content .= '<noscript>';
 																}
 															}
-															$content .= '<li class="itemid-'.$itemid.' '.$itemslug.' '.$mrclasses.' mr-item '.$mrcurrent.$pinned.'" '.((in_array("url", $itemoptions))?'url='.esc_url($itemurl):"").' style="'.$manualorder.'"><div class="mr-item-container"'.$showimage.'>'.$showitemtitle.'<div class="mr-content">'.$showitemmeta.$showitemdesc.$bottomlinktext.'</div></div></li>';
+															$content .= '<li class="itemid-'.$itemid.' '.$itemslug.' '.$mrclasses.' mr-item '.$mrcurrent.$pinned.'" '.((in_array("url", $itemoptions))?'url='.esc_url($itemurl):"").' style="'.$manualorder.'"><div class="mr-item-container"'.$showimage.'>'.$showitemtitle.'<div class="mr-content">'.$showitemmeta.$showitemdesc.$showitemspecs.$bottomlinktext.'</div></div></li>';
 															$itemcount = ($itemcount + 1);
 															/*
 															If the option 'only show subitems of active' is enabled and this item is a subcategory, it should not close the page yet.

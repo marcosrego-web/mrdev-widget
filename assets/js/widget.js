@@ -528,7 +528,7 @@ document.addEventListener('click',function(event) {
 		const mrwidThis = event.target;
 		mrwidMain(mrwidThis);
 		event.stopPropagation();
-	} /*tabs*/else if (event.target.matches('.mr-tabs .mr-tab')) {
+	} /*tabs*/else if (event.target.matches('.mr-tabs .mr-tab') && !event.target.matches('.mr-layout.mr-donotinactive .mr-tabs .mr-tab.active')) {
 		const mrwidThis = event.target;
 		mrwidTabsChange(mrwidThis);
 		event.stopPropagation();
