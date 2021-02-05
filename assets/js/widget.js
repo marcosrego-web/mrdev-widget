@@ -81,7 +81,7 @@ function mrChangeStatus(mrwidThis,mrwidLayout,mrwidPage/*tabs*/,mrwidItemsTabs/*
 			rect = mrwidPage.getBoundingClientRect();
 		}
 		const elementoffset = rect.top + window.pageYOffset;
-		mrScrollTo(elementoffset,500);
+		mrScrollTo(elementoffset,750);
 	}
 	/*end*/
 	/*itemoptions-url*/
@@ -216,7 +216,7 @@ function mrwidChangePage(currentElement,mrwidLayout,mrwidPage) {
 			if(mrwidLayout.classList.contains('mr-autoscroll')) {
 				rect = mrwidLayout.getBoundingClientRect();
 				const elementoffset = rect.top + window.pageYOffset;
-				mrScrollTo(elementoffset,500);
+				mrScrollTo(elementoffset,750);
 			}
 		}, 400);
 	}
