@@ -153,7 +153,7 @@ defined('ABSPATH') or die;
 					//print_r($itemlist);
 					if ( !empty( $itemlist ) ) {
 							if($is_admin === false) {
-								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).' mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
+								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).' mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs))?' mr-hastabs':" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
 								if($tabs === 1) { //Items Tabs
 									$content .= '<ul class="mr-tabs mr-items mr-flex mr-scroll mr-nobullets">';
 									foreach ( $itemlist as $key => $tab) {
@@ -166,7 +166,7 @@ defined('ABSPATH') or die;
 											$tabname = $tab->post_title;
 											$tabslug = $tab->post_name;
 										}
-										if($contentoverride_status == 1 && !empty($titleoverride[$tabid]) || $contenttypes === 'custom_items' && !empty($titleoverride[$tabid])) {
+										if($mrdev_widget_contentoverride == 1 && !empty($titleoverride[$tabid]) || $contenttypes === 'custom_items' && !empty($titleoverride[$tabid])) {
 											$tabname = $titleoverride[$tabid];
 										}
 										/*
@@ -202,7 +202,7 @@ defined('ABSPATH') or die;
 											$tabname = $tab->post_title;
 											$tabslug = $tab->post_name;
 										}
-										if($contentoverride_status == 1 && !empty($titleoverride[$tabid])) {
+										if($mrdev_widget_contentoverride == 1 && !empty($titleoverride[$tabid])) {
 											$tabname = $titleoverride[$tabid];
 										}
 										if (isset($manualordering[$tabid])) {
@@ -277,12 +277,12 @@ defined('ABSPATH') or die;
 								} else if (strpos($contenttypes, 'taxonomy_') !== false) { //Taxonomies
 									$itemid = $item->term_id;
 									$itemslug = $item->slug;
-									if($contentoverride_status == 1 && !empty($titleoverride[$itemid])) {
+									if($mrdev_widget_contentoverride == 1 && !empty($titleoverride[$itemid])) {
 										$itemtitle = $titleoverride[$itemid];
 									} else {
 										$itemtitle = $item->name;
 									}
-									if($itemsauthor != 0 && $contentoverride_status == 1 && !empty($authoroverride[$itemid])) {
+									if($itemsauthor != 0 && $mrdev_widget_contentoverride == 1 && !empty($authoroverride[$itemid])) {
 										$authorid = $authoroverride[$itemid];
 									} else if($itemsauthor != 0) {
 										$authorid = 0;
@@ -301,13 +301,13 @@ defined('ABSPATH') or die;
 									//$itemid = $item;
 									$itemslug = $item->post_name;
 									//$itemslug = get_post_field('post_name',$itemid);
-									if($contentoverride_status == 1 && !empty($titleoverride[$itemid])) {
+									if($mrdev_widget_contentoverride == 1 && !empty($titleoverride[$itemid])) {
 										$itemtitle = $titleoverride[$itemid];
 									} else {
 										$itemtitle = $item->post_title;
 										//$itemtitle = get_post_field('post_title',$itemid);
 									}
-									if($itemsauthor != 0 && $contentoverride_status == 1 && !empty($authoroverride[$itemid])) {
+									if($itemsauthor != 0 && $mrdev_widget_contentoverride == 1 && !empty($authoroverride[$itemid])) {
 										$authorid = $authoroverride[$itemid];
 									} else if($itemsauthor != 0) {
 										$authorid = $item->post_author;
@@ -394,7 +394,7 @@ defined('ABSPATH') or die;
 								} else {
 									$itemdescription = null;
 								}
-								if($contentoverride_status == 1 && !empty($linkoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($linkoverride[$itemid]) ) {
+								if($mrdev_widget_contentoverride == 1 && !empty($linkoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($linkoverride[$itemid]) ) {
 									$itemurl = $linkoverride[$itemid];
 								} else if (strpos($contenttypes, 'taxonomy_') !== false) {
 									$itemurl = str_replace("/./","/",get_category_link($itemid));
@@ -403,7 +403,7 @@ defined('ABSPATH') or die;
 								} else {
 									$itemurl = null;
 								}
-								if($contentoverride_status == 1 && !empty($itemlinktargetoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($itemlinktargetoverride[$itemid]) ) {
+								if($mrdev_widget_contentoverride == 1 && !empty($itemlinktargetoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($itemlinktargetoverride[$itemid]) ) {
 									$itemlinktargetrel = 'target="_'.$itemlinktargetoverride[$itemid].'"';
 									if($itemlinktargetoverride[$itemid] != "self") {
 										$itemlinktargetrel = $itemlinktargetrel.' rel="noopener noreferrer"';
@@ -444,7 +444,24 @@ defined('ABSPATH') or die;
 												echo '<div class="mr-list-container" style="-ms-flex-order:'.(!empty($pageorder[$pagecount]) ? $pageorder[$pagecount] : $pagecount).'; -webkit-order:'.(!empty($pageorder[$pagecount]) ? $pageorder[$pagecount] : $pagecount).'; order:'.(!empty($pageorder[$pagecount]) ? $pageorder[$pagecount] : $pagecount).';">';
 												?>
 												<div class="mr-page">
-													<input <?php if($content_access === 'Denied') { echo 'disabled'; } ?> type="number" name="<?php echo esc_attr( $this->get_field_name( 'pageorder' ) ); ?>[<?php echo $pagecount; ?>]" min="1" class="mr-input mr-pageinput" placeholder="<?php echo $pagecount; ?>" <?php if(in_array($pagecount,$pageorder) && !empty($pageorder[$pagecount] )) { echo 'value="'.esc_attr( $pageorder[$pagecount]).'"'; } else { echo 'value="'.$pagecount.'"'; } if(in_array($pagecount,$pageorder) && $pageorder[$pagecount] !== $pagecount && $pageorder[$pagecount] !== 0) { echo 'style="border-right-width: 3px;"'; }  ?> title="Reorder page by number. Leave empty to return to its original number. Repeated values are not allowed for pages.">
+													<?php
+													if(!isset($mrdev_get_user)) {
+														$mrdev_get_user = wp_get_current_user();
+													}
+													if(!isset($mrdev_get_userrole)) {
+														$mrdev_get_userrole = $mrdev_get_user->roles[0];
+													}
+													if(!isset($mrdev_get_username)) {
+														$mrdev_get_username = $mrdev_get_user->user_login;
+													}
+													$mrdev_widget_content_access = isset($getpluginsettings['mrdeveloper_content']) ? $getpluginsettings['mrdeveloper_content'] : '';
+													if(!is_array( $mrdev_widget_content_access ) && $mrdev_widget_content_access == $mrdev_get_username || is_array( $mrdev_widget_content_access ) && in_array( $mrdev_get_username , $mrdev_widget_content_access ) || !is_array( $mrdev_widget_content_access ) && $mrdev_widget_content_access == $mrdev_get_userrole || is_array( $mrdev_widget_content_access ) && in_array( $mrdev_get_userrole , $mrdev_widget_content_access )) {
+														$mrdev_widget_content_access = 'Denied';
+													} else {
+														$mrdev_widget_content_access = 'Allowed';
+													}
+													?>
+													<input <?php if($mrdev_widget_content_access === 'Denied') { echo 'disabled'; } ?> type="number" name="<?php echo esc_attr( $this->get_field_name( 'pageorder' ) ); ?>[<?php echo $pagecount; ?>]" min="1" class="mr-input mr-pageinput" placeholder="<?php echo $pagecount; ?>" <?php if(in_array($pagecount,$pageorder) && !empty($pageorder[$pagecount] )) { echo 'value="'.esc_attr( $pageorder[$pagecount]).'"'; } else { echo 'value="'.$pagecount.'"'; } if(in_array($pagecount,$pageorder) && $pageorder[$pagecount] !== $pagecount && $pageorder[$pagecount] !== 0) { echo 'style="border-right-width: 3px;"'; }  ?> title="Reorder page by number. Leave empty to return to its original number. Repeated values are not allowed for pages.">
 													<hr>
 												</div>
 												<?php
@@ -454,9 +471,9 @@ defined('ABSPATH') or die;
 													include trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/orderpin.php';
 												}
 												?>
-												<label <?php if(!file_exists(trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/orderpin.php')) { echo 'style="margin-left: 48px;"'; } ?>><input <?php if($content_access === 'Denied') { echo 'disabled'; } ?> type="checkbox" class="mr-checkbox" name="<?php echo esc_attr( $this->get_field_name( 'itemselect' ) ); ?>[]" value="<?php echo $itemid; ?>" title="Exclude or include this item, depending of the selected option on the top." <?php checked( (in_array( $itemid, $itemselect ) ) ? $itemid : '', $itemid ); ?>/>
+												<label <?php if(!file_exists(trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/orderpin.php')) { echo 'style="margin-left: 48px;"'; } ?>><input <?php if($mrdev_widget_content_access === 'Denied') { echo 'disabled'; } ?> type="checkbox" class="mr-checkbox" name="<?php echo esc_attr( $this->get_field_name( 'itemselect' ) ); ?>[]" value="<?php echo $itemid; ?>" title="Exclude or include this item, depending of the selected option on the top." <?php checked( (in_array( $itemid, $itemselect ) ) ? $itemid : '', $itemid ); ?>/>
 												<?php
-													if($contentoverride_status == 1 && file_exists(trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/customitems.php') || $contenttypes === 'custom_items' && file_exists(trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/customitems.php')) {
+													if($mrdev_widget_contentoverride == 1 && file_exists(trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/customitems.php') || $contenttypes === 'custom_items' && file_exists(trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/customitems.php')) {
 														include trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/customitems.php';
 													} else {
 														if (strpos($contenttypes, 'taxonomy_') !== false) { echo $item->name; } else if (strpos($contenttypes, 'posttype_') !== false) { echo $item->post_title.'</label>';}
@@ -498,7 +515,7 @@ defined('ABSPATH') or die;
 															if($itemimage === 9) {
 																$showimage = null;
 																$getimg = null;
-															} else if($contentoverride_status == 1 && !empty($imageoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($imageoverride[$itemid])) {
+															} else if($mrdev_widget_contentoverride == 1 && !empty($imageoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($imageoverride[$itemid])) {
 																$getimg = $imageoverride[$itemid];
 															} else {
 																$showimage = null;
@@ -764,7 +781,7 @@ defined('ABSPATH') or die;
 															if($itemdesc === 1) { //No description
 																$showitemdesc = null;
 															} else { //With description
-																if($contentoverride_status == 1 && !empty($textoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($textoverride[$itemid])) { //Override description
+																if($mrdev_widget_contentoverride == 1 && !empty($textoverride[$itemid]) || $contenttypes === 'custom_items' && !empty($textoverride[$itemid])) { //Override description
 																	$itemdescription = $textoverride[$itemid];
 																} else if($itemdesc === 4) { //Item excerpt
 																	if (strpos($contenttypes, 'posttype_') !== false && has_excerpt($itemid)) {
