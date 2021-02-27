@@ -4,8 +4,15 @@ Mr.Dev. is your provider of developing tools for Wordpress!
 He brings you a widget to display your categories and posts from Wordpress with many customizable layouts and options to choose from. 
 
 ##
+### Themes & Layouts
+The widget initially comes with the themes ‘None’ and ‘Default’.
+'Default' has many layouts to choose from including a custom layout to choose each option. It's also possible to develop new custom themes. This is perfect if you already have a website and want to display your content in a new way, while keeping the look & feel of your current template.
+
+#### [See Demo](https://marcosrego.com/en/web-en/mrwidgets-themes/)
+
+##
 ### Do you need more features?
-If you need more features then you need **Mr.Dev.'s Framework**:
+If you need more features then you need to add **Mr.Dev.'s Framework**:
 
 1.  **Hide widget sections** to specific users or roles.
 2.  Insert widgets inside the content section on posts/pages/categories using **widget block, classic editor button or shortcodes**.
@@ -29,19 +36,8 @@ And more...
 #### [Get Mr.Dev.'s Framework](https://marcosrego.com/en/web-en/mrdev-en/)
 
 ##
-### Themes & Layouts
-The widget initially comes with the themes ‘None’ and ‘Default’.
-'Default' has many layouts to choose from including a custom layout to choose each option. It's also possible to develop new custom themes. This is perfect if you already have a website and want to display your content in a new way, while keeping the look & feel of your current template.
-
-#### [See Demo](https://marcosrego.com/en/web-en/mrwidgets-themes/)
-
-##
 ### Additional information
 Mr.Dev. starts with categories because some *content display plugins* and *CMS* do not highlight categories as much as posts/articles. But that could be practical for a better organization, structure, search engine optimization and a better understanding of the front and backoffice from clients and users.
-
-##
-### Details
-
 
 ##
 ### Compatibility Warning ⚠ 
