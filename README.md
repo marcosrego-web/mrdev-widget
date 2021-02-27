@@ -1,5 +1,5 @@
 # Mr.Dev.'s Widget
-Mr.Dev. is your provider of developing tools for Wordpress!
+Mr.Dev. is your provider of developing tools!
 
 He brings you a widget to display your categories and posts from Wordpress with many customizable layouts and options to choose from. 
 
