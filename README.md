@@ -1,8 +1,7 @@
 # Mr.Dev.'s Widget
 Mr.Dev. is your provider of developing tools for Wordpress!
 
-He brings you a widget to display categories, tags, posts, pages and custom items with many customizable layouts and options to choose from.
-All tools are optional and you can hide parts of the widgets to specific users or roles/groups.
+He brings you a widget to display categories, tags, posts, pages from Wordpress and custom items with many customizable layouts and options to choose from. All tools are optional and you can hide parts of the widgets to specific users or roles/groups.
 
 
 ### [Features](https://marcosrego.com/en/web-en/mrplugins-features/)
