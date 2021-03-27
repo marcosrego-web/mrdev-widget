@@ -1,0 +1,6 @@
+[submodule "tools/mr-utils"]
+	path = tools/mr-utils
+	url = https://github.com/marcosrego-web/mr-utils
+[submodule "tools/plugin-update-checker"]
+	path = tools/plugin-update-checker
+	url = https://github.com/YahnisElsts/plugin-update-checker
