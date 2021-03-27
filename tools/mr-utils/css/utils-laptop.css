@@ -1,0 +1,309 @@
+.mr-laptop-container {
+  max-width: var(--laptop-container, 75rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--laptop-padding, 0.75rem);
+  padding-right: var(--laptop-padding, 0.75rem);
+}
+.mr-laptop-margin {
+  margin: var(--laptop-margin, 0.75rem);
+}
+.mr-laptop-margintop {
+  margin-top: var(--laptop-margin, 0.75rem);
+}
+.mr-laptop-marginright {
+  margin-right: var(--laptop-margin, 0.75rem);
+}
+.mr-laptop-marginbottom {
+  margin-bottom: var(--laptop-margin, 0.75rem);
+}
+.mr-laptop-marginleft {
+  margin-left: var(--laptop-margin, 0.75rem);
+}
+.mr-laptop-padding {
+  padding: var(--laptop-padding, 0.75rem);
+}
+.mr-laptop-paddingtop {
+  padding-top: var(--laptop-padding, 0.75rem);
+}
+.mr-laptop-paddingright {
+  padding-right: var(--laptop-padding, 0.75rem);
+}
+.mr-laptop-paddingbottom {
+  padding-bottom: var(--laptop-padding, 0.75rem);
+}
+.mr-laptop-paddingleft {
+  padding-left: var(--laptop-padding, 0.75rem);
+}
+.mr-laptop-nomargin {
+  margin: 0 !important;
+}
+.mr-laptop-nomargintop {
+  margin-top: 0 !important;
+}
+.mr-laptop-nomarginright {
+  margin-right: 0 !important;
+}
+.mr-laptop-nomarginbottom {
+  margin-bottom: 0 !important;
+}
+.mr-laptop-nomarginleft {
+  margin-left: 0 !important;
+}
+.mr-laptop-nopadding {
+  padding: 0 !important;
+}
+.mr-laptop-nopaddingtop {
+  padding-top: 0 !important;
+}
+.mr-laptop-nopaddingright {
+  padding-right: 0 !important;
+}
+.mr-laptop-nopaddingbottom {
+  padding-bottom: 0 !important;
+}
+.mr-laptop-flex,
+.mr-laptop-12perline,
+.mr-laptop-11perline,
+.mr-laptop-10perline,
+.mr-laptop-9perline,
+.mr-laptop-8perline,
+.mr-laptop-7perline,
+.mr-laptop-6perline,
+.mr-laptop-5perline,
+.mr-laptop-4perline,
+.mr-laptop-3perline,
+.mr-laptop-2perline,
+.mr-laptop-1perline,
+.mr-laptop-0perline,
+.mr-laptop-perline {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.mr-laptop-wrap,
+.mr-laptop-12perline,
+.mr-laptop-11perline,
+.mr-laptop-10perline,
+.mr-laptop-9perline,
+.mr-laptop-8perline,
+.mr-laptop-7perline,
+.mr-laptop-6perline,
+.mr-laptop-5perline,
+.mr-laptop-4perline,
+.mr-laptop-3perline,
+.mr-laptop-2perline,
+.mr-laptop-1perline,
+.mr-laptop-perline {
+  flex-wrap: wrap;
+}
+.mr-laptop-section,
+.mr-laptop-0perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-1perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size12,
+.mr-laptop-width100 {
+  width: 100%;
+}
+.mr-laptop-2perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size11,
+.mr-laptop-width50 {
+  width: 50%;
+}
+.mr-laptop-3perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size10,
+.mr-laptop-width33 {
+  width: 33.33333333333333%;
+}
+.mr-laptop-4perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size9,
+.mr-laptop-width25 {
+  width: 25%;
+}
+.mr-laptop-5perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size8,
+.mr-laptop-width20 {
+  width: 20%;
+}
+.mr-laptop-6perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size7,
+.mr-laptop-width16 {
+  width: 16.66666666666667%;
+}
+.mr-laptop-7perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size6,
+.mr-laptop-width14 {
+  width: 14.28571428571429%;
+}
+.mr-laptop-8perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size5,
+.mr-laptop-width12 {
+  width: 12.5%;
+}
+.mr-laptop-9perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size4,
+.mr-laptop-width11 {
+  width: 11.11111111111111%;
+}
+.mr-laptop-10perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size3,
+.mr-laptop-width10 {
+  width: 10%;
+}
+.mr-laptop-11perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size2,
+.mr-laptop-width9 {
+  width: 9.090909090909091%;
+}
+.mr-laptop-12perline > .mr-item:not([class*="mr-laptop-size"]),
+.mr-laptop-size1,
+.mr-laptop-width8 {
+  width: 8.333333333333333%;
+}
+.mr-laptop-orderfirst,
+.mr-laptop-order-1 {
+  -ms-flex-order: -1;
+  -webkit-order: -1;
+  order: -1;
+}
+.mr-laptop-order1 {
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+.mr-laptop-order2 {
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+}
+.mr-laptop-order3 {
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+.mr-laptop-order4 {
+  -ms-flex-order: 4;
+  -webkit-order: 4;
+  order: 4;
+}
+.mr-laptop-order5 {
+  -ms-flex-order: 5;
+  -webkit-order: 5;
+  order: 5;
+}
+.mr-laptop-order6 {
+  -ms-flex-order: 6;
+  -webkit-order: 6;
+  order: 6;
+}
+.mr-laptop-order7 {
+  -ms-flex-order: 7;
+  -webkit-order: 7;
+  order: 7;
+}
+.mr-laptop-order8 {
+  -ms-flex-order: 8;
+  -webkit-order: 8;
+  order: 8;
+}
+.mr-laptop-order9 {
+  -ms-flex-order: 9;
+  -webkit-order: 9;
+  order: 9;
+}
+.mr-laptop-order10 {
+  -ms-flex-order: 10;
+  -webkit-order: 10;
+  order: 10;
+}
+.mr-laptop-order11 {
+  -ms-flex-order: 11;
+  -webkit-order: 11;
+  order: 11;
+}
+.mr-laptop-order12 {
+  -ms-flex-order: 12;
+  -webkit-order: 12;
+  order: 12;
+}
+.mr-laptop-orderlast {
+  -ms-flex-order: 999;
+  -webkit-order: 999;
+  order: 999;
+}
+.mr-laptop-scroll {
+  overflow: auto;
+}
+.mr-laptop-noscroll {
+  overflow: hidden !important;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .mr-laptop-iosscroll,
+  .mr-laptop-scroll {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+.mr-laptop-show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.mr-laptop-show,
+.mr-laptop-block {
+  display: block !important;
+}
+.mr-laptop-hide {
+  opacity: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
+}
+.mr-laptop-relative {
+  position: relative;
+}
+.mr-laptop-absolute {
+  position: absolute;
+}
+.mr-laptop-fixed {
+  position: fixed;
+}
+.mr-laptop-sticky {
+  position: sticky;
+}
+.mr-laptop-alignleft {
+  text-align: left;
+}
+.mr-laptop-aligncenter {
+  text-align: center;
+}
+.mr-laptop-alignright {
+  text-align: right;
+}
+.mr-laptop-top {
+  top: 0;
+  bottom: auto;
+  margin-top: 0;
+  align-items: start;
+  vertical-align: top;
+}
+.mr-laptop-middle {
+  align-items: center;
+  vertical-align: middle;
+}
+.mr-laptop-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mr-laptop-bottom {
+  bottom: 0;
+  top: auto;
+  margin-bottom: 0;
+  align-items: end;
+  vertical-align: bottom;
+}
+.mr-laptop-baseline {
+  align-items: baseline;
+  vertical-align: baseline;
+}

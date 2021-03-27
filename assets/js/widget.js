@@ -190,7 +190,7 @@ function mrwidChangePage(currentElement,mrwidLayout,mrwidPage) {
 		} else if(currentElement.classList.contains('mr-prev')) {
 			mrwidLayout.classList.add('mr-transitionleft');
 		}
-		if(!!mrwidLayout.querySelector('.mr-page'+mrwidPage+' noscript')) {
+		if(mrwidLayout.querySelector('.mr-page'+mrwidPage+' noscript')) {
 			mrwidLayout.querySelector('.mr-page'+mrwidPage).innerHTML = mrwidLayout.querySelector('.mr-page'+mrwidPage+' noscript').textContent;
 		}
 		const mrwidPages = mrwidLayout.querySelectorAll('.mr-pages');
@@ -266,7 +266,7 @@ function mrwidBelow(currentElement) {
 		mrwidLayout.querySelector('.mr-page1').classList.add('active');
 		currentElement.style.classList.remove('mr-hide');
 	} else {
-		if(!!mrwidNewPage.querySelector('noscript')) {
+		if(mrwidNewPage.querySelector('noscript')) {
 			mrwidNewPage.innerHTML = mrwidNewPage.querySelector('noscript').textContent;
 		}
 		mrwidNewPage.classList.remove('inactive');
@@ -393,6 +393,14 @@ function mrwidTabsChange(mrwidThis) {
 	/*end*/
 }
 document.addEventListener('DOMContentLoaded', function() {
+	/*pagetoggles-1*/
+	const mrSelects = document.querySelectorAll('.mr-pagination .mr-pageselect');
+	if(mrSelects) {
+		for (id = 0; id < mrSelects.length; id++) {
+			mrSelects[id].selectedIndex = '0';
+		}
+	}
+	/*end*/
 	/*itemoptions-remember*/
 	const mrwids = document.querySelectorAll('.mr-remember .mr-pages.active .mr-item');
 	if(mrwids) {
@@ -560,7 +568,7 @@ document.addEventListener('click',function(event) {
 			mrwidPrev(currentElement);
 		}
 		event.stopPropagation();
-	} /*end*/ /*pagetoggles-2*/ else if (event.target.matches('.mr-radio')) {
+	} /*end*/ /*pagetoggles-2*/ else if (event.target.matches('.mr-radio:not([checked])')) {
 		const currentElement = event.target;
 		if(!currentElement.classList.contains('loading')) {
 			currentElement.classList.add('loading');

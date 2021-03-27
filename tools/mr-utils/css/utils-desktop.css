@@ -1,0 +1,309 @@
+.mr-desktop-container {
+  max-width: var(--desktop-container, 75rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--desktop-padding, 0.75rem);
+  padding-right: var(--desktop-padding, 0.75rem);
+}
+.mr-desktop-margin {
+  margin: var(--desktop-margin, 0.75rem);
+}
+.mr-desktop-margintop {
+  margin-top: var(--desktop-margin, 0.75rem);
+}
+.mr-desktop-marginright {
+  margin-right: var(--desktop-margin, 0.75rem);
+}
+.mr-desktop-marginbottom {
+  margin-bottom: var(--desktop-margin, 0.75rem);
+}
+.mr-desktop-marginleft {
+  margin-left: var(--desktop-margin, 0.75rem);
+}
+.mr-desktop-padding {
+  padding: var(--desktop-padding, 0.75rem);
+}
+.mr-desktop-paddingtop {
+  padding-top: var(--desktop-padding, 0.75rem);
+}
+.mr-desktop-paddingright {
+  padding-right: var(--desktop-padding, 0.75rem);
+}
+.mr-desktop-paddingbottom {
+  padding-bottom: var(--desktop-padding, 0.75rem);
+}
+.mr-desktop-paddingleft {
+  padding-left: var(--desktop-padding, 0.75rem);
+}
+.mr-desktop-nomargin {
+  margin: 0 !important;
+}
+.mr-desktop-nomargintop {
+  margin-top: 0 !important;
+}
+.mr-desktop-nomarginright {
+  margin-right: 0 !important;
+}
+.mr-desktop-nomarginbottom {
+  margin-bottom: 0 !important;
+}
+.mr-desktop-nomarginleft {
+  margin-left: 0 !important;
+}
+.mr-desktop-nopadding {
+  padding: 0 !important;
+}
+.mr-desktop-nopaddingtop {
+  padding-top: 0 !important;
+}
+.mr-desktop-nopaddingright {
+  padding-right: 0 !important;
+}
+.mr-desktop-nopaddingbottom {
+  padding-bottom: 0 !important;
+}
+.mr-desktop-flex,
+.mr-desktop-12perline,
+.mr-desktop-11perline,
+.mr-desktop-10perline,
+.mr-desktop-9perline,
+.mr-desktop-8perline,
+.mr-desktop-7perline,
+.mr-desktop-6perline,
+.mr-desktop-5perline,
+.mr-desktop-4perline,
+.mr-desktop-3perline,
+.mr-desktop-2perline,
+.mr-desktop-1perline,
+.mr-desktop-0perline,
+.mr-desktop-perline {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.mr-desktop-wrap,
+.mr-desktop-12perline,
+.mr-desktop-11perline,
+.mr-desktop-10perline,
+.mr-desktop-9perline,
+.mr-desktop-8perline,
+.mr-desktop-7perline,
+.mr-desktop-6perline,
+.mr-desktop-5perline,
+.mr-desktop-4perline,
+.mr-desktop-3perline,
+.mr-desktop-2perline,
+.mr-desktop-1perline,
+.mr-desktop-perline {
+  flex-wrap: wrap;
+}
+.mr-desktop-section,
+.mr-desktop-0perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-1perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size12,
+.mr-desktop-width100 {
+  width: 100%;
+}
+.mr-desktop-2perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size11,
+.mr-desktop-width50 {
+  width: 50%;
+}
+.mr-desktop-3perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size10,
+.mr-desktop-width33 {
+  width: 33.33333333333333%;
+}
+.mr-desktop-4perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size9,
+.mr-desktop-width25 {
+  width: 25%;
+}
+.mr-desktop-5perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size8,
+.mr-desktop-width20 {
+  width: 20%;
+}
+.mr-desktop-6perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size7,
+.mr-desktop-width16 {
+  width: 16.66666666666667%;
+}
+.mr-desktop-7perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size6,
+.mr-desktop-width14 {
+  width: 14.28571428571429%;
+}
+.mr-desktop-8perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size5,
+.mr-desktop-width12 {
+  width: 12.5%;
+}
+.mr-desktop-9perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size4,
+.mr-desktop-width11 {
+  width: 11.11111111111111%;
+}
+.mr-desktop-10perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size3,
+.mr-desktop-width10 {
+  width: 10%;
+}
+.mr-desktop-11perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size2,
+.mr-desktop-width9 {
+  width: 9.090909090909091%;
+}
+.mr-desktop-12perline > .mr-item:not([class*="mr-desktop-size"]),
+.mr-desktop-size1,
+.mr-desktop-width8 {
+  width: 8.333333333333333%;
+}
+.mr-desktop-orderfirst,
+.mr-desktop-order-1 {
+  -ms-flex-order: -1;
+  -webkit-order: -1;
+  order: -1;
+}
+.mr-desktop-order1 {
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+.mr-desktop-order2 {
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+}
+.mr-desktop-order3 {
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+.mr-desktop-order4 {
+  -ms-flex-order: 4;
+  -webkit-order: 4;
+  order: 4;
+}
+.mr-desktop-order5 {
+  -ms-flex-order: 5;
+  -webkit-order: 5;
+  order: 5;
+}
+.mr-desktop-order6 {
+  -ms-flex-order: 6;
+  -webkit-order: 6;
+  order: 6;
+}
+.mr-desktop-order7 {
+  -ms-flex-order: 7;
+  -webkit-order: 7;
+  order: 7;
+}
+.mr-desktop-order8 {
+  -ms-flex-order: 8;
+  -webkit-order: 8;
+  order: 8;
+}
+.mr-desktop-order9 {
+  -ms-flex-order: 9;
+  -webkit-order: 9;
+  order: 9;
+}
+.mr-desktop-order10 {
+  -ms-flex-order: 10;
+  -webkit-order: 10;
+  order: 10;
+}
+.mr-desktop-order11 {
+  -ms-flex-order: 11;
+  -webkit-order: 11;
+  order: 11;
+}
+.mr-desktop-order12 {
+  -ms-flex-order: 12;
+  -webkit-order: 12;
+  order: 12;
+}
+.mr-desktop-orderlast {
+  -ms-flex-order: 999;
+  -webkit-order: 999;
+  order: 999;
+}
+.mr-desktop-scroll {
+  overflow: auto;
+}
+.mr-desktop-noscroll {
+  overflow: hidden !important;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .mr-desktop-iosscroll,
+  .mr-desktop-scroll {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+.mr-desktop-show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.mr-desktop-show,
+.mr-desktop-block {
+  display: block !important;
+}
+.mr-desktop-hide {
+  opacity: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
+}
+.mr-desktop-relative {
+  position: relative;
+}
+.mr-desktop-absolute {
+  position: absolute;
+}
+.mr-desktop-fixed {
+  position: fixed;
+}
+.mr-desktop-sticky {
+  position: sticky;
+}
+.mr-desktop-alignleft {
+  text-align: left;
+}
+.mr-desktop-aligncenter {
+  text-align: center;
+}
+.mr-desktop-alignright {
+  text-align: right;
+}
+.mr-desktop-top {
+  top: 0;
+  bottom: auto;
+  margin-top: 0;
+  align-items: start;
+  vertical-align: top;
+}
+.mr-desktop-middle {
+  align-items: center;
+  vertical-align: middle;
+}
+.mr-desktop-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mr-desktop-bottom {
+  bottom: 0;
+  top: auto;
+  margin-bottom: 0;
+  align-items: end;
+  vertical-align: bottom;
+}
+.mr-desktop-baseline {
+  align-items: baseline;
+  vertical-align: baseline;
+}

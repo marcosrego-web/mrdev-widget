@@ -2,11 +2,20 @@
 defined('ABSPATH') or die;
 				$lang = null;
 				$is_admin = is_admin();
+				$content = '';
 				if($is_admin === false) {
 					$currentLink = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 					$lang =	get_locale();
-					$title = apply_filters( 'widget_title', $instance['title'] );
-					$maintitle = intval($instance['maintitle']);
+					if(!empty($instance['title'])) {
+						$title = apply_filters( 'widget_title', $instance['title'] );
+					} else {
+						$title = null;
+					}
+					if(!empty($instance['maintitle'])) {
+						$maintitle = intval($instance['maintitle']);
+					} else {
+						$maintitle = null;
+					}
 					if($maintitle == 1) { // Main category title
 						if ( !in_array(0,$parentcats)) {
 							$content .= $args['before_title'] . get_cat_name( $parentcats[0] ) . $args['after_title'];
@@ -807,7 +816,7 @@ defined('ABSPATH') or die;
 																		$itemdescription = $itemexcerpt;
 																	}
 																}
-																if($itemdescmax != 0) {
+																if(!empty($itemdescmax)) {
 																	$itemdescription = strip_tags($itemdescription);
 																	$itemdescription = (strlen($itemdescription) > $itemdescmax) ? mb_substr($itemdescription,0,$itemdescmax, 'utf-8').'<span class="mr-ellipsis">...</span>' : $itemdescription;
 																}

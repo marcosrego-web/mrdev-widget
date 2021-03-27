@@ -167,7 +167,6 @@ class mr_developer extends WP_Widget {
 				$customcss = htmlspecialchars($instance['customcss']);
 				$lastactivedetails = htmlspecialchars($instance['lastactivedetails']);
 				$getpluginsettings = get_option('mrdev-widget-options');
-				$content = '';
 				if($theme == "default") {
 					include plugin_dir_path( __DIR__ ).'mrdev-widget/themes/'.$theme.'/index.php';
 				} else if($theme == "none") {
@@ -183,7 +182,9 @@ class mr_developer extends WP_Widget {
 			Check if a Javascript cache exists. If not then load the entire javascript.
 			Only load one javascript to avoid repetition and conflicts.
 			*/
-			wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/utils.js',array(),'0.9.40');
+			if(!wp_script_is('mrdev_utils','registered')) {
+				wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/min/js/utils.js',array(),'0.9.40');
+			}
 			if(file_exists($cache_dir.'/mrdev/widgets/js/'.$widgetid.'.js') && !wp_script_is('mrdev_widget')) {
 				wp_enqueue_script( 'mrdev_widget', $cache_url.'/mrdev/widgets/js/'.$widgetid.'.js', array('mrdev_utils'),'0.9.40');
 			} else {
@@ -194,7 +195,28 @@ class mr_developer extends WP_Widget {
 			Check if a css cache exists. If not then load the entire theme's css.
 			A css file with the theme's name is mandatory.
 			*/
-			wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/utils.css',array(),'0.9.40');
+			if(!wp_style_is('mrdev_utils','registered')) {
+				wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/min/css/utils.css',array(),'0.9.40');
+			}
+			/*global ${"mrdev_breakpoint_desktop"},${"mrdev_breakpoint_tablet"},${"mrdev_breakpoint_phone"};
+			if(!wp_style_is('mrdev_utils_desktop','registered')) {
+				if(empty(${"mrdev_breakpoint_desktop"})) {
+					${"mrdev_breakpoint_desktop"} = '(min-width: 1200px) and (max-width: 100vw)';
+				}
+				wp_register_style( 'mrdev_utils_desktop', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/min/css/utils-desktop.css',array(),'0.9.40',${"mrdev_breakpoint_desktop"});
+			}
+			if(!wp_style_is('mrdev_utils_tablet','registered')) {
+				if(empty(${"mrdev_breakpoint_tablet"})) {
+					${"mrdev_breakpoint_tablet"} = '(min-width: 768px) and (max-width: 959px)';
+				}
+				wp_register_style( 'mrdev_utils_tablet', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/min/css/utils-tablet.css',array(),'0.9.40',${"mrdev_breakpoint_tablet"});
+			}
+			if(!wp_style_is('mrdev_utils_phone','registered')) {
+				if(empty(${"mrdev_breakpoint_phone"})) {
+					${"mrdev_breakpoint_phone"} = '(min-width: 0px) and (max-width: 767px)';
+				}
+				wp_register_style( 'mrdev_utils_phone', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/min/css/utils-phone.css',array(),'0.9.40',${"mrdev_breakpoint_phone"});
+			}*/
 			if(file_exists($cache_dir.'/mrdev/widgets/css/'.$widgetid.'.css')) {
 				wp_enqueue_style( $widgetid.'_css', $cache_url.'/mrdev/widgets/css/'.$widgetid.'.css', array('mrdev_utils'),'0.9.40');
 			} else {
@@ -990,6 +1012,7 @@ class mr_developer extends WP_Widget {
 					<p>
 					If you need more features then you need <strong>Mr.Dev.'s Framework</strong>:</p>
 					<ol>
+					<li><strong>Hide widget sections</strong> to specific users or roles.</li>
 					<li>Insert widgets inside the content section on posts/pages/categories using <strong>blocks, classic editor button or shortcodes</strong>.</li>
 					<li><strong>More content types</strong> such as pages, tags and some compatibility with other third-party registered terms/post-types (such as events and products).</li>
 					<li><strong>Override the content</strong> of each item per widget, without affecting the original content.</li>
@@ -1002,8 +1025,7 @@ class mr_developer extends WP_Widget {
 					<li>Choose a <strong>fallback image</strong>.</li>
 					<li>Choose <strong>images maximum size</strong> together with <strong>srcset and native lazyload</strong>.</li>
 					<li><strong>More options for tabs</strong> such as Categories and Tags.</li>
-					<li><strong>Hide widget sections</strong> to specific users or roles.</li>
-					<li>Other <strong>Advanced</strong> options such as preload pages, content HTML cache, generate CSS and JS minifying it per widget, choose the titles tag (h2, h3, h4, p, etc), load polyfill on IE and add custom classes to the bottom link.</li>
+					<li>Other <strong>Advanced</strong> options such as preload pages, content HTML cache, generate CSS and JS minifying it per widget, choose the titles tag (h2, h3, h4, p, etc), load polyfill for IE compatibility and add custom classes.</li>
 					</ol>
 					<p>And more...</p>
 					<p><a class="button button-primary" href="https://marcosrego.com/en/web-en/mrdev-en/" target="_blank">Get Mr.Dev.'s Framework</a></p>
@@ -1019,13 +1041,6 @@ class mr_developer extends WP_Widget {
 			?>
 			</div>
 			<?php
-			if(!get_option('mrdev-config-options')['config_iepolyfill'] || get_option('mrdev-config-options')['config_iepolyfill'] != 1) {
-				/*Polyfill for Vanilla Javascript on Internet Explorer*/
-				wp_register_script( 'mrdev_polyfill', '//polyfill.io/v3/polyfill.min.js');
-				wp_script_add_data( 'mrdev_polyfill', 'crossorigin' , 'anonymous' );
-				wp_enqueue_script( 'mrdev_polyfill' );
-			}
-		
 	}
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
