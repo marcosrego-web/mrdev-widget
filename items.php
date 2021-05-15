@@ -162,7 +162,7 @@ defined('ABSPATH') or die;
 					//print_r($itemlist);
 					if ( !empty( $itemlist ) ) {
 							if($is_admin === false) {
-								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).' mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs))?' mr-hastabs':" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
+								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).'theme mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).'layout '.(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs))?' mr-hastabs':" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
 								if($tabs === 1) { //Items Tabs
 									$content .= '<ul class="mr-tabs mr-items mr-flex mr-scroll mr-nobullets">';
 									foreach ( $itemlist as $key => $tab) {
@@ -531,7 +531,9 @@ defined('ABSPATH') or die;
 																$getimg = null;
 																if ($itemimage === 8) { //Description first image
 																	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $itemdescription, $matches);
-																	$getimg = $matches[1][0];
+																	if(!empty($output) && !empty($matches)) {
+																		$getimg = $matches[1][0];
+																	}
 																}
 																if($contenttypes != 'custom_items') {
 																	if ($itemimage === 1) { //Item image
@@ -540,7 +542,9 @@ defined('ABSPATH') or die;
 																		} else {
 																			if($itemdescription) {
 																				$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $itemdescription, $matches);
-																				$getimg = $matches[1][0];
+																				if(!empty($output) && !empty($matches)) {
+																					$getimg = $matches[1][0];
+																				}
 																			}
 																		}
 																	} else if ($itemimage === 2 || $itemimage === 5) { //Post images
@@ -897,9 +901,9 @@ defined('ABSPATH') or die;
 																} else {
 																	$pagenumber = $pagecount;
 																}
-																$content .= '<ul class="pageid-'.$pagecount.' mr-page'.$pagenumber.' mr-pages mr-'.$perpage.'perpage mr-nobullets mr-'.$perline.'perline mr-'.$pagetransition.''.($pagenumber == 1 ? " active" : " inactive").'" style="-ms-flex-order: '.$pagenumber.'; -webkit-order: '.$pagenumber.'; order: '.$pagenumber.';">';
+																$content .= '<ul class="pageid-'.$pagecount.' mr-'.$perline.'perline mr-page'.$pagenumber.' mr-pages mr-'.$perpage.'perpage mr-nobullets mr-'.$pagetransition.''.($pagenumber == 1 ? " active" : " inactive").'" style="-ms-flex-order: '.$pagenumber.'; -webkit-order: '.$pagenumber.'; order: '.$pagenumber.';">';
 																if($pagenumber != 1 && !in_array(1,$technical)) {
-																	$content .= '<noscript>';
+																	$content .= '<noscript class="mr-noscript">';
 																}
 															}
 															$content .= '<li class="itemid-'.$itemid.' '.$itemslug.' '.$mrclasses.' mr-item '.$mrcurrent.$pinned.'" '.((in_array("url", $itemoptions))?'url='.esc_url($itemurl):"").' style="'.$manualorder.'"><div class="mr-item-container"'.$showimage.'>'.$showitemtitle.'<div class="mr-content">'.$showitemmeta.$showitemdesc.$showitemspecs.$bottomlinktext.'</div></div></li>';

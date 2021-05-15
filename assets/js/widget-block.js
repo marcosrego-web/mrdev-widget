@@ -3,7 +3,7 @@ function mrwidMain(mrwidThis) {
     mrwidThis = event.target.closest(".mr-item");
   }
   const mrwidLayout = mrwidThis.closest(".mr-layout");
-  const mrwidPage = mrwidThis.closest(".mr-pages");
+  const mrwidPage = mrwidThis.parentNode;
   /*tabs*/
   const mrwidItemsTabs = mrwidLayout.querySelector(".mr-tabs.mr-items");
   const mrwidTabs = mrwidLayout.querySelector(".mr-tabs:not(.mr-items)");
@@ -48,7 +48,7 @@ function mrChangeStatus(
   mrwidPage /*tabs*/,
   mrwidItemsTabs /*end*/
 ) {
-  const mrwids = mrwidPage.querySelectorAll(".mr-item");
+  const mrwids = mrwidPage.children;
   for (id = 0; id < mrwids.length; id++) {
     /*globallayoutoptions-keepactive*/
     if (mrwidLayout.classList.contains("mr-keepactive")) {
@@ -161,7 +161,7 @@ function mrCloseActive(
     mrwidLayout.classList.contains("mr-subitemactive") &&
     mrwidLayout.classList.contains("mr-hideinactives")
   ) {
-    const mrwids = mrwidPage.querySelectorAll(".mr-item");
+    const mrwids = mrwidPage.children;
     if (mrwids) {
       for (id = 0; id < mrwids.length; id++) {
         if (mrwids[id].classList.contains("mr-subitem")) {
@@ -186,7 +186,7 @@ function mrCloseActive(
 function mrConfirmStatus(mrwidPage /*tabs*/, mrwidItemsTabs /*end*/) {
   const mrwidCheckState = mrwidPage.querySelectorAll(".active");
   if (!mrwidCheckState.length) {
-    const mrwids = mrwidPage.querySelectorAll(".mr-item");
+    const mrwids = mrwidPage.children;
     for (id = 0; id < mrwids.length; id++) {
       mrwids[id].classList.remove("inactive");
     }
@@ -483,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /*end*/
   /*itemoptions-remember*/
   const mrwids = document.querySelectorAll(
-    ".mr-remember .mr-pages.active .mr-item"
+    ".mr-remember > *:not(.mr-pagination):not(.mr-tabs).active > *"
   );
   if (mrwids) {
     if (mrGetCookie("mrRemember") != "") {
@@ -514,7 +514,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /*end*/
   /*itemoptions-url*/
   window.addEventListener("popstate", function () {
-    const checkattr = document.querySelectorAll(".mr-url .mr-item[url]");
+    const checkattr = document.querySelectorAll(".mr-url > *:not(.mr-pagination):not(.mr-tabs) > *[url]");
     if (checkattr) {
       for (id = 0; id < checkattr.length; id++) {
         const getWidUrl = checkattr[id].getAttribute("url");
@@ -567,7 +567,7 @@ document.addEventListener("DOMContentLoaded", function () {
         /*itemoptions-hover*/
         if (
           event.target.matches(
-            ".mr-layout.mr-hover > .mr-pages.active > .mr-item"
+            ".mr-layout.mr-hover > *:not(.mr-pagination):not(.mr-tabs).active > *"
           )
         ) {
           mrwidMain(event.target);
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         /*end*/
         if (
-          event.target.matches(".mr-layout[class*=mr-autoplay] .mr-item") ||
+          event.target.matches(".mr-layout[class*=mr-autoplay] > *:not(.mr-pagination):not(.mr-tabs) > *") ||
           event.target.matches(".mr-layout[class*=mr-autoplay] .mr-tab") ||
           event.target.matches(
             ".mr-layout[class*=mr-autoplay] .mr-pagination"
@@ -598,7 +598,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         /*itemoptions-hover*/
         const mrwid = event.target.querySelectorAll(
-          ".mr-layout.mr-hover > .mr-pages.active > .mr-item"
+          ".mr-layout.mr-hover > *:not(.mr-pagination):not(.mr-tabs).active > *"
         );
         if (mrwid) {
           for (id = 0; id < mrwid.length; id++) {
@@ -657,7 +657,7 @@ document.addEventListener("click", function (event) {
     mrwidThis.classList.add("open");
     event.stopPropagation();
   } else if (
-    event.target.matches(".mr-layout:not(.mr-hover) .mr-item") ||
+    event.target.matches(".mr-layout:not(.mr-hover) > *:not(.mr-pagination):not(.mr-tabs) > *") ||
     event.target.matches(".mr-layout:not(.mr-hover) .mr-item-container") ||
     event.target.matches(".mr-layout:not(.mr-hover) .mr-image") ||
     event.target.matches(".mr-layout:not(.mr-hover) .mr-title") ||
@@ -665,6 +665,12 @@ document.addEventListener("click", function (event) {
       ".mr-layout:not(.mr-hover) .mr-item:not(.active) .mr-content, .mr-layout:not(.mr-hover) .mr-item:not(.active) .mr-content *"
     )
   ) {
+    if(event.target.matches(".mrdev-block > .mr-layout:not(.mr-hover) > *:not(.mr-pagination):not(.mr-tabs) > *:not(.mr-item)")) {
+      const mrDevBlockItems = event.target.parentNode.children;
+      for (id = 0; id < mrDevBlockItems.length; id++) {
+        mrDevBlockItems[id].classList.add("mr-item");
+      }
+    }
     const mrwidThis = event.target;
     mrwidMain(mrwidThis);
     event.stopPropagation();

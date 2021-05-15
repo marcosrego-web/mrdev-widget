@@ -1,0 +1,485 @@
+.mr-layout:not(.mr-0perlinecontent) > .wp-block-columns > .wp-block-column {
+	flex-basis: inherit;
+    flex-grow: inherit;
+}
+.widget_mr_categories .widgettitle,
+.widget_yng_developer .widgettitle {
+	text-transform: capitalize;
+}
+.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > * {
+	margin-left: 0;
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *:not(.active):before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 15;
+	display: block;
+	cursor: pointer;
+}
+.mr-layout:not(.mr-hover)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *:not(.active),
+.mr-layout:not(.mr-hover):not(.mr-donotinactive)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *.active {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+.mr-layout:not(.mr-hover):not(.mr-donotinactive)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *.active
+	*.mr-content {
+	cursor: initial;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+	.mr-theme > .mr-layout.mr-windowheight > *:not(.mr-pagination):not(.mr-tabs),
+	.mr-theme
+		> .mr-layout.mr-expandactive.mr-0perlinecontent
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> *.active
+		> .mr-item-container {
+		overflow-y: scroll !important;
+		-webkit-overflow-scrolling: touch !important;
+	}
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs).inactive:not(.active) {
+	display: none;
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-content
+	> .mr-meta {
+	flex-flow: column;
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-content
+	> .mr-meta {
+	align-items: baseline;
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-content
+	> .mr-meta
+	> .mr-date,
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-content
+	> .mr-meta
+	> .mr-author,
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-content
+	> .mr-meta
+	.mr-categories,
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-content
+	> .mr-meta
+	.mr-tags {
+	margin-right: 0.25rem;
+}
+.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > *,
+.mr-theme > .mr-layout .mr-title,
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-content
+	> .mr-meta,
+.mr-theme > .mr-layout .mr-content,
+.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
+	position: relative;
+}
+.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
+	text-align: center;
+	cursor: pointer;
+	word-break: break-word;
+}
+.mr-theme > .mr-layout > .mr-tabs > .mr-tab.active {
+	font-weight: 700;
+}
+.mr-theme
+	> .mr-layout:not(.mr-nonetheme):not(.mr-windowheight)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *,
+.mr-theme
+	> .mr-layout:not(.mr-nonetheme):not(.mr-windowheight)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container {
+	min-height: 100%;
+}
+.mr-tab {
+	width: 100%;
+}
+@media only screen and (orientation: portrait) {
+	.mr-theme
+		> .mr-layout:not(.mr-landscape).mr-0perlinecontent
+		> *:not(.mr-pagination):not(.mr-tabs) {
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 960px) {
+	.mr-theme > .mr-layout.mr-11perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > *,
+	.mr-theme > .mr-layout.mr-5perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > *,
+	.mr-theme > .mr-layout.mr-7perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > *,
+	.mr-theme > .mr-layout.mr-9perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > * {
+		width: 33.333333%;
+	}
+	.mr-theme > .mr-layout.mr-10perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > *,
+	.mr-theme > .mr-layout.mr-12perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > *,
+	.mr-theme > .mr-layout.mr-4perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > *,
+	.mr-theme > .mr-layout.mr-6perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > *,
+	.mr-theme > .mr-layout.mr-8perlinecontent > *:not(.mr-pagination):not(.mr-tabs) > * {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 47.94em) and (orientation: landscape) {
+	.mr-theme
+		> .mr-layout:not(.mr-portrait):not(.mr-2perlinecontent):not(.mr-1perlinecontent)
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> * {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 47.94em) and (orientation: portrait) {
+	.mr-theme
+		> .mr-layout:not(.mr-landscape):not(.mr-1perlinecontent)
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> * {
+		width: 100%;
+	}
+}
+/*tabsposition-tabstop*/
+.mr-theme > .mr-layout.mr-tabs:not(.mr-tabsleft):not(.mr-tabsright) > .mr-tabs {
+	width: 100%;
+}
+/*tabsposition-tabsleft*/
+.mr-theme > .mr-layout.mr-tabsleft > *:not(.mr-pagination):not(.mr-tabs) {
+	flex-grow: 1;
+	max-width: 75%;
+}
+.mr-theme > .mr-layout.mr-tabsleft > .mr-tabs {
+	width: 25%;
+	flex-wrap: wrap;
+}
+/*tabsposition-tabsright*/
+.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
+	order: 9999;
+}
+.mr-theme > .mr-layout.mr-tabsright > *:not(.mr-pagination):not(.mr-tabs) {
+	flex-grow: 1;
+	max-width: 75%;
+}
+.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
+	width: 25%;
+	flex-wrap: wrap;
+}
+/*tabsposition-tabsbottom*/
+.mr-theme > .mr-layout.mr-tabsbottom > .mr-tabs {
+	order: 9999;
+}
+/*pagetoggles-4*/
+.mr-theme
+	> .mr-layout
+	> .mr-pagination
+	> button.mr-scroll:not(.mr-below):not(.loading) {
+	opacity: 0;
+}
+.mr-theme > .mr-layout > .mr-pagination > button.mr-scroll.loading span {
+	font-size: 0;
+}
+.mr-theme > .mr-layout > .mr-pagination > button.mr-scroll.loading span:after {
+	content: "...";
+	font-size: initial;
+}
+/*pagetoggles-3*/
+.mr-theme > .mr-layout > .mr-pagination > .mr-below.loading span {
+	font-size: 0;
+}
+.mr-theme > .mr-layout > .mr-pagination > .mr-below.loading span:after {
+	content: "...";
+	font-size: initial;
+}
+/*itemimage*/
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-image {
+	overflow: hidden;
+	min-height: 4.5rem;
+	margin: 0;
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-image
+	img {
+	object-fit: cover;
+	width: auto;
+}
+.mr-theme
+	> .mr-layout:not(.mr-thumbnail)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container {
+	overflow: hidden;
+}
+.mr-theme
+	> .mr-layout:not(.mr-thumbnail)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-image {
+	background-position-x: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.mr-theme
+	> .mr-layout:not(.mr-parallax)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-image {
+	background-position-y: center;
+}
+.mr-theme
+	> .mr-layout
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container
+	> .mr-image
+	figcaption {
+	display: inherit;
+}
+/*imagestype-parallax*/
+@media (prefers-reduced-motion: no-preference) {
+	.mr-theme
+		> .mr-layout.mr-parallax
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> *
+		> .mr-item-container
+		> .mr-image {
+		background-attachment: fixed;
+	}
+	_:-ms-lang(x),
+	_:-webkit-full-screen,
+	.mr-theme
+		> .mr-layout.mr-parallax
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> *
+		> .mr-item-container
+		> .mr-image {
+		background-attachment: scroll !important;
+		background-position-x: center !important;
+		background-position-y: center !important;
+	}
+	@supports (-webkit-overflow-scrolling: touch) {
+		.mr-theme
+			> .mr-layout.mr-parallax
+			> *:not(.mr-pagination):not(.mr-tabs)
+			> *
+			> .mr-item-container
+			> .mr-image {
+			background-attachment: scroll !important;
+			background-position-x: center !important;
+			background-position-y: center !important;
+		}
+	}
+}
+/*globallayoutoptions-windowheight*/
+.mr-theme > .mr-layout.mr-windowheight > *:not(.mr-pagination):not(.mr-tabs) {
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.mr-theme
+	> .mr-layout:not(.mr-list).mr-windowheight.mr-0perlinecontent
+	> *:not(.mr-pagination):not(.mr-tabs) {
+	overflow: auto;
+}
+.mr-theme
+	> .mr-layout.mr-windowheight
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *,
+.mr-theme
+	> .mr-layout.mr-windowheight
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container {
+	height: 100%;
+}
+.mr-theme
+	> .mr-layout.mr-windowheight
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container {
+	overflow: hidden;
+}
+.mr-theme
+	> .mr-layout.mr-windowheight
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *.active
+	> .mr-item-container {
+	overflow: auto;
+}
+/*perpage*/
+.mr-theme > .mr-layout > .mr-pagination {
+	order: 9999;
+}
+.mr-theme > .mr-layout > .mr-pagination > .mr-radios > .mr-radio,
+.mr-theme
+	> .mr-layout
+	> .mr-pagination
+	> *:not(.mr-pagination):not(.mr-tabs)elect {
+	cursor: pointer;
+}
+/*globallayoutoptions-contentpagination*/
+.mr-theme > .mr-layout.mr-contentpagination {
+	position: relative;
+}
+.mr-theme
+	> .mr-layout.mr-contentpagination
+	> .mr-pagination
+	> *:not(.mr-pagination):not(.mr-tabs)elect,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-radios,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-below {
+	position: absolute;
+	z-index: 2;
+}
+.mr-theme
+	> .mr-layout.mr-contentpagination
+	> .mr-pagination
+	> *:not(.mr-pagination):not(.mr-tabs)elect,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-radios,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-below {
+	width: 100%;
+}
+.mr-layout.mr-contentpagination
+	> .mr-pagination
+	> *:not(.mr-pagination):not(.mr-tabs)elect {
+	bottom: 3.5rem;
+}
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-radios {
+	text-align: center;
+	bottom: 2rem;
+}
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-below {
+	bottom: 0;
+}
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-next,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-prev {
+	position: absolute;
+	top: 50%;
+	float: inherit;
+	z-index: 3;
+}
+.mr-layout.mr-contentpagination
+	> .mr-pagination
+	> *:not(.mr-pagination):not(.mr-tabs)elect,
+.mr-layout.mr-contentpagination > .mr-pagination > .mr-radios,
+.mr-layout.mr-contentpagination > .mr-pagination > .mr-below,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-prev {
+	left: 0;
+}
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-next {
+	right: 0;
+}
+.mr-theme
+	> .mr-layout.mr-contentpagination
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *
+	> .mr-item-container {
+	padding: 0 1.75rem 4rem 1.75rem;
+}
+@media only screen and (max-width: 59.94em) and (min-width: 47.94em) {
+	.mr-theme
+		> .mr-layout.mr-contentpagination
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> *
+		> .mr-item-container {
+		padding-bottom: 5.4rem;
+	}
+}
+@media only screen and (max-width: 47.94em) and (orientation: landscape) {
+	.mr-theme
+		> .mr-layout.mr-contentpagination
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> *
+		> .mr-item-container {
+		padding-bottom: 7.4rem;
+	}
+}
+@media only screen and (max-width: 47.94em) and (orientation: portrait) {
+	.mr-theme
+		> .mr-layout.mr-contentpagination
+		> *:not(.mr-pagination):not(.mr-tabs)
+		> *
+		> .mr-item-container {
+		padding-bottom: 7.4rem;
+	}
+}
+/*globallayoutoptions-hideinactives*/
+.mr-theme
+	> .mr-layout.mr-hideinactives:not(.mr-onlyactives)
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *.inactive {
+	display: none;
+}
+/*globallayoutoptions-onlyactives*/
+.mr-theme
+	> .mr-layout.mr-onlyactives
+	> *:not(.mr-pagination):not(.mr-tabs)
+	> *:not(.active) {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	padding: 0;
+}
+/*end*/
