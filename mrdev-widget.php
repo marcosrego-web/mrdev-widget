@@ -3,13 +3,13 @@
 	Plugin Name: Mr.Dev.'s Widget
 	Plugin URI:  https://marcosrego.com/web-en/mrdev-en
 	Description: Mr.Dev. is your provider of developing tools! He gives you a powerful widget to display your content with many customizable layouts and options.
-	Version:     0.9.422
+	Version:     0.9.423
 	Author:      Marcos Rego
 	Author URI:  https://marcosrego.com
 	License:     GNU Public License version 2 or later
 	License URI: http://www.gnu.org/licenseses/gpl-2.0.html
 */
-/* Copyright 2020 Mr.Dev. by Marcos Rego (email : web@marcosrego.com)
+/* Copyright 2021 Mr.Dev. by Marcos Rego (email : web@marcosrego.com)
 Mr.Dev. is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
@@ -40,7 +40,7 @@ if(is_admin()) {
 	if (strpos($url,'taxonomy=category') !== false || strpos($url,'taxonomy=post_tag') !== false) {
 		function mrdev_add_style() {
 			/*---Corrects the Visual Term Description Editor appearing above the categories list in some resolutions---*/
-			wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.422');
+			wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.423');
 		}
 		add_action('admin_footer', 'mrdev_add_style');
 	}
@@ -48,7 +48,7 @@ if(is_admin()) {
 // Disables the block editor from managing widgets in the Gutenberg plugin.
 add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 // Disables the block editor from managing widgets.
-add_filter( 'wp_use_widgets_block_editor', '__return_false' );
+add_filter( 'use_widgets_block_editor', '__return_false' );
 /*---Clean Mr.Dev. - Widget HTML cache on post save---*/
 function mrdev_cleanwidgetcache() {
 	$cached_html_files = glob(WP_CONTENT_DIR.'/cache/mrdev/widgets/html/*');
@@ -192,57 +192,57 @@ class mr_developer extends WP_Widget {
 			Only load one javascript to avoid repetition and conflicts.
 			*/
 			if(!wp_script_is('mrdev_utils','registered')) {
-				wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/js/utils.js',array(),'0.9.422');
+				wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/js/utils.js',array(),'0.9.423');
 			}
 			if(file_exists($cache_dir.'/mrdev/widgets/js/'.$widgetid.'.js') && !wp_script_is('mrdev_widget')) {
-				wp_enqueue_script( 'mrdev_widget', $cache_url.'/mrdev/widgets/js/'.$widgetid.'.js', array('mrdev_utils'),'0.9.422');
+				wp_enqueue_script( 'mrdev_widget', $cache_url.'/mrdev/widgets/js/'.$widgetid.'.js', array('mrdev_utils'),'0.9.423');
 			} else {
 				wp_deregister_script('mrdev_widget');
-				wp_enqueue_script( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/widget.js', array('mrdev_utils'),'0.9.422');
+				wp_enqueue_script( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/widget.js', array('mrdev_utils'),'0.9.423');
 			}
 			/*
 			Check if a css cache exists. If not then load the entire theme's css.
 			A css file with the theme's name is mandatory.
 			*/
 			if(!wp_style_is('mrdev_utils','registered')) {
-				wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils.css',array(),'0.9.422');
+				wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils.css',array(),'0.9.423');
 			}
 			/*global ${"mrdev_breakpoint_desktop"},${"mrdev_breakpoint_tablet"},${"mrdev_breakpoint_phone"};
 			if(!wp_style_is('mrdev_utils_desktop','registered')) {
 				if(empty(${"mrdev_breakpoint_desktop"})) {
 					${"mrdev_breakpoint_desktop"} = '(min-width: 1200px) and (max-width: 100vw)';
 				}
-				wp_register_style( 'mrdev_utils_desktop', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-desktop.css',array(),'0.9.422',${"mrdev_breakpoint_desktop"});
+				wp_register_style( 'mrdev_utils_desktop', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-desktop.css',array(),'0.9.423',${"mrdev_breakpoint_desktop"});
 			}
 			if(!wp_style_is('mrdev_utils_tablet','registered')) {
 				if(empty(${"mrdev_breakpoint_tablet"})) {
 					${"mrdev_breakpoint_tablet"} = '(min-width: 768px) and (max-width: 959px)';
 				}
-				wp_register_style( 'mrdev_utils_tablet', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-tablet.css',array(),'0.9.422',${"mrdev_breakpoint_tablet"});
+				wp_register_style( 'mrdev_utils_tablet', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-tablet.css',array(),'0.9.423',${"mrdev_breakpoint_tablet"});
 			}
 			if(!wp_style_is('mrdev_utils_phone','registered')) {
 				if(empty(${"mrdev_breakpoint_phone"})) {
 					${"mrdev_breakpoint_phone"} = '(min-width: 0px) and (max-width: 767px)';
 				}
-				wp_register_style( 'mrdev_utils_phone', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-phone.css',array(),'0.9.422',${"mrdev_breakpoint_phone"});
+				wp_register_style( 'mrdev_utils_phone', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-phone.css',array(),'0.9.423',${"mrdev_breakpoint_phone"});
 			}*/
 			if(file_exists($cache_dir.'/mrdev/widgets/css/'.$widgetid.'.css')) {
-				wp_enqueue_style( $widgetid.'_css', $cache_url.'/mrdev/widgets/css/'.$widgetid.'.css', array('mrdev_utils'),'0.9.422');
+				wp_enqueue_style( $widgetid.'_css', $cache_url.'/mrdev/widgets/css/'.$widgetid.'.css', array('mrdev_utils'),'0.9.423');
 			} else {
-				wp_enqueue_style( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/widget.css', array('mrdev_utils'),'0.9.422');
+				wp_enqueue_style( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/widget.css', array('mrdev_utils'),'0.9.423');
 				if($theme == "default") {
 					//Official Themes
-					wp_enqueue_style( 'mrdev_'.$theme.'_css', plugin_dir_url( __DIR__ ).'mrdev-widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.422');
+					wp_enqueue_style( 'mrdev_'.$theme.'_css', plugin_dir_url( __DIR__ ).'mrdev-widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.423');
 				} else if($theme == "none") {
 				} else {
 					//Custom Themes
-					wp_enqueue_style( 'mrdev_'.$theme.'_css', get_home_url().'/wp-content/themes/mrdev/widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.422');
+					wp_enqueue_style( 'mrdev_'.$theme.'_css', get_home_url().'/wp-content/themes/mrdev/widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.423');
 				}
 				/*
 				Custom CSS
 				*/
 				if(file_exists($cache_dir.'/mrdev/widgets/css/'.$widgetid.'_custom.css')) {
-					wp_enqueue_style( $widgetid.'_customcss', $cache_url.'/mrdev/widgets/css/'.$widgetid.'_custom.css','0.9.422');
+					wp_enqueue_style( $widgetid.'_customcss', $cache_url.'/mrdev/widgets/css/'.$widgetid.'_custom.css','0.9.423');
 				}
 			}
 			echo __( $content, 'mr_developer' );
@@ -305,7 +305,7 @@ class mr_developer extends WP_Widget {
 		} else {
 			$advanced_access = 'Allowed';
 		}
-		wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.422');
+		wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.423');
 		?>
 		<div class="mr-admin">
 		<p class="mr-section"><a href="https://marcosrego.com/web-en/mrdev-en/" target="_blank">
@@ -1046,7 +1046,7 @@ class mr_developer extends WP_Widget {
 				wp_enqueue_script('wplink');
 				wp_enqueue_script( 'media-upload' );
 				wp_enqueue_media();
-				wp_enqueue_script( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/admin.js', array('jquery'),'0.9.422');
+				wp_enqueue_script( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/admin.js', array('jquery'),'0.9.423');
 			?>
 			</div>
 			<?php
