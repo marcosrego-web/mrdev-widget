@@ -806,13 +806,13 @@
 	padding-top: 0;
 	padding-bottom: 0;
 }
-.mr-theme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item, .mr-theme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item > .mr-item-container {
+.mr-theme.mr-defaulttheme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item, .mr-theme.mr-defaulttheme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item > .mr-item-container {
 	height: 100%;
 }
-.mr-theme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item > .mr-item-container {
+.mr-theme.mr-defaulttheme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item > .mr-item-container {
 	overflow: hidden;
 }
-.mr-theme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item.active > .mr-item-container {
+.mr-theme.mr-defaulttheme .mr-layout.mr-windowheight.mr-revealactive > .mr-pages > .mr-item.active > .mr-item-container {
 	overflow: initial;
 	min-height: 100%;
 }

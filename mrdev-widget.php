@@ -3,13 +3,13 @@
 	Plugin Name: Mr.Dev.'s Widget
 	Plugin URI:  https://marcosrego.com/web-en/mrdev-en
 	Description: Mr.Dev. is your provider of developing tools! He gives you a powerful widget to display your content with many customizable layouts and options.
-	Version:     0.9.42
+	Version:     0.9.425
 	Author:      Marcos Rego
 	Author URI:  https://marcosrego.com
 	License:     GNU Public License version 2 or later
 	License URI: http://www.gnu.org/licenseses/gpl-2.0.html
 */
-/* Copyright 2020 Mr.Dev. by Marcos Rego (email : web@marcosrego.com)
+/* Copyright 2021 Mr.Dev. by Marcos Rego (email : web@marcosrego.com)
 Mr.Dev. is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
@@ -28,18 +28,26 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	__FILE__,
 	'mrdev-widget'
 );
-$myUpdateChecker->setAuthentication('effa8d004dd339ff5a1b00fade69f3d6ac635496');
-$myUpdateChecker->setBranch('master');
+global $mrdev_config_betatest;
+if($mrdev_config_betatest === 1) {
+	$myUpdateChecker->setBranch('develop');
+} else {
+	$myUpdateChecker->setBranch('master');
+}
 if(is_admin()) {
 	$url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	if (strpos($url,'taxonomy=category') !== false || strpos($url,'taxonomy=post_tag') !== false) {
 		function mrdev_add_style() {
 			/*---Corrects the Visual Term Description Editor appearing above the categories list in some resolutions---*/
-			wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.42');
+			wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.425');
 		}
 		add_action('admin_footer', 'mrdev_add_style');
 	}
 }
+// Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+// Disables the block editor from managing widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
 /*---Clean Mr.Dev. - Widget HTML cache on post save---*/
 function mrdev_cleanwidgetcache() {
 	$cached_html_files = glob(WP_CONTENT_DIR.'/cache/mrdev/widgets/html/*');
@@ -167,7 +175,6 @@ class mr_developer extends WP_Widget {
 				$customcss = htmlspecialchars($instance['customcss']);
 				$lastactivedetails = htmlspecialchars($instance['lastactivedetails']);
 				$getpluginsettings = get_option('mrdev-widget-options');
-				$content = '';
 				if($theme == "default") {
 					include plugin_dir_path( __DIR__ ).'mrdev-widget/themes/'.$theme.'/index.php';
 				} else if($theme == "none") {
@@ -183,35 +190,58 @@ class mr_developer extends WP_Widget {
 			Check if a Javascript cache exists. If not then load the entire javascript.
 			Only load one javascript to avoid repetition and conflicts.
 			*/
-			wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/utils.js',array(),'0.9.40');
+			if(!wp_script_is('mrdev_utils','registered')) {
+				wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/js/utils.js',array(),'0.9.425');
+			}
 			if(file_exists($cache_dir.'/mrdev/widgets/js/'.$widgetid.'.js') && !wp_script_is('mrdev_widget')) {
-				wp_enqueue_script( 'mrdev_widget', $cache_url.'/mrdev/widgets/js/'.$widgetid.'.js', array('mrdev_utils'),'0.9.40');
+				wp_enqueue_script( 'mrdev_widget', $cache_url.'/mrdev/widgets/js/'.$widgetid.'.js', array('mrdev_utils'),'0.9.425');
 			} else {
 				wp_deregister_script('mrdev_widget');
-				wp_enqueue_script( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/widget.js', array('mrdev_utils'),'0.9.40');
+				wp_enqueue_script( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/widget.js', array('mrdev_utils'),'0.9.425');
 			}
 			/*
 			Check if a css cache exists. If not then load the entire theme's css.
 			A css file with the theme's name is mandatory.
 			*/
-			wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/utils.css',array(),'0.9.40');
+			if(!wp_style_is('mrdev_utils','registered')) {
+				wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils.css',array(),'0.9.425');
+			}
+			/*global ${"mrdev_breakpoint_desktop"},${"mrdev_breakpoint_tablet"},${"mrdev_breakpoint_phone"};
+			if(!wp_style_is('mrdev_utils_desktop','registered')) {
+				if(empty(${"mrdev_breakpoint_desktop"})) {
+					${"mrdev_breakpoint_desktop"} = '(min-width: 1200px) and (max-width: 100vw)';
+				}
+				wp_register_style( 'mrdev_utils_desktop', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-desktop.css',array(),'0.9.425',${"mrdev_breakpoint_desktop"});
+			}
+			if(!wp_style_is('mrdev_utils_tablet','registered')) {
+				if(empty(${"mrdev_breakpoint_tablet"})) {
+					${"mrdev_breakpoint_tablet"} = '(min-width: 768px) and (max-width: 959px)';
+				}
+				wp_register_style( 'mrdev_utils_tablet', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-tablet.css',array(),'0.9.425',${"mrdev_breakpoint_tablet"});
+			}
+			if(!wp_style_is('mrdev_utils_phone','registered')) {
+				if(empty(${"mrdev_breakpoint_phone"})) {
+					${"mrdev_breakpoint_phone"} = '(min-width: 0px) and (max-width: 767px)';
+				}
+				wp_register_style( 'mrdev_utils_phone', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-phone.css',array(),'0.9.425',${"mrdev_breakpoint_phone"});
+			}*/
 			if(file_exists($cache_dir.'/mrdev/widgets/css/'.$widgetid.'.css')) {
-				wp_enqueue_style( $widgetid.'_css', $cache_url.'/mrdev/widgets/css/'.$widgetid.'.css', array('mrdev_utils'),'0.9.40');
+				wp_enqueue_style( $widgetid.'_css', $cache_url.'/mrdev/widgets/css/'.$widgetid.'.css', array('mrdev_utils'),'0.9.425');
 			} else {
-				wp_enqueue_style( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/widget.css', array('mrdev_utils'),'0.9.40');
+				wp_enqueue_style( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/widget.css', array('mrdev_utils'),'0.9.425');
 				if($theme == "default") {
 					//Official Themes
-					wp_enqueue_style( 'mrdev_'.$theme.'_css', plugin_dir_url( __DIR__ ).'mrdev-widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.40');
+					wp_enqueue_style( 'mrdev_'.$theme.'_css', plugin_dir_url( __DIR__ ).'mrdev-widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.425');
 				} else if($theme == "none") {
 				} else {
 					//Custom Themes
-					wp_enqueue_style( 'mrdev_'.$theme.'_css', get_home_url().'/wp-content/themes/mrdev/widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.40');
+					wp_enqueue_style( 'mrdev_'.$theme.'_css', get_home_url().'/wp-content/themes/mrdev/widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.425');
 				}
 				/*
 				Custom CSS
 				*/
 				if(file_exists($cache_dir.'/mrdev/widgets/css/'.$widgetid.'_custom.css')) {
-					wp_enqueue_style( $widgetid.'_customcss', $cache_url.'/mrdev/widgets/css/'.$widgetid.'_custom.css','0.9.40');
+					wp_enqueue_style( $widgetid.'_customcss', $cache_url.'/mrdev/widgets/css/'.$widgetid.'_custom.css','0.9.425');
 				}
 			}
 			echo __( $content, 'mr_developer' );
@@ -274,7 +304,7 @@ class mr_developer extends WP_Widget {
 		} else {
 			$advanced_access = 'Allowed';
 		}
-		wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.42');
+		wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.425');
 		?>
 		<div class="mr-admin">
 		<p class="mr-section"><a href="https://marcosrego.com/web-en/mrdev-en/" target="_blank">
@@ -846,7 +876,7 @@ class mr_developer extends WP_Widget {
 							<option value="slide" id="slide"', $pagetransition == 'slide' ? ' selected="selected"' : '', '>Slide</option>
 							<option value="scale" id="scale"', $pagetransition == 'scale' ? ' selected="selected"' : '', '>Scale</option>
 							<option value="zoom" id="zoom"', $pagetransition == 'zoom' ? ' selected="selected"' : '', '>Zoom</option>
-							<option value="none" id="none"', $pagetransition == 'none' ? ' selected="selected"' : '', '>None</option>';
+							<option value="notransition" id="notransition"', $pagetransition == 'notransition' ? ' selected="selected"' : '', '>None</option>';
 						?>
 					</select><br>
 			</p>
@@ -990,6 +1020,7 @@ class mr_developer extends WP_Widget {
 					<p>
 					If you need more features then you need <strong>Mr.Dev.'s Framework</strong>:</p>
 					<ol>
+					<li><strong>Hide widget sections</strong> to specific users or roles.</li>
 					<li>Insert widgets inside the content section on posts/pages/categories using <strong>blocks, classic editor button or shortcodes</strong>.</li>
 					<li><strong>More content types</strong> such as pages, tags and some compatibility with other third-party registered terms/post-types (such as events and products).</li>
 					<li><strong>Override the content</strong> of each item per widget, without affecting the original content.</li>
@@ -1002,8 +1033,7 @@ class mr_developer extends WP_Widget {
 					<li>Choose a <strong>fallback image</strong>.</li>
 					<li>Choose <strong>images maximum size</strong> together with <strong>srcset and native lazyload</strong>.</li>
 					<li><strong>More options for tabs</strong> such as Categories and Tags.</li>
-					<li><strong>Hide widget sections</strong> to specific users or roles.</li>
-					<li>Other <strong>Advanced</strong> options such as preload pages, content HTML cache, generate CSS and JS minifying it per widget, choose the titles tag (h2, h3, h4, p, etc), load polyfill on IE and add custom classes to the bottom link.</li>
+					<li>Other <strong>Advanced</strong> options such as preload pages, content HTML cache, generate CSS and JS minifying it per widget, choose the titles tag (h2, h3, h4, p, etc), load polyfill for IE compatibility and add custom classes.</li>
 					</ol>
 					<p>And more...</p>
 					<p><a class="button button-primary" href="https://marcosrego.com/en/web-en/mrdev-en/" target="_blank">Get Mr.Dev.'s Framework</a></p>
@@ -1015,17 +1045,10 @@ class mr_developer extends WP_Widget {
 				wp_enqueue_script('wplink');
 				wp_enqueue_script( 'media-upload' );
 				wp_enqueue_media();
-				wp_enqueue_script( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/admin.js', array('jquery'),'0.9.42');
+				wp_enqueue_script( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/admin.js', array('jquery'),'0.9.425');
 			?>
 			</div>
 			<?php
-			if(!get_option('mrdev-config-options')['config_iepolyfill'] || get_option('mrdev-config-options')['config_iepolyfill'] != 1) {
-				/*Polyfill for Vanilla Javascript on Internet Explorer*/
-				wp_register_script( 'mrdev_polyfill', '//polyfill.io/v3/polyfill.min.js');
-				wp_script_add_data( 'mrdev_polyfill', 'crossorigin' , 'anonymous' );
-				wp_enqueue_script( 'mrdev_polyfill' );
-			}
-		
 	}
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
