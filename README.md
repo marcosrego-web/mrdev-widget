@@ -8,7 +8,7 @@ He brings you a widget to display your categories and posts from Wordpress with 
 The widget initially comes with the themes ‘None’ and ‘Default’.
 'Default' has many layouts to choose from including a custom layout to choose each option. It's also possible to develop new custom themes. This is perfect if you already have a website and want to display your content in a new way, while keeping the look & feel of your current template.
 
-#### [See Demo](https://marcosrego.com/en/web-en/mrwidgets-themes/)
+#### [See Demo](https://marcosrego.com/mrdev-widget-module-themes/)
 
 ##
 ### Do you need more features?
@@ -31,9 +31,9 @@ If you need more features then you need to add **Mr.Dev.'s Framework**:
 
 And more...
 
-#### [Features Comparison](https://marcosrego.com/en/web-en/mrplugins-features/)
+#### [Features Comparison](https://marcosrego.com/mrdev-widget-module-features/)
 
-#### [Get Mr.Dev.'s Framework](https://marcosrego.com/en/web-en/mrdev-en/)
+#### [Get Mr.Dev.'s Framework](https://marcosrego.com/development/mrdev-widget/)
 
 ##
 ### Additional information
