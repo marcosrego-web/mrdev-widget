@@ -902,7 +902,7 @@ defined('ABSPATH') or die;
 																	$pagenumber = $pagecount;
 																}
 																$content .= '<ul class="pageid-'.$pagecount.' mr-'.$perline.'perline mr-page'.$pagenumber.' mr-pages mr-'.$perpage.'perpage mr-nobullets mr-'.$pagetransition.''.($pagenumber == 1 ? " active" : " inactive").'" style="-ms-flex-order: '.$pagenumber.'; -webkit-order: '.$pagenumber.'; order: '.$pagenumber.';">';
-																if($pagenumber != 1 && !in_array(1,$technical)) {
+																if($pagenumber != 1 && in_array(1,$technical)) {
 																	$content .= '<noscript class="mr-noscript">';
 																}
 															}
@@ -914,7 +914,7 @@ defined('ABSPATH') or die;
 															if(in_array( "subitemactive", $globallayoutoptions ) && $itemparent > 0) {
 															} else {
 																if($itemcount == $perpage) {
-																	if($pagenumber != 1 && !in_array(1,$technical)) {
+																	if($pagenumber != 1 && in_array(1,$technical)) {
 																		$content .= '</noscript>';
 																	}
 																	$content .= '</ul>';
@@ -938,7 +938,7 @@ defined('ABSPATH') or die;
 								if($is_admin === true) {
 									echo '</div><hr>';
 								} else {
-									if($pagecount != 1 && !in_array(1,$technical)) {
+									if($pagecount != 1 && in_array(1,$technical)) {
 										$content .= '</noscript>';
 									}
 									$content .= '</ul>';

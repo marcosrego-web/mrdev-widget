@@ -3,7 +3,7 @@
 	Plugin Name: Mr.Dev.'s Widget
 	Plugin URI:  https://marcosrego.com/web-en/mrdev-en
 	Description: Mr.Dev. is your provider of developing tools! He gives you a powerful widget to display your content with many customizable layouts and options.
-	Version:     0.9.426
+	Version:     0.9.427
 	Author:      Marcos Rego
 	Author URI:  https://marcosrego.com
 	License:     GNU Public License version 2 or later
@@ -1033,7 +1033,7 @@ class mr_developer extends WP_Widget {
 					<li>Choose a <strong>fallback image</strong>.</li>
 					<li>Choose <strong>images maximum size</strong> together with <strong>srcset and native lazyload</strong>.</li>
 					<li><strong>More options for tabs</strong> such as Categories and Tags.</li>
-					<li>Other <strong>Advanced</strong> options such as preload pages, content HTML cache, generate CSS and JS minifying it per widget, choose the titles tag (h2, h3, h4, p, etc), load polyfill for IE compatibility and add custom classes.</li>
+					<li>Other <strong>Advanced</strong> options such as lazyloading pages, content HTML cache, generate CSS and JS minifying it per widget, choose the titles tag (h2, h3, h4, p, etc), load polyfill for IE compatibility and add custom classes.</li>
 					</ol>
 					<p>And more...</p>
 					<p><a class="button button-primary" href="https://marcosrego.com/en/web-en/mrdev-en/" target="_blank">Get Mr.Dev.'s Framework</a></p>
