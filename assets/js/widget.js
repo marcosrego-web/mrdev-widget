@@ -235,11 +235,10 @@ function mrwidChangePage(currentElement, mrwidLayout, mrwidPage) {
       mrwidLayout.classList.add("mr-transitionleft");
     }
     if (mrwidLayout.querySelector(".mr-page" + mrwidPage + " .mr-noscript")) {
-      mrwidLayout.querySelector(
-        ".mr-page" + mrwidPage
-      ).innerHTML = mrwidLayout.querySelector(
-        ".mr-page" + mrwidPage + " .mr-noscript"
-      ).textContent;
+      mrwidLayout.querySelector(".mr-page" + mrwidPage).innerHTML =
+        mrwidLayout.querySelector(
+          ".mr-page" + mrwidPage + " .mr-noscript"
+        ).textContent;
     }
     const mrwidPages = mrwidLayout.querySelectorAll(".mr-pages");
     const mrwidActivePages = mrwidLayout.querySelectorAll(".mr-pages.active");
@@ -326,9 +325,8 @@ function mrwidBelow(currentElement) {
     currentElement.style.classList.remove("mr-hide");
   } else {
     if (mrwidNewPage.querySelector(".mr-noscript")) {
-      mrwidNewPage.innerHTML = mrwidNewPage.querySelector(
-        ".mr-noscript"
-      ).textContent;
+      mrwidNewPage.innerHTML =
+        mrwidNewPage.querySelector(".mr-noscript").textContent;
     }
     mrwidNewPage.classList.remove("inactive");
     mrwidNewPage.classList.add("active");
@@ -382,7 +380,9 @@ function mrAutoPlay() {
 }
 function mrwidTabs() {
   /*tabs*/
-  const mrwidItemsTabs = document.querySelectorAll(".mr-tabs .mr-tab");
+  const mrwidItemsTabs = document.querySelectorAll(
+    ".mrdev-widget .mr-tabs .mr-tab"
+  );
   if (mrwidItemsTabs) {
     for (id = 0; id < mrwidItemsTabs.length; id++) {
       const mrwidItemTab = mrwidItemsTabs[id];
@@ -474,7 +474,9 @@ function mrwidTabsChange(mrwidThis) {
 }
 document.addEventListener("DOMContentLoaded", function () {
   /*pagetoggles-1*/
-  const mrSelects = document.querySelectorAll(".mr-pagination .mr-pageselect");
+  const mrSelects = document.querySelectorAll(
+    ".mrdev-widget .mr-pagination .mr-pageselect"
+  );
   if (mrSelects) {
     for (id = 0; id < mrSelects.length; id++) {
       mrSelects[id].selectedIndex = "0";
@@ -514,7 +516,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /*end*/
   /*itemoptions-url*/
   window.addEventListener("popstate", function () {
-    const checkattr = document.querySelectorAll(".mr-url .mr-item[url]");
+    const checkattr = document.querySelectorAll(
+      ".mrdev-widget .mr-url .mr-item[url]"
+    );
     if (checkattr) {
       for (id = 0; id < checkattr.length; id++) {
         const getWidUrl = checkattr[id].getAttribute("url");
@@ -533,7 +537,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   /*end*/
   /*itemoptions-windowheight*/
-  const mrwidsHeightFix = document.querySelectorAll(".mr-windowheight");
+  const mrwidsHeightFix = document.querySelectorAll(
+    ".mrdev-widget .mr-windowheight"
+  );
   if (mrwidsHeightFix) {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", vh + "px");
@@ -567,13 +573,15 @@ document.addEventListener("DOMContentLoaded", function () {
         /*itemoptions-hover*/
         if (
           event.target.matches(
-            ".mr-layout.mr-hover > .mr-pages.active > .mr-item"
+            ".mrdev-widget .mr-layout.mr-hover > .mr-pages.active > .mr-item"
           )
         ) {
           mrwidMain(event.target);
           event.stopPropagation();
         } else if (
-          event.target.matches(".mr-layout.mr-hover > .mr-tabs > .mr-tab")
+          event.target.matches(
+            ".mrdev-widget .mr-layout.mr-hover > .mr-tabs > .mr-tab"
+          )
         ) {
           const mrwidThis = event.target;
           mrwidTabsChange(mrwidThis);
@@ -581,13 +589,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         /*end*/
         if (
-          event.target.matches(".mr-layout[class*=mr-autoplay] .mr-item") ||
-          event.target.matches(".mr-layout[class*=mr-autoplay] .mr-tab") ||
           event.target.matches(
-            ".mr-layout[class*=mr-autoplay] .mr-pagination"
+            ".mrdev-widget .mr-layout[class*=mr-autoplay] .mr-item"
           ) ||
-          event.target.matches(".mr-layout[class*=mr-autoplay] .mr-arrows") ||
-          event.target.matches(".mr-layout[class*=mr-autoplay] .mr-below")
+          event.target.matches(
+            ".mrdev-widget .mr-layout[class*=mr-autoplay] .mr-tab"
+          ) ||
+          event.target.matches(
+            ".mrdev-widget .mr-layout[class*=mr-autoplay] .mr-pagination"
+          ) ||
+          event.target.matches(
+            ".mrdev-widget .mr-layout[class*=mr-autoplay] .mr-arrows"
+          ) ||
+          event.target.matches(
+            ".mrdev-widget .mr-layout[class*=mr-autoplay] .mr-below"
+          )
         ) {
           event.target.closest(".mr-layout").classList.add("mr-hovering");
         }
@@ -625,7 +641,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("click", function (event) {
   if (
     event.target.matches(
-      '.mr-layout:not(.mr-hover) .mr-pages a[href]:not([href="#"]):not([href="javascript:void(0)"]):not([target="_blank"])'
+      '.mrdev-widget .mr-layout:not(.mr-hover) .mr-pages a[href]:not([href="#"]):not([href="javascript:void(0)"]):not([target="_blank"])'
     )
   ) {
     const mrwidNotThis = event.target
@@ -657,10 +673,12 @@ document.addEventListener("click", function (event) {
     mrwidThis.classList.add("open");
     event.stopPropagation();
   } else if (
-    event.target.matches(".mr-layout:not(.mr-hover) .mr-item") ||
-    event.target.matches(".mr-layout:not(.mr-hover) .mr-item-container") ||
-    event.target.matches(".mr-layout:not(.mr-hover) .mr-image") ||
-    event.target.matches(".mr-layout:not(.mr-hover) .mr-title") ||
+    event.target.matches(".mrdev-widget .mr-layout:not(.mr-hover) .mr-item") ||
+    event.target.matches(
+      ".mrdev-widget .mr-layout:not(.mr-hover) .mr-item-container"
+    ) ||
+    event.target.matches(".mrdev-widget .mr-layout:not(.mr-hover) .mr-image") ||
+    event.target.matches(".mrdev-widget .mr-layout:not(.mr-hover) .mr-title") ||
     event.target.matches(
       ".mr-layout:not(.mr-hover) .mr-item:not(.active) .mr-content, .mr-layout:not(.mr-hover) .mr-item:not(.active) .mr-content *"
     )
@@ -669,34 +687,38 @@ document.addEventListener("click", function (event) {
     mrwidMain(mrwidThis);
     event.stopPropagation();
   } /*tabs*/ else if (
-    event.target.matches(".mr-tabs .mr-tab") &&
-    !event.target.matches(".mr-layout.mr-donotinactive .mr-tabs .mr-tab.active")
+    event.target.matches(".mrdev-widget .mr-tabs .mr-tab") &&
+    !event.target.matches(
+      ".mrdev-widget .mr-layout.mr-donotinactive .mr-tabs .mr-tab.active"
+    )
   ) {
     const mrwidThis = event.target;
     mrwidTabsChange(mrwidThis);
     event.stopPropagation();
-  } /*end*/ /*pagetoggles-0*/ else if (event.target.matches(".mr-next")) {
+  } /*end*/ /*pagetoggles-0*/ else if (
+    event.target.matches(".mrdev-widget .mr-next")
+  ) {
     const currentElement = event.target;
     if (!currentElement.classList.contains("loading")) {
       currentElement.classList.add("loading");
       mrwidNext(currentElement);
     }
     event.stopPropagation();
-  } else if (event.target.matches(".mr-next span")) {
+  } else if (event.target.matches(".mrdev-widget .mr-next span")) {
     const currentElement = event.target.parentElement;
     if (!currentElement.classList.contains("loading")) {
       currentElement.classList.add("loading");
       mrwidNext(currentElement);
     }
     event.stopPropagation();
-  } else if (event.target.matches(".mr-prev")) {
+  } else if (event.target.matches(".mrdev-widget .mr-prev")) {
     const currentElement = event.target;
     if (!currentElement.classList.contains("loading")) {
       currentElement.classList.add("loading");
       mrwidPrev(currentElement);
     }
     event.stopPropagation();
-  } else if (event.target.matches(".mr-prev span")) {
+  } else if (event.target.matches(".mrdev-widget .mr-prev span")) {
     const currentElement = event.target.parentElement;
     if (!currentElement.classList.contains("loading")) {
       currentElement.classList.add("loading");
@@ -704,7 +726,7 @@ document.addEventListener("click", function (event) {
     }
     event.stopPropagation();
   } /*end*/ /*pagetoggles-2*/ else if (
-    event.target.matches(".mr-radio:not([checked])")
+    event.target.matches(".mrdev-widget .mr-radio:not([checked])")
   ) {
     const currentElement = event.target;
     if (!currentElement.classList.contains("loading")) {
@@ -714,7 +736,9 @@ document.addEventListener("click", function (event) {
       mrwidChangePage(currentElement, mrwidLayout, mrwidPage);
     }
     event.stopPropagation();
-  } /*end*/ /*pagetoggles-1*/ else if (event.target.matches(".mr-pageselect")) {
+  } /*end*/ /*pagetoggles-1*/ else if (
+    event.target.matches(".mrdev-widget .mr-pageselect")
+  ) {
     event.target.addEventListener("change", function (event) {
       const currentElement = event.target;
       if (!currentElement.classList.contains("loading")) {
@@ -725,22 +749,8 @@ document.addEventListener("click", function (event) {
       }
     });
     event.stopPropagation();
-  } /*end*/ /*pagetoggles-3*/ else if (event.target.matches(".mr-below")) {
-    const currentElement = event.target;
-    if (!currentElement.classList.contains("loading")) {
-      currentElement.classList.add("loading");
-      mrwidBelow(currentElement);
-    }
-    event.stopPropagation();
-  } else if (event.target.matches(".mr-below span")) {
-    const currentElement = event.target.parentElement;
-    if (!currentElement.classList.contains("loading")) {
-      currentElement.classList.add("loading");
-      mrwidBelow(currentElement);
-    }
-    event.stopPropagation();
-  } /*end*/ /*pagetoggles-4*/ else if (
-    event.target.matches("button.mr-scroll")
+  } /*end*/ /*pagetoggles-3*/ else if (
+    event.target.matches(".mrdev-widget .mr-below")
   ) {
     const currentElement = event.target;
     if (!currentElement.classList.contains("loading")) {
@@ -748,7 +758,23 @@ document.addEventListener("click", function (event) {
       mrwidBelow(currentElement);
     }
     event.stopPropagation();
-  } else if (event.target.matches("button.mr-scroll span")) {
+  } else if (event.target.matches(".mrdev-widget .mr-below span")) {
+    const currentElement = event.target.parentElement;
+    if (!currentElement.classList.contains("loading")) {
+      currentElement.classList.add("loading");
+      mrwidBelow(currentElement);
+    }
+    event.stopPropagation();
+  } /*end*/ /*pagetoggles-4*/ else if (
+    event.target.matches(".mrdev-widget button.mr-scroll")
+  ) {
+    const currentElement = event.target;
+    if (!currentElement.classList.contains("loading")) {
+      currentElement.classList.add("loading");
+      mrwidBelow(currentElement);
+    }
+    event.stopPropagation();
+  } else if (event.target.matches(".mrdev-widget button.mr-scroll span")) {
     const currentElement = event.target.parentElement;
     if (!currentElement.classList.contains("loading")) {
       currentElement.classList.add("loading");
@@ -759,7 +785,7 @@ document.addEventListener("click", function (event) {
 });
 /*pagetoggles-5*/
 document.addEventListener("keydown", function (event) {
-  const mrwidKeyboard = document.querySelectorAll(".mr-keyboard");
+  const mrwidKeyboard = document.querySelectorAll(".mrdev-widget .mr-keyboard");
   if (mrwidKeyboard) {
     for (id = 0; id < mrwidKeyboard.length; id++) {
       const currentElement = mrwidKeyboard[id];
@@ -826,7 +852,9 @@ let mrScrollTimer;
 let mrInitst;
 window.addEventListener("scroll", function (event) {
   /*pagetoggles-4*/
-  const mrwidsScroll = document.querySelectorAll("button.mr-scroll");
+  const mrwidsScroll = document.querySelectorAll(
+    ".mrdev-widget button.mr-scroll"
+  );
   if (mrwidsScroll) {
     clearTimeout(mrScrollTimer);
     mrScrollTimer = setTimeout(function () {

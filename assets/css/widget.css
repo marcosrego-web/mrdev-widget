@@ -2,10 +2,10 @@
 .widget_yng_developer .widgettitle {
   text-transform: capitalize;
 }
-.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > * {
+.mrdev-widget.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > * {
   margin-left: 0;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *:not(.active):before {
@@ -19,10 +19,12 @@
   display: block;
   cursor: pointer;
 }
-.mr-layout:not(.mr-hover)
+.mrdev-widget.mr-theme
+  > .mr-layout:not(.mr-hover)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *:not(.active),
-.mr-layout:not(.mr-hover):not(.mr-donotinactive)
+.mrdev-widget.mr-theme
+  > .mr-layout:not(.mr-hover):not(.mr-donotinactive)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *.active {
   cursor: pointer;
@@ -35,8 +37,10 @@
   cursor: initial;
 }
 @supports (-webkit-overflow-scrolling: touch) {
-  .mr-theme > .mr-layout.mr-windowheight > *:not(.mr-pagination):not(.mr-tabs),
-  .mr-theme
+  .mrdev-widget.mr-theme
+    > .mr-layout.mr-windowheight
+    > *:not(.mr-pagination):not(.mr-tabs),
+  .mrdev-widget.mr-theme
     > .mr-layout.mr-expandactive
     > *:not(.mr-pagination):not(.mr-tabs).mr-0perline
     > *.active
@@ -45,12 +49,12 @@
     -webkit-overflow-scrolling: touch !important;
   }
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs).inactive:not(.active) {
   display: none;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -59,7 +63,7 @@
   > .mr-meta {
   flex-flow: column;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -68,7 +72,7 @@
   > .mr-meta {
   align-items: baseline;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -76,7 +80,7 @@
   > .mr-content
   > .mr-meta
   > .mr-date,
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -84,7 +88,7 @@
   > .mr-content
   > .mr-meta
   > .mr-author,
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -92,7 +96,7 @@
   > .mr-content
   > .mr-meta
   .mr-categories,
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -102,32 +106,32 @@
   .mr-tags {
   margin-right: 0.25rem;
 }
-.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > *,
-.mr-theme > .mr-layout .mr-title,
-.mr-theme
+.mrdev-widget.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > *,
+.mrdev-widget.mr-theme > .mr-layout .mr-title,
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
   > .mr-item-container
   > .mr-content
   > .mr-meta,
-.mr-theme > .mr-layout .mr-content,
-.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
+.mrdev-widget.mr-theme > .mr-layout .mr-content,
+.mrdev-widget.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
   position: relative;
 }
-.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
+.mrdev-widget.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
   text-align: center;
   cursor: pointer;
   word-break: break-word;
 }
-.mr-theme > .mr-layout > .mr-tabs > .mr-tab.active {
+.mrdev-widget.mr-theme > .mr-layout > .mr-tabs > .mr-tab.active {
   font-weight: 700;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout:not(.mr-none):not(.mr-windowheight)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *,
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout:not(.mr-none):not(.mr-windowheight)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -138,29 +142,56 @@
   width: 100%;
 }
 @media only screen and (orientation: portrait) {
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout:not(.mr-landscape)
     > *:not(.mr-pagination):not(.mr-tabs).mr-0perline {
     flex-direction: column;
   }
 }
 @media only screen and (max-width: 960px) {
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-11perline > *,
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-5perline > *,
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-7perline > *,
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-9perline > * {
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-11perline
+    > *,
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-5perline
+    > *,
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-7perline
+    > *,
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-9perline
+    > * {
     width: 33.333333%;
   }
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-10perline > *,
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-12perline > *,
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-4perline > *,
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-6perline > *,
-  .mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs).mr-8perline > * {
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-10perline
+    > *,
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-12perline
+    > *,
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-4perline
+    > *,
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-6perline
+    > *,
+  .mrdev-widget.mr-theme
+    > .mr-layout
+    > *:not(.mr-pagination):not(.mr-tabs).mr-8perline
+    > * {
     width: 50%;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: landscape) {
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout:not(.mr-portrait)
     > *:not(.mr-pagination):not(.mr-tabs):not(.mr-2perline):not(.mr-1perline)
     > * {
@@ -168,7 +199,7 @@
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: portrait) {
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout:not(.mr-landscape)
     > *:not(.mr-pagination):not(.mr-tabs):not(.mr-1perline)
     > * {
@@ -176,58 +207,76 @@
   }
 }
 /*tabsposition-tabstop*/
-.mr-theme > .mr-layout.mr-tabs:not(.mr-tabsleft):not(.mr-tabsright) > .mr-tabs {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-tabs:not(.mr-tabsleft):not(.mr-tabsright)
+  > .mr-tabs {
   width: 100%;
 }
 /*tabsposition-tabsleft*/
-.mr-theme > .mr-layout.mr-tabsleft > *:not(.mr-pagination):not(.mr-tabs) {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-tabsleft
+  > *:not(.mr-pagination):not(.mr-tabs) {
   flex-grow: 1;
   max-width: 75%;
 }
-.mr-theme > .mr-layout.mr-tabsleft > .mr-tabs {
+.mrdev-widget.mr-theme > .mr-layout.mr-tabsleft > .mr-tabs {
   width: 25%;
   flex-wrap: wrap;
 }
 /*tabsposition-tabsright*/
-.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
+.mrdev-widget.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
   order: 9999;
 }
-.mr-theme > .mr-layout.mr-tabsright > *:not(.mr-pagination):not(.mr-tabs) {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-tabsright
+  > *:not(.mr-pagination):not(.mr-tabs) {
   flex-grow: 1;
   max-width: 75%;
 }
-.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
+.mrdev-widget.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
   width: 25%;
   flex-wrap: wrap;
 }
 /*tabsposition-tabsbottom*/
-.mr-theme > .mr-layout.mr-tabsbottom > .mr-tabs {
+.mrdev-widget.mr-theme > .mr-layout.mr-tabsbottom > .mr-tabs {
   order: 9999;
 }
 /*pagetoggles-4*/
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > .mr-pagination
   > button.mr-scroll:not(.mr-below):not(.loading) {
   opacity: 0;
 }
-.mr-theme > .mr-layout > .mr-pagination > button.mr-scroll.loading span {
+.mrdev-widget.mr-theme
+  > .mr-layout
+  > .mr-pagination
+  > button.mr-scroll.loading
+  span {
   font-size: 0;
 }
-.mr-theme > .mr-layout > .mr-pagination > button.mr-scroll.loading span:after {
+.mrdev-widget.mr-theme
+  > .mr-layout
+  > .mr-pagination
+  > button.mr-scroll.loading
+  span:after {
   content: "...";
   font-size: initial;
 }
 /*pagetoggles-3*/
-.mr-theme > .mr-layout > .mr-pagination > .mr-below.loading span {
+.mrdev-widget.mr-theme > .mr-layout > .mr-pagination > .mr-below.loading span {
   font-size: 0;
 }
-.mr-theme > .mr-layout > .mr-pagination > .mr-below.loading span:after {
+.mrdev-widget.mr-theme
+  > .mr-layout
+  > .mr-pagination
+  > .mr-below.loading
+  span:after {
   content: "...";
   font-size: initial;
 }
 /*itemimage*/
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -237,7 +286,7 @@
   min-height: 4.5rem;
   margin: 0;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -247,14 +296,14 @@
   object-fit: cover;
   width: auto;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout:not(.mr-thumbnail)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
   > .mr-item-container {
   overflow: hidden;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout:not(.mr-thumbnail)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -266,7 +315,7 @@
   width: 100%;
   height: 100%;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -276,7 +325,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout:not(.mr-parallax)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -284,7 +333,7 @@
   > .mr-image {
   background-position-y: center;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -295,7 +344,7 @@
 }
 /*imagestype-parallax*/
 @media (prefers-reduced-motion: no-preference) {
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout.mr-parallax
     > *:not(.mr-pagination):not(.mr-tabs)
     > *
@@ -305,7 +354,7 @@
   }
   _:-ms-lang(x),
   _:-webkit-full-screen,
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout.mr-parallax
     > *:not(.mr-pagination):not(.mr-tabs)
     > *
@@ -316,7 +365,7 @@
     background-position-y: center !important;
   }
   @supports (-webkit-overflow-scrolling: touch) {
-    .mr-theme
+    .mrdev-widget.mr-theme
       > .mr-layout.mr-parallax
       > *:not(.mr-pagination):not(.mr-tabs)
       > *
@@ -329,36 +378,38 @@
   }
 }
 /*globallayoutoptions-windowheight*/
-.mr-theme > .mr-layout.mr-windowheight > *:not(.mr-pagination):not(.mr-tabs) {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-windowheight
+  > *:not(.mr-pagination):not(.mr-tabs) {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   overflow-x: hidden;
   overflow-y: auto;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout:not(.mr-list).mr-windowheight
   > *:not(.mr-pagination):not(.mr-tabs).mr-0perline {
   overflow: auto;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-windowheight
   > *:not(.mr-pagination):not(.mr-tabs)
   > *,
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-windowheight
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
   > .mr-item-container {
   height: 100%;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-windowheight
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
   > .mr-item-container {
   overflow: hidden;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-windowheight
   > *:not(.mr-pagination):not(.mr-tabs)
   > *.active
@@ -366,68 +417,107 @@
   overflow: auto;
 }
 /*perpage*/
-.mr-theme > .mr-layout > .mr-pagination {
+.mrdev-widget.mr-theme > .mr-layout > .mr-pagination {
   order: 9999;
 }
-.mr-theme > .mr-layout > .mr-pagination > .mr-radios > .mr-radio,
-.mr-theme
+.mrdev-widget.mr-theme > .mr-layout > .mr-pagination > .mr-radios > .mr-radio,
+.mrdev-widget.mr-theme
   > .mr-layout
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs)elect {
+  > *:not(.mr-pagination):not(.mr-tabs) {
   cursor: pointer;
 }
 /*globallayoutoptions-contentpagination*/
-.mr-theme > .mr-layout.mr-contentpagination {
+.mrdev-widget.mr-theme > .mr-layout.mr-contentpagination {
   position: relative;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs)elect,
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-radios,
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-below {
+  > *:not(.mr-pagination):not(.mr-tabs),
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-radios,
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-below {
   position: absolute;
   z-index: 2;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs)elect,
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-radios,
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-below {
+  > *:not(.mr-pagination):not(.mr-tabs),
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-radios,
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-below {
   width: 100%;
 }
-.mr-layout.mr-contentpagination
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs)elect {
+  > *:not(.mr-pagination):not(.mr-tabs) {
   bottom: 3.5rem;
 }
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-radios {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-radios {
   text-align: center;
   bottom: 2rem;
 }
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-below {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-below {
   bottom: 0;
 }
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-next,
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-prev {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-next,
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-prev {
   position: absolute;
   top: 50%;
   float: inherit;
   z-index: 3;
 }
-.mr-layout.mr-contentpagination
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs)elect,
-.mr-layout.mr-contentpagination > .mr-pagination > .mr-radios,
-.mr-layout.mr-contentpagination > .mr-pagination > .mr-below,
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-prev {
+  > *:not(.mr-pagination):not(.mr-tabs),
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-radios,
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-below,
+.mrdev-widget.mr-theme
+  > .mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-prev {
   left: 0;
 }
-.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-next {
+.mrdev-widget.mr-theme
+  > .mr-layout.mr-contentpagination
+  > .mr-pagination
+  > .mr-next {
   right: 0;
 }
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-contentpagination
   > *:not(.mr-pagination):not(.mr-tabs)
   > *
@@ -435,7 +525,7 @@
   padding: 0 1.75rem 4rem 1.75rem;
 }
 @media only screen and (max-width: 59.94em) and (min-width: 47.94em) {
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout.mr-contentpagination
     > *:not(.mr-pagination):not(.mr-tabs)
     > *
@@ -444,7 +534,7 @@
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: landscape) {
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout.mr-contentpagination
     > *:not(.mr-pagination):not(.mr-tabs)
     > *
@@ -453,7 +543,7 @@
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: portrait) {
-  .mr-theme
+  .mrdev-widget.mr-theme
     > .mr-layout.mr-contentpagination
     > *:not(.mr-pagination):not(.mr-tabs)
     > *
@@ -462,14 +552,14 @@
   }
 }
 /*globallayoutoptions-hideinactives*/
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-hideinactives:not(.mr-onlyactives)
   > *:not(.mr-pagination):not(.mr-tabs)
   > *.inactive {
   display: none;
 }
 /*globallayoutoptions-onlyactives*/
-.mr-theme
+.mrdev-widget.mr-theme
   > .mr-layout.mr-onlyactives
   > *:not(.mr-pagination):not(.mr-tabs)
   > *:not(.active) {
