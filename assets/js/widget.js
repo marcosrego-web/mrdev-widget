@@ -383,7 +383,7 @@ function mrwidBelow(currentElement) {
 /*end*/
 function mrAutoPlay() {
   const mrwidsAutoPlay = document.querySelectorAll(
-    ".mr-layout[class*=mr-autoplay]"
+    ".mr-layout[class*=mr-widget-autoplay]"
   );
   if (mrwidsAutoPlay) {
     for (id = 0; id < mrwidsAutoPlay.length; id++) {
@@ -392,7 +392,7 @@ function mrAutoPlay() {
         .call(currentElement.classList)
         .toString();
       const mrwidAutoPlayClass = mrwidAutoPlayClasses.substring(
-        mrwidAutoPlayClasses.lastIndexOf("mr-autoplay") + 11,
+        mrwidAutoPlayClasses.lastIndexOf("mr-widget-autoplay") + 11,
         mrwidAutoPlayClasses.lastIndexOf("s")
       );
       if (!currentElement.classList.contains("mr-hovering")) {
@@ -575,21 +575,21 @@ document.addEventListener("DOMContentLoaded", function () {
   /*end*/
   /*autoplay*/
   const mrwidAutoPlay = document.querySelector(
-    ".mr-layout[class*=mr-autoplay]"
+    ".mr-layout[class*=mr-widget-autoplay]"
   );
   if (mrwidAutoPlay) {
     const mrwidAutoPlayClasses = [].slice
       .call(mrwidAutoPlay.classList)
       .toString();
     const mrwidAutoPlayClass = mrwidAutoPlayClasses.substring(
-      mrwidAutoPlayClasses.lastIndexOf("mr-autoplay") + 14,
+      mrwidAutoPlayClasses.lastIndexOf("mr-widget-autoplay") + 14,
       mrwidAutoPlayClasses.lastIndexOf("s")
     );
     setTimeout(mrAutoPlay, parseInt(mrwidAutoPlayClass) * 1000);
   }
   /*end*/
   const mrwidsHover = document.querySelectorAll(
-    ".mr-layout.mr-hover,.mr-layout[class*=mr-autoplay]"
+    ".mr-layout.mr-hover,.mr-layout[class*=mr-widget-autoplay]"
   );
   if (mrwidsHover) {
     for (id = 0; id < mrwidsHover.length; id++) {
@@ -614,17 +614,19 @@ document.addEventListener("DOMContentLoaded", function () {
         /*end*/
         if (
           event.target.matches(
-            ".mr-layout[class*=mr-autoplay] .mr-widget-item"
+            ".mr-layout[class*=mr-widget-autoplay] .mr-widget-item"
           ) ||
           event.target.matches(
-            ".mr-layout[class*=mr-autoplay] .mr-widget-tab"
+            ".mr-layout[class*=mr-widget-autoplay] .mr-widget-tab"
           ) ||
           event.target.matches(
-            ".mr-layout[class*=mr-autoplay] .mr-pagination"
+            ".mr-layout[class*=mr-widget-autoplay] .mr-pagination"
           ) ||
-          event.target.matches(".mr-layout[class*=mr-autoplay] .mr-arrows") ||
           event.target.matches(
-            ".mr-layout[class*=mr-autoplay] .mr-widget-below"
+            ".mr-layout[class*=mr-widget-autoplay] .mr-widget-arrows"
+          ) ||
+          event.target.matches(
+            ".mr-layout[class*=mr-widget-autoplay] .mr-widget-below"
           )
         ) {
           event.target.closest(".mr-layout").classList.add("mr-hovering");

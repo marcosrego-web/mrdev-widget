@@ -46,7 +46,7 @@ defined('ABSPATH') or die;
 					if($autoplay === 0) {
 						$autoplayclass = '';
 					} else if($autoplay > 0) {
-						$autoplayclass = ' mr-autoplay'.$autoplay."s mr-transitionright";
+						$autoplayclass = ' mr-widget-autoplay'.$autoplay."s mr-transitionright";
 					}
 					/*
 					Images size inline styles
@@ -951,10 +951,10 @@ defined('ABSPATH') or die;
 								if($pagecount > 1) {
 									$content .= '<div class="mr-pagination '.((in_array(5, $pagetoggles))?'mr-keyboard':"").'">';
 									if( in_array( 0, $pagetoggles ) || empty($pagetoggles) && $autoplay === 0) {
-										$content .= '<button class="mr-arrows mr-widget-prev"><span><</span></button>';
+										$content .= '<button class="mr-widget-arrows mr-widget-prev"><span><</span></button>';
 									}
 									if( in_array( 0, $pagetoggles ) || empty($pagetoggles) && $autoplay === 0) {
-										$content .= '<button class="mr-arrows mr-widget-next"><span>></span></button>';
+										$content .= '<button class="mr-widget-arrows mr-widget-next"><span>></span></button>';
 									}
 									$hideelement = null;
 									if( empty( $pagetoggles ) || !in_array( 1, $pagetoggles )) {
