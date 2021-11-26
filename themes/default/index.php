@@ -50,7 +50,7 @@ if(is_admin()) {
 		<strong>Items per line overriden</strong><br>
 		The current layout will force the items per line number on the 'Pagination' section. Customize or change layout if you need changes on that option to take effect.</p>
 	</div>
-	<div class="mr-notice perpageov" <?php if($theme == 'default' && $layout == 'Slider' || $theme == 'default' && $layout == 'Menu') { } else { echo 'style="display:none"'; } ?>>
+	<div class="mr-notice pagesov" <?php if($theme == 'default' && $layout == 'Slider' || $theme == 'default' && $layout == 'Menu') { } else { echo 'style="display:none"'; } ?>>
 		<p><strong>Items per page overriden</strong><br>
 		The current layout will force the items per page number on the 'Pagination' section. Customize or change layout if you need changes on that option to take effect.</p>
 	</div>

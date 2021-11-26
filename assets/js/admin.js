@@ -74,10 +74,10 @@ document.addEventListener("click", function (event) {
     }
   } else if (event.target.matches(".mr-admin .mr-editoverride")) {
     mrSlideDown(event.target.nextElementSibling);
-    event.target.closest(".mr-widget-item").classList.add("mr-openedpanel");
+    event.target.closest(".mr-item").classList.add("mr-openedpanel");
   } else if (event.target.matches(".mr-admin .mr-closeeditoverride")) {
     mrSlideUp(event.target.closest(".mr-overridepanel"));
-    event.target.closest(".mr-widget-item").classList.remove("mr-openedpanel");
+    event.target.closest(".mr-item").classList.remove("mr-openedpanel");
   } else if (event.target.matches(".mr-themes")) {
     event.target.addEventListener("change", function (event) {
       mrSlideUp(
@@ -106,14 +106,10 @@ document.addEventListener("click", function (event) {
           .querySelector(".mr-saveexcludeinclude")
       );
       mrSlideUp(
-        event.target
-          .closest(".mr-admin")
-          .querySelector(".mr-widget-itemscontainer")
+        event.target.closest(".mr-admin").querySelector(".mr-itemscontainer")
       );
       mrSlideUp(
-        event.target
-          .closest(".mr-admin")
-          .querySelector(".mr-widget-itemsnumber")
+        event.target.closest(".mr-admin").querySelector(".mr-itemsnumber")
       );
       mrSlideUp(
         event.target.closest(".mr-admin").querySelector(".mr-parentscontainer")
@@ -160,7 +156,7 @@ document.addEventListener("click", function (event) {
         );
       }
     });
-  } else if (event.target.matches(".mr-widget-itemimage")) {
+  } else if (event.target.matches(".mr-itemimage")) {
     event.target.addEventListener("change", function (event) {
       if (event.target.value != 9) {
         mrSlideDown(
@@ -212,29 +208,23 @@ document.addEventListener("click", function (event) {
         );
       }
     });
-  } else if (event.target.matches(".mr-widget-itemstitleinput")) {
+  } else if (event.target.matches(".mr-itemstitleinput")) {
     event.target.addEventListener("change", function (event) {
       if (event.target.value != 1) {
         mrSlideDown(
-          event.target
-            .closest(".mr-admin")
-            .querySelector(".mr-widget-itemstitlemax")
+          event.target.closest(".mr-admin").querySelector(".mr-itemstitlemax")
         );
       } else {
         mrSlideUp(
-          event.target
-            .closest(".mr-admin")
-            .querySelector(".mr-widget-itemstitlemax")
+          event.target.closest(".mr-admin").querySelector(".mr-itemstitlemax")
         );
       }
     });
-  } else if (event.target.matches(".mr-widget-itemdescinput")) {
+  } else if (event.target.matches(".mr-itemdescinput")) {
     event.target.addEventListener("change", function (event) {
       if (event.target.value != 1) {
         mrSlideDown(
-          event.target
-            .closest(".mr-admin")
-            .querySelector(".mr-widget-itemdescmax")
+          event.target.closest(".mr-admin").querySelector(".mr-itemdescmax")
         );
         var textoverrides = event.target
           .closest(".mr-admin")
@@ -244,9 +234,7 @@ document.addEventListener("click", function (event) {
         }
       } else {
         mrSlideUp(
-          event.target
-            .closest(".mr-admin")
-            .querySelector(".mr-widget-itemdescmax")
+          event.target.closest(".mr-admin").querySelector(".mr-itemdescmax")
         );
         var textoverrides = event.target
           .closest(".mr-admin")
@@ -280,7 +268,7 @@ document.addEventListener("click", function (event) {
         );
       }
     });
-  } else if (event.target.matches(".mr-widget-itemsdate")) {
+  } else if (event.target.matches(".mr-itemsdate")) {
     event.target.addEventListener("change", function (event) {
       if (event.target.value != 0) {
         var dateoverrides = event.target
@@ -298,7 +286,7 @@ document.addEventListener("click", function (event) {
         }
       }
     });
-  } else if (event.target.matches(".mr-widget-itemsauthor")) {
+  } else if (event.target.matches(".mr-itemsauthor")) {
     event.target.addEventListener("change", function (event) {
       if (event.target.value != 0) {
         var authoroverrides = event.target
