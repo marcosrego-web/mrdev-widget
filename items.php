@@ -901,7 +901,7 @@ defined('ABSPATH') or die;
 																} else {
 																	$pagenumber = $pagecount;
 																}
-																$content .= '<ul class="pageid-'.$pagecount.' mr-'.$perline.'perline mr-widget-page'.$pagenumber.' mr-widget-pages mr-'.$perpage.'perpage mr-nobullets mr-'.$pagetransition.''.($pagenumber == 1 ? " active" : " inactive").'" style="-ms-flex-order: '.$pagenumber.'; -webkit-order: '.$pagenumber.'; order: '.$pagenumber.';">';
+																$content .= '<ul class="pageid-'.$pagecount.' mr-'.$perline.'perline mr-widget-page'.$pagenumber.' mr-widget-pages mrwidget-'.$perpage.'perpage mr-nobullets mr-'.$pagetransition.''.($pagenumber == 1 ? " active" : " inactive").'" style="-ms-flex-order: '.$pagenumber.'; -webkit-order: '.$pagenumber.'; order: '.$pagenumber.';">';
 																if($pagenumber != 1 && in_array(1,$technical)) {
 																	$content .= '<noscript class="mr-noscript">';
 																}
