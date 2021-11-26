@@ -3,7 +3,7 @@
 	Plugin Name: Mr.Dev.'s Widget
 	Plugin URI:  https://marcosrego.com/web-en/mrdev-en
 	Description: Mr.Dev. is your provider of developing tools! He gives you a powerful widget to display your content with many customizable layouts and options.
-	Version:     0.9.427
+	Version:     0.9.429
 	Author:      Marcos Rego
 	Author URI:  https://marcosrego.com
 	License:     GNU Public License version 2 or later
