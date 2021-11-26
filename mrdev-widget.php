@@ -3,7 +3,7 @@
 	Plugin Name: Mr.Dev.'s Widget
 	Plugin URI:  https://marcosrego.com/web-en/mrdev-en
 	Description: Mr.Dev. is your provider of developing tools! He gives you a powerful widget to display your content with many customizable layouts and options.
-	Version:     0.9.428
+	Version:     0.9.427
 	Author:      Marcos Rego
 	Author URI:  https://marcosrego.com
 	License:     GNU Public License version 2 or later
@@ -39,15 +39,15 @@ if(is_admin()) {
 	if (strpos($url,'taxonomy=category') !== false || strpos($url,'taxonomy=post_tag') !== false) {
 		function mrdev_add_style() {
 			/*---Corrects the Visual Term Description Editor appearing above the categories list in some resolutions---*/
-			wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.428');
+			wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.429');
 		}
 		add_action('admin_footer', 'mrdev_add_style');
 	}
 }
 // Disables the block editor from managing widgets in the Gutenberg plugin.
-//add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 // Disables the block editor from managing widgets.
-//add_filter( 'use_widgets_block_editor', '__return_false' );
+add_filter( 'use_widgets_block_editor', '__return_false' );
 /*---Clean Mr.Dev. - Widget HTML cache on post save---*/
 function mrdev_cleanwidgetcache() {
 	$cached_html_files = glob(WP_CONTENT_DIR.'/cache/mrdev/widgets/html/*');
@@ -191,65 +191,57 @@ class mr_developer extends WP_Widget {
 			Only load one javascript to avoid repetition and conflicts.
 			*/
 			if(!wp_script_is('mrdev_utils','registered')) {
-				wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/js/utils.js',array(),'0.9.428');
+				wp_register_script( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/js/utils.js',array(),'0.9.429');
 			}
 			if(file_exists($cache_dir.'/mrdev/widgets/js/'.$widgetid.'.js') && !wp_script_is('mrdev_widget')) {
-				$mrdev_widget_js_date = filemtime($cache_dir.'/mrdev/widgets/js/'.$widgetid.'.js');
-            	$mrdev_widget_js_version = '0.9.428'.'-'.$mrdev_widget_js_date;
-				wp_enqueue_script( 'mrdev_widget', $cache_url.'/mrdev/widgets/js/'.$widgetid.'.js', array('mrdev_utils'),$mrdev_widget_js_version);
+				wp_enqueue_script( 'mrdev_widget', $cache_url.'/mrdev/widgets/js/'.$widgetid.'.js', array('mrdev_utils'),'0.9.429');
 			} else {
 				wp_deregister_script('mrdev_widget');
-				wp_enqueue_script( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/widget.js', array('mrdev_utils'),'0.9.428');
+				wp_enqueue_script( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/widget.js', array('mrdev_utils'),'0.9.429');
 			}
 			/*
 			Check if a css cache exists. If not then load the entire theme's css.
 			A css file with the theme's name is mandatory.
 			*/
 			if(!wp_style_is('mrdev_utils','registered')) {
-				wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils.css',array(),'0.9.428');
+				wp_register_style( 'mrdev_utils', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils.css',array(),'0.9.429');
 			}
 			/*global ${"mrdev_breakpoint_desktop"},${"mrdev_breakpoint_tablet"},${"mrdev_breakpoint_phone"};
 			if(!wp_style_is('mrdev_utils_desktop','registered')) {
 				if(empty(${"mrdev_breakpoint_desktop"})) {
 					${"mrdev_breakpoint_desktop"} = '(min-width: 1200px) and (max-width: 100vw)';
 				}
-				wp_register_style( 'mrdev_utils_desktop', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-desktop.css',array(),'0.9.428',${"mrdev_breakpoint_desktop"});
+				wp_register_style( 'mrdev_utils_desktop', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-desktop.css',array(),'0.9.429',${"mrdev_breakpoint_desktop"});
 			}
 			if(!wp_style_is('mrdev_utils_tablet','registered')) {
 				if(empty(${"mrdev_breakpoint_tablet"})) {
 					${"mrdev_breakpoint_tablet"} = '(min-width: 768px) and (max-width: 959px)';
 				}
-				wp_register_style( 'mrdev_utils_tablet', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-tablet.css',array(),'0.9.428',${"mrdev_breakpoint_tablet"});
+				wp_register_style( 'mrdev_utils_tablet', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-tablet.css',array(),'0.9.429',${"mrdev_breakpoint_tablet"});
 			}
 			if(!wp_style_is('mrdev_utils_phone','registered')) {
 				if(empty(${"mrdev_breakpoint_phone"})) {
 					${"mrdev_breakpoint_phone"} = '(min-width: 0px) and (max-width: 767px)';
 				}
-				wp_register_style( 'mrdev_utils_phone', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-phone.css',array(),'0.9.428',${"mrdev_breakpoint_phone"});
+				wp_register_style( 'mrdev_utils_phone', plugin_dir_url( __DIR__ ).'mrdev-widget/tools/mr-utils/css/utils-phone.css',array(),'0.9.429',${"mrdev_breakpoint_phone"});
 			}*/
 			if(file_exists($cache_dir.'/mrdev/widgets/css/'.$widgetid.'.css')) {
-				$mrdev_widget_css_date = filemtime($cache_dir.'/mrdev/widgets/css/'.$widgetid.'.css');
-            	$mrdev_widget_css_version = '0.9.428'.'-'.$mrdev_widget_css_date;
-				wp_enqueue_style( $widgetid.'_css', $cache_url.'/mrdev/widgets/css/'.$widgetid.'.css', array('mrdev_utils'),$mrdev_widget_css_version);
+				wp_enqueue_style( $widgetid.'_css', $cache_url.'/mrdev/widgets/css/'.$widgetid.'.css', array('mrdev_utils'),'0.9.429');
 			} else {
-				wp_enqueue_style( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/widget.css', array('mrdev_utils'),'0.9.428');
+				wp_enqueue_style( 'mrdev_widget', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/widget.css', array('mrdev_utils'),'0.9.429');
 				if($theme == "default") {
 					//Official Themes
-					wp_enqueue_style( 'mrdev_'.$theme.'_css', plugin_dir_url( __DIR__ ).'mrdev-widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.428');
+					wp_enqueue_style( 'mrdev_'.$theme.'_css', plugin_dir_url( __DIR__ ).'mrdev-widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.429');
 				} else if($theme == "none") {
 				} else {
 					//Custom Themes
-					$mrdev_widget_custom_theme_date = filemtime(get_home_path().'/wp-content/themes/mrdev/widget/themes/'.$theme.'/'.$theme.'.css');
-            		$mrdev_widget_custom_theme_version = '0.9.428'.'-'.$mrdev_widget_custom_theme_date;
-					wp_enqueue_style( 'mrdev_'.$theme.'_css', get_home_url().'/wp-content/themes/mrdev/widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),$mrdev_widget_custom_theme_version);
+					wp_enqueue_style( 'mrdev_'.$theme.'_css', get_home_url().'/wp-content/themes/mrdev/widget/themes/'.$theme.'/'.$theme.'.css',array('mrdev_widget'),'0.9.429');
 				}
 				/*
 				Custom CSS
 				*/
 				if(file_exists($cache_dir.'/mrdev/widgets/css/'.$widgetid.'_custom.css')) {
-					$mrdev_widget_custom_css_date = filemtime($cache_dir.'/mrdev/widgets/css/'.$widgetid.'.css');
-            		$mrdev_widget_custom_css_version = '0.9.428'.'-'.$mrdev_widget_custom_css_date;
-					wp_enqueue_style( $widgetid.'_customcss', $cache_url.'/mrdev/widgets/css/'.$widgetid.'_custom.css',$mrdev_widget_custom_css_version);
+					wp_enqueue_style( $widgetid.'_customcss', $cache_url.'/mrdev/widgets/css/'.$widgetid.'_custom.css','0.9.429');
 				}
 			}
 			echo __( $content, 'mr_developer' );
@@ -312,7 +304,7 @@ class mr_developer extends WP_Widget {
 		} else {
 			$advanced_access = 'Allowed';
 		}
-		wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.428');
+		wp_enqueue_style( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/css/admin.css',array(),'0.9.429');
 		?>
 		<div class="mr-admin">
 		<p class="mr-section"><a href="https://marcosrego.com/web-en/mrdev-en/" target="_blank">
@@ -762,7 +754,7 @@ class mr_developer extends WP_Widget {
 						include trailingslashit(plugin_dir_path( __DIR__ ) ).'mrdev-framework_wp/settings/widget/parents.php';
 					}
 				?>
-				<details class="mr-itemscontainer" style="position: relative;" <?php if($contenttypes == 'custom_items') { echo 'active open'; } ?>>
+				<details class="mr-widget-itemscontainer" style="position: relative;" <?php if($contenttypes == 'custom_items') { echo 'active open'; } ?>>
 				<summary style='cursor:pointer;' title="See and customize the items considered by your selected options."><?php _e( 'Customize content' ); ?><br></summary>
 				<p class="mr-heading">	
 					<label  for="<?php echo $this->get_field_id( 'manualordering' ); ?>"><?php _e( 'Order:' ); ?></label>
@@ -786,7 +778,7 @@ class mr_developer extends WP_Widget {
 					?>
 				</div>
 				</details>
-				<p class="mr-itemsnumber"><input <?php if($mrdev_widget_content_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-pagination-input" id="<?php echo $this->get_field_id( 'itemsnumber' ); ?>" name="<?php echo $this->get_field_name( 'itemsnumber' ); ?>" type="number" <?php if($contenttypes == 'custom_items') { echo 'placeholder="1" min="1" title="Choose the number of items to display."'; } else { echo 'placeholder="∞" title="Choose the number of items to display. Leave empty or choose 0 to include all items."'; }?>  value="<?php if(!esc_attr( $itemsnumber )) {  } else { echo esc_attr( $itemsnumber ); } ?>" /> items</p>
+				<p class="mr-widget-itemsnumber"><input <?php if($mrdev_widget_content_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-pagination-input" id="<?php echo $this->get_field_id( 'itemsnumber' ); ?>" name="<?php echo $this->get_field_name( 'itemsnumber' ); ?>" type="number" <?php if($contenttypes == 'custom_items') { echo 'placeholder="1" min="1" title="Choose the number of items to display."'; } else { echo 'placeholder="∞" title="Choose the number of items to display. Leave empty or choose 0 to include all items."'; }?>  value="<?php if(!esc_attr( $itemsnumber )) {  } else { echo esc_attr( $itemsnumber ); } ?>" /> items</p>
 			</p>
 			</details>
 			<details class="appearanceDetails" <?php if(esc_attr( $lastactivedetails ) == 'appearanceDetails') { echo 'open="open"'; }  if($appearance_access == 'Denied') { echo 'style="display:none; opacity: 0.5;"'; } ?>>
@@ -845,7 +837,7 @@ class mr_developer extends WP_Widget {
 							<option value="12"', $perline == 12 ? ' selected="selected"' : '', '>12</option>';
 						?>
 			</select> items per line<br>
-			<input <?php if($pagination_access == 'Denied') { echo 'disabled'; } ?> class="mr-pagination-input mr-pages-input" type="number" id="<?php echo $this->get_field_id( 'perpage' ); ?>" name="<?php echo $this->get_field_name( 'perpage' ); ?>" type="text" placeholder="∞" title="Choose the number of items per page. Leave empty or type '0' to show all items on the same page." value="<?php if(esc_attr( $perpage ) == "" || esc_attr( $perpage ) <= 0) { } else { echo esc_attr( $perpage ); } ?>" /> items per page
+			<input <?php if($pagination_access == 'Denied') { echo 'disabled'; } ?> class="mr-pagination-input mr-widget-pages-input" type="number" id="<?php echo $this->get_field_id( 'perpage' ); ?>" name="<?php echo $this->get_field_name( 'perpage' ); ?>" type="text" placeholder="∞" title="Choose the number of items per page. Leave empty or type '0' to show all items on the same page." value="<?php if(esc_attr( $perpage ) == "" || esc_attr( $perpage ) <= 0) { } else { echo esc_attr( $perpage ); } ?>" /> items per page
 			</p>
 			<p>
 						<label  for="<?php echo $this->get_field_id( 'pagetoggles' ); ?>"><?php _e( 'Toggles:' ); ?></label> <br>
@@ -890,7 +882,7 @@ class mr_developer extends WP_Widget {
 			</p>
 			<p>
 			<label  for="<?php echo $this->get_field_id( 'autoplay' ); ?>"><?php _e( 'Autoplay:' ); ?></label><br>
-			<input <?php if($pagination_access == 'Denied') { echo 'disabled'; } ?> class="mr-pagination-input mr-autoplay-input" type="number" id="<?php echo $this->get_field_id( 'autoplay' ); ?>" name="<?php echo $this->get_field_name( 'autoplay' ); ?>" type="text" placeholder="∞" title="Choose how many seconds the autoplay should take to change page. Leave empty or choose '0' to turn off autoplay." value="<?php if(esc_attr( $autoplay ) == "" || esc_attr( $autoplay ) <= 0) { } else { echo esc_attr( $autoplay ); } ?>" /> seconds per page
+			<input <?php if($pagination_access == 'Denied') { echo 'disabled'; } ?> class="mr-pagination-input mr-widget-autoplay-input" type="number" id="<?php echo $this->get_field_id( 'autoplay' ); ?>" name="<?php echo $this->get_field_name( 'autoplay' ); ?>" type="text" placeholder="∞" title="Choose how many seconds the autoplay should take to change page. Leave empty or choose '0' to turn off autoplay." value="<?php if(esc_attr( $autoplay ) == "" || esc_attr( $autoplay ) <= 0) { } else { echo esc_attr( $autoplay ); } ?>" /> seconds per page
 			</p>
 			</details>
 			<details class="displayDetails" <?php if(esc_attr( $lastactivedetails ) == 'displayDetails') { echo 'open="open"'; } if($display_access == 'Denied') { echo 'style="display:none; opacity: 0.5;"'; } ?>>
@@ -911,7 +903,7 @@ class mr_developer extends WP_Widget {
 			</p>
 			<p style="margin-bottom: 0 !important;">
 				<label  for="<?php echo $this->get_field_id( 'itemimage' ); ?>"><?php _e( 'Images:' ); ?></label><br>
-				<select <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-itemimage" id="<?php echo $this->get_field_id('itemimage'); ?>" name="<?php echo $this->get_field_name('itemimage'); ?>">
+				<select <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-widget-itemimage" id="<?php echo $this->get_field_id('itemimage'); ?>" name="<?php echo $this->get_field_name('itemimage'); ?>">
 							<?php
 								echo '<option value="1"', $itemimage == 1 ? ' selected="selected"' : '', '>Item image</option>
 								<option value="8"', $itemimage == 8 ? ' selected="selected"' : '', '>Description first image</option>
@@ -938,14 +930,14 @@ class mr_developer extends WP_Widget {
 			</div>
 			<p>
 				<label  for="<?php echo $this->get_field_id( 'itemstitle' ); ?>"><?php _e( 'Titles:' ); ?></label><br>
-				<select <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-itemstitleinput" id="<?php echo $this->get_field_id('itemstitle'); ?>" name="<?php echo $this->get_field_name('itemstitle'); ?>">
+				<select <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-widget-itemstitleinput" id="<?php echo $this->get_field_id('itemstitle'); ?>" name="<?php echo $this->get_field_name('itemstitle'); ?>">
 							<?php
 								echo '<option value="0"', $itemstitle == 0 ? ' selected="selected"' : '', '>Linked item title</option>
 								<option value="2"', $itemstitle == 2 ? ' selected="selected"' : '', '>Item title</option>
 								<option value="1"', $itemstitle == 1 ? ' selected="selected"' : '', '>No title</option>';
 							?>
 						</select><br>
-				<span class="mr-itemstitlemax" <?php if($itemstitle && $itemstitle == 1) { echo 'style="display: none;"'; } ?>>	
+				<span class="mr-widget-itemstitlemax" <?php if($itemstitle && $itemstitle == 1) { echo 'style="display: none;"'; } ?>>	
 				<input <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-pagination-input" id="<?php echo $this->get_field_id( 'itemstitlemax' ); ?>" name="<?php echo $this->get_field_name( 'itemstitlemax' ); ?>" type="number" placeholder="∞" value="<?php if(!esc_attr( $itemstitlemax )) {  } else { echo esc_attr( $itemstitlemax ); } ?>" /> max. characters
 				</span>
 			</p>
@@ -956,7 +948,7 @@ class mr_developer extends WP_Widget {
 			?>
 			<p>
 				<label  for="<?php echo $this->get_field_id( 'itemdesc' ); ?>"><?php _e( 'Descriptions:' ); ?></label><br>
-				<select <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-itemdescinput" id="<?php echo $this->get_field_id('itemdesc'); ?>" name="<?php echo $this->get_field_name('itemdesc'); ?>">
+				<select <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-widget-itemdescinput" id="<?php echo $this->get_field_id('itemdesc'); ?>" name="<?php echo $this->get_field_name('itemdesc'); ?>">
 							<?php
 								echo '<option value="0"', $itemdesc == 0 ? ' selected="selected"' : '', '>Item description</option>
 								<option value="4"', $itemdesc == 4 ? ' selected="selected"' : '', '>Item excerpt</option>
@@ -965,7 +957,7 @@ class mr_developer extends WP_Widget {
 								<option value="1"', $itemdesc == 1 ? ' selected="selected"' : '', '>No description</option>';
 							?>
 						</select><br>
-				<span class="mr-itemdescmax" <?php if($itemdesc && $itemdesc == 1) { echo 'style="display: none;"'; } ?>>
+				<span class="mr-widget-itemdescmax" <?php if($itemdesc && $itemdesc == 1) { echo 'style="display: none;"'; } ?>>
 				<input <?php if($display_access == 'Denied') { echo 'disabled'; } ?> class="widefat mr-pagination-input" id="<?php echo $this->get_field_id( 'itemdescmax' ); ?>" name="<?php echo $this->get_field_name( 'itemdescmax' ); ?>" type="number" placeholder="∞" value="<?php if(!esc_attr( $itemdescmax )) {  } else { echo esc_attr( $itemdescmax ); } ?>" /> max. characters
 				</span>
 			</p>
@@ -1053,7 +1045,7 @@ class mr_developer extends WP_Widget {
 				wp_enqueue_script('wplink');
 				wp_enqueue_script( 'media-upload' );
 				wp_enqueue_media();
-				wp_enqueue_script( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/admin.js', array('jquery'),'0.9.428');
+				wp_enqueue_script( 'mrdevWidget_admin', plugin_dir_url( __DIR__ ).'mrdev-widget/assets/js/admin.js', array('jquery'),'0.9.429');
 			?>
 			</div>
 			<?php

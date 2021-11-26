@@ -1,321 +1,319 @@
-.mrdev-widget.mr-theme.mr-defaulttheme > .mr-layout .mr-item-container {
+.mr-theme.mr-defaulttheme > .mr-layout .mr-widget-item-container {
   position: relative;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme > .mr-layout > .mr-pages > .mr-item,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme > .mr-layout > .mr-widget-pages > .mr-widget-item,
+.mr-theme.mr-defaulttheme
   > .mr-layout
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-content,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-parallax)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image
   figcaption,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image
   figcaption
   small,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-tabs
+  > .mr-widget-tab,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab:after {
+  > .mr-widget-tabs
+  > .mr-widget-tab:after {
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-1perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-1perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-2perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-2perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-3perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-3perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-4perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-4perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-5perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-5perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-6perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-6perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-7perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-7perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-8perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-8perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-9perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-9perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-10perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-10perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-11perline
-  > .mr-item:not(.active),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-11perline
+  > .mr-widget-item:not(.active),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-windowheight)
-  > .mr-pages.mr-12perline
-  > .mr-item:not(.active) {
+  > .mr-widget-pages.mr-12perline
+  > .mr-widget-item:not(.active) {
   min-height: 4.5rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout
-  > .mr-pages
-  > .mr-item:not(.active) {
+  > .mr-widget-pages
+  > .mr-widget-item:not(.active) {
   z-index: 0;
   overflow: hidden;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout
-  > .mr-pages.mr-1perpage
-  > .mr-item:not(.active):before,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-1perpage
+  > .mr-widget-item:not(.active):before,
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-revealactive):not(.mr-expandactive)
-  > .mr-pages
-  > .mr-item:not(.active):before {
+  > .mr-widget-pages
+  > .mr-widget-item:not(.active):before {
   display: none;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-defaultstyle):not(.mr-expandactive)
-  > .mr-pages:not(.mr-1perline),
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages:not(.mr-1perline),
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-expandactive)
-  > .mr-tabs
-  > .mr-tabs {
+  > .mr-widget-tabs
+  > .mr-widget-tabs {
   margin: 0 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
-  > .mr-layout:not(.mr-defaultstyle):not(.mr-expandactive):not(.mr-tabsleft):not(.mr-tabsright)
-  > .mr-pages:not(.mr-1perline),
-.mrdev-widget.mr-theme.mr-defaulttheme
-  > .mr-layout:not(.mr-tabsleft):not(.mr-tabsright):not(.mr-expandactive)
-  > .mr-tabs
-  > .mr-tabs {
+.mr-theme.mr-defaulttheme
+  > .mr-layout:not(.mr-defaultstyle):not(.mr-expandactive):not(.mr-widget-tabsleft):not(.mr-widget-tabsright)
+  > .mr-widget-pages:not(.mr-1perline),
+.mr-theme.mr-defaulttheme
+  > .mr-layout:not(.mr-widget-tabsleft):not(.mr-widget-tabsright):not(.mr-expandactive)
+  > .mr-widget-tabs
+  > .mr-widget-tabs {
   width: 100%;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-expandactive)
-  > .mr-tabs
-  > .mr-tab {
+  > .mr-widget-tabs
+  > .mr-widget-tab {
   margin: var(--padding, 0.75rem);
 }
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll):not(.mr-windowheight).mr-portrait:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll):not(.mr-windowheight).mr-portrait.mr-landscape
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-revealactive
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container
     > .mr-content
     * {
     height: 100%;
   }
 }
 /*layoutoptions-defaultstyle*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active:before {
+  > .mr-widget-pages
+  > .mr-widget-item.active:before {
   display: none;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages.mr-0perline
-  > .mr-item {
+  > .mr-widget-pages.mr-0perline
+  > .mr-widget-item {
   overflow: hidden;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-title {
   margin: 0;
   z-index: 14;
   padding: var(--padding, 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle:not(.mr-verticaltitle)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-title {
   overflow-x: hidden;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-content,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image {
   padding: var(--padding, 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   .mr-meta {
   padding-bottom: calc(var(--padding, 0.75rem) * 2);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-content {
   position: relative;
   z-index: 2;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab:after {
+  > .mr-widget-tabs
+  > .mr-widget-tab:after {
   content: "";
   position: absolute;
   z-index: 1;
   border: 0.0625rem solid;
   opacity: 0.25;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-expandactive
-  > .mr-pages:not(.mr-1perline)
-  > .mr-item:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages:not(.mr-1perline)
+  > .mr-widget-item:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages.mr-1perline
-  > .mr-item:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages.mr-1perline
+  > .mr-widget-item:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab:after {
+  > .mr-widget-tabs
+  > .mr-widget-tab:after {
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   box-shadow: 0 0 0.3125rem 0 inset;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle:not(.mr-expandactive)
-  > .mr-pages:not(.mr-1perline)
-  > .mr-item:after {
+  > .mr-widget-pages:not(.mr-1perline)
+  > .mr-widget-item:after {
   top: var(--padding, 0.75rem);
   right: var(--padding, 0.75rem);
   bottom: var(--padding, 0.75rem);
   left: var(--padding, 0.75rem);
   box-shadow: 0 0 0.3125rem 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-expandactive)
-  > .mr-pages:not(.mr-1perline)
-  > .mr-item,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages:not(.mr-1perline)
+  > .mr-widget-item,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab {
+  > .mr-widget-tabs
+  > .mr-widget-tab {
   padding: var(--padding, 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-expandactive):not(.mr-revealactive)
-  > .mr-pages.mr-1perline
-  > .mr-item:not(:only-child) {
+  > .mr-widget-pages.mr-1perline
+  > .mr-widget-item:not(:only-child) {
   margin-top: var(--padding, 0.75rem);
   margin-bottom: var(--padding, 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev:focus,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-prev:focus,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next:focus,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-next:focus,
+.mr-theme.mr-defaulttheme > .mr-layout.mr-defaultstyle .mr-widget-radio:focus,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  .mr-radio:focus,
-.mrdev-widget.mr-theme.mr-defaulttheme
-  > .mr-layout.mr-defaultstyle
-  > .mr-pageselect:focus {
+  > .mr-widget-pageselect:focus {
   outline: none;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-prev:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-next:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-below:not(.loading):after {
+  > .mr-widget-below:not(.loading):after {
   content: "";
   display: block;
   border-style: solid;
   opacity: 0.25;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-pageselect {
+  > .mr-widget-pageselect {
   margin: 0 auto;
   background: transparent;
   border: 0;
@@ -324,17 +322,17 @@
   width: auto;
   border-radius: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-pageselect:checked {
+  > .mr-widget-pageselect:checked {
   background: currentColor;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-radios
-  > .mr-radio {
+  > .mr-widget-radios
+  > .mr-widget-radio {
   position: relative;
   width: 1rem;
   height: 1rem;
@@ -346,11 +344,11 @@
   -webkit-appearance: unset;
   box-shadow: none;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-radios
-  > .mr-radio:before {
+  > .mr-widget-radios
+  > .mr-widget-radio:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -358,65 +356,65 @@
   border-radius: 100%;
   box-shadow: 0 0 0.2125rem 0 inset;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-radios
-  > .mr-radio[checked="true"]:before,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-radios
+  > .mr-widget-radio[checked="true"]:before,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-radios
-  > .mr-radio[checked="checked"]:before {
+  > .mr-widget-radios
+  > .mr-widget-radio[checked="checked"]:before {
   background: currentColor;
   opacity: 0.5;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev:hover:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-prev:hover:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next:hover:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-next:hover:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   .mr-pagination
-  .mr-radio:hover,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-widget-radio:hover,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   .mr-pagination
-  .mr-radio:hover:before,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-widget-radio:hover:before,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   .mr-pagination
-  > .mr-pageselect:hover,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pageselect:hover,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev:focus:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-prev:focus:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next:focus:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-next:focus:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   .mr-pagination
-  .mr-radio:focus,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-widget-radio:focus,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   .mr-pagination
-  .mr-radio:focus:before,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-widget-radio:focus:before,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   .mr-pagination
-  > .mr-pageselect:focus {
+  > .mr-widget-pageselect:focus {
   opacity: 1;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-below {
+  > .mr-widget-below {
   background: transparent;
   opacity: 0.25;
   border: 0;
@@ -426,107 +424,107 @@
   width: 1.5rem;
 }
 /*layoutoptions-checkcurrent*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-defaultstyle).mr-checkcurrent
-  > .mr-pages
-  > .mr-item.mr-current
-  > .mr-item-container {
+  > .mr-widget-pages
+  > .mr-widget-item.mr-current
+  > .mr-widget-item-container {
   border-bottom: 1px solid;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab:after {
+  > .mr-widget-tabs
+  > .mr-widget-tab:after {
   border-bottom: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-checkcurrent
-  > .mr-pages
-  > .mr-item.mr-current:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item.mr-current:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab.active:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-tabs
+  > .mr-widget-tab.active:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-tabs
-  > .mr-tab:hover:after {
+  > .mr-widget-tabs
+  > .mr-widget-tab:hover:after {
   opacity: 0.5;
 }
 /*layoutoptions-expandactive*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-expandactive:not(.mr-portrait).mr-verticaltitle
-  > .mr-pages.mr-0perline:not(.mr-1perline)
-  > .mr-item
-  > .mr-item-container {
+  > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+  > .mr-widget-item
+  > .mr-widget-item-container {
   width: auto;
   width: intrinsic;
   width: -moz-max-content;
   width: -webkit-max-content;
   width: max-content;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-expandactive.mr-verticaltitle
-  > .mr-pages.mr-0perline:not(.mr-1perline)
-  > .mr-item
-  > .mr-item-container {
+  > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+  > .mr-widget-item
+  > .mr-widget-item-container {
   min-width: calc(100% - 0.75rem - 0.75rem);
   max-width: calc(100vw - 0.75rem - 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-expandactive
-  > .mr-pages.mr-0perline:not(.mr-1perline)
-  > .mr-item.active
-  > .mr-item-container {
+  > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+  > .mr-widget-item.active
+  > .mr-widget-item-container {
   height: 100%;
   overflow: auto;
 }
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-portrait
-    > .mr-pages
-    > .mr-item {
+    > .mr-widget-pages
+    > .mr-widget-item {
     min-height: inherit;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-portrait
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-thumbnail.mr-portrait
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-image {
     float: left;
     max-width: 20%;
     height: auto;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-thumbnail.mr-portrait
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-image
     + .mr-title {
     padding-left: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     width: auto;
     width: intrinsic;
@@ -536,59 +534,59 @@
   }
   _:-ms-lang(x),
   _:-webkit-full-screen,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     white-space: nowrap;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-thumbnail).mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     min-width: calc(100% - var(--padding, 0.75rem) - var(--padding, 0.75rem));
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-thumbnail).mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle):not(.mr-contentpagination)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle):not(.mr-contentpagination)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     max-width: calc(100vw - var(--padding, 0.75rem) - var(--padding, 0.75rem));
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-thumbnail).mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle).mr-contentpagination
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle).mr-contentpagination
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     max-width: calc(
       100vw - var(--padding, 0.75rem) - var(--padding, 0.75rem) -
@@ -596,74 +594,74 @@
         calc(var(--padding, 0.75rem) + 1rem)
     );
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-portrait
-    > .mr-pages.mr-0perline:not(.mr-1perline) {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline) {
     flex-direction: column;
   }
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-lanscape)
-    > .mr-pages
-    > .mr-item {
+    > .mr-widget-pages
+    > .mr-widget-item {
     min-height: inherit;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-item-container {
+    > .mr-widget-item-container {
     max-width: inherit;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-thumbnail:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-image {
     float: left;
     max-width: 20%;
     height: auto;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-thumbnail:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-image
     + .mr-title {
     padding-left: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-verticaltitle.mr-landscape
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item {
     height: 100%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait).mr-landscape:not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.mr-widget-item-container
     > .mr-content,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape:not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     width: auto;
     width: intrinsic;
@@ -673,207 +671,207 @@
   }
   _:-ms-lang(x),
   _:-webkit-full-screen,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait).mr-landscape:not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.mr-widget-item-container
     > .mr-content,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape:not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     word-wrap: none;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-thumbnail).mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-portrait.mr-landscape:not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.mr-widget-item-container
     > .mr-content,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     min-width: calc(100% - 0.75rem - 0.75rem);
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle):not(.mr-contentpagination)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-portrait.mr-landscape:not(.mr-verticaltitle):not(.mr-contentpagination)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.mr-widget-item-container
     > .mr-content,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle):not(.mr-contentpagination)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     max-width: calc(100vw - 0.75rem - 0.75rem);
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-thumbnail).mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle).mr-contentpagination
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-portrait.mr-landscape:not(.mr-verticaltitle).mr-contentpagination
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.mr-widget-item-container
     > .mr-content,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle).mr-contentpagination
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     max-width: calc(100vw - 0.75rem - 0.75rem - 1.75rem - 1.75rem);
   }
 }
 @media all and (-ms-high-contrast: none) and (orientation: landscape),
   (-ms-high-contrast: active) and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     white-space: nowrap;
   }
 }
 @media all and (-ms-high-contrast: none) and (orientation: portrait),
   (-ms-high-contrast: active) and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait):not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-title,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait).mr-landscape:not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.mr-widget-item-container
     > .mr-content,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape:not(.mr-verticaltitle)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content {
     white-space: nowrap;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait).mr-verticaltitle
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item
-    > .mr-item-container {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item
+    > .mr-widget-item-container {
     white-space: nowrap;
   }
 }
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive
-    > .mr-pages:not(.mr-1perline)
-    > .mr-item.active
-    > .mr-item-container {
+    > .mr-widget-pages:not(.mr-1perline)
+    > .mr-widget-item.active
+    > .mr-widget-item-container {
     overflow: auto;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.active {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.active {
     width: 1600%;
     z-index: 1;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait).mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.inactive {
     display: inherit;
     width: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-portrait
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container {
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container {
     max-width: inherit;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight.mr-portrait
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.active {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.active {
     height: 1600%;
     z-index: 1;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight.mr-portrait:not(.mr-landscape).mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.inactive,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.inactive,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight.mr-portrait.mr-landscape
-    > .mr-pages.mr-0perline:not(.mr-1perline).mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline).mr-hideinactives:not(.mr-subitemactive)
+    > .mr-widget-pages
+    > .mr-widget-item.inactive {
     display: inherit;
     height: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight.mr-portrait:not(.mr-onlyactives)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-verticaltitle:not(.mr-portrait)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item {
     height: 100%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight.mr-portrait.mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.inactive {
     height: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-portrait:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-portrait.mr-landscape
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content
     * {
     height: 0;
@@ -883,18 +881,18 @@
     padding-bottom: 0;
     opacity: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-portrait:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-portrait.mr-landscape
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content
     * {
     -o-transition: all 0.5s ease-in-out;
@@ -904,345 +902,345 @@
   }
 }
 @media only screen and (min-width: 59.94em) and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages:not(.mr-1perline)
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-1perline)
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-2perline
-    > .mr-item.inactive:nth-child(2n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-2perline
+    > .mr-widget-item.inactive:nth-child(2n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-3perline
-    > .mr-item.inactive:nth-child(3n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-3perline
+    > .mr-widget-item.inactive:nth-child(3n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-4perline
-    > .mr-item.inactive:nth-child(4n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-4perline
+    > .mr-widget-item.inactive:nth-child(4n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-5perline
-    > .mr-item.inactive:nth-child(5n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-5perline
+    > .mr-widget-item.inactive:nth-child(5n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-6perline
-    > .mr-item.inactive:nth-child(6n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-6perline
+    > .mr-widget-item.inactive:nth-child(6n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-7perline
-    > .mr-item.inactive:nth-child(7n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-7perline
+    > .mr-widget-item.inactive:nth-child(7n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-8perline
-    > .mr-item.inactive:nth-child(8n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-8perline
+    > .mr-widget-item.inactive:nth-child(8n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-9perline
-    > .mr-item.inactive:nth-child(9n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-9perline
+    > .mr-widget-item.inactive:nth-child(9n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-10perline
-    > .mr-item.inactive:nth-child(10n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-10perline
+    > .mr-widget-item.inactive:nth-child(10n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-11perline
-    > .mr-item.inactive:nth-child(11n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-11perline
+    > .mr-widget-item.inactive:nth-child(11n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-12perline
-    > .mr-item.inactive:nth-child(12n) {
+    > .mr-widget-pages.mr-12perline
+    > .mr-widget-item.inactive:nth-child(12n) {
     width: 75%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-12perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-12perline
+    > .mr-widget-item.inactive {
     width: 2.272727272727273%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-11perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-11perline
+    > .mr-widget-item.inactive {
     width: 2.5%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-10perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-10perline
+    > .mr-widget-item.inactive {
     width: 2.777777777777778%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-9perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-9perline
+    > .mr-widget-item.inactive {
     width: 3.125%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-8perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-8perline
+    > .mr-widget-item.inactive {
     width: 3.571428571428571%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-7perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-7perline
+    > .mr-widget-item.inactive {
     width: 4.166666666666667%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-6perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-6perline
+    > .mr-widget-item.inactive {
     width: 5%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-5perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-5perline
+    > .mr-widget-item.inactive {
     width: 6.25%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-4perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-4perline
+    > .mr-widget-item.inactive {
     width: 8.333333333333333%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-3perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-3perline
+    > .mr-widget-item.inactive {
     width: 8.333333333333333%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages.mr-2perline
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-2perline
+    > .mr-widget-item.inactive {
     width: 25%;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages:not(.mr-1perline)
-    > .mr-item.active {
+    > .mr-widget-pages:not(.mr-1perline)
+    > .mr-widget-item.active {
     width: 75%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-portrait)
-    > .mr-pages:not(.mr-1perline)
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-1perline)
+    > .mr-widget-item.inactive {
     width: 25%;
   }
 }
 @media only screen and (min-width: 47.94em) and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-1perline)
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-1perline)
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-2perline
-    > .mr-item.inactive:nth-child(2n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-2perline
+    > .mr-widget-item.inactive:nth-child(2n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-3perline
-    > .mr-item.inactive:nth-child(3n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-3perline
+    > .mr-widget-item.inactive:nth-child(3n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-4perline
-    > .mr-item.inactive:nth-child(4n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-4perline
+    > .mr-widget-item.inactive:nth-child(4n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-5perline
-    > .mr-item.inactive:nth-child(5n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-5perline
+    > .mr-widget-item.inactive:nth-child(5n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-6perline
-    > .mr-item.inactive:nth-child(6n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-6perline
+    > .mr-widget-item.inactive:nth-child(6n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-7perline
-    > .mr-item.inactive:nth-child(7n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-7perline
+    > .mr-widget-item.inactive:nth-child(7n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-8perline
-    > .mr-item.inactive:nth-child(8n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-8perline
+    > .mr-widget-item.inactive:nth-child(8n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-9perline
-    > .mr-item.inactive:nth-child(9n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-9perline
+    > .mr-widget-item.inactive:nth-child(9n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-10perline
-    > .mr-item.inactive:nth-child(10n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-10perline
+    > .mr-widget-item.inactive:nth-child(10n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-11perline
-    > .mr-item.inactive:nth-child(11n),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-11perline
+    > .mr-widget-item.inactive:nth-child(11n),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-12perline
-    > .mr-item.inactive:nth-child(12n) {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-12perline
+    > .mr-widget-item.inactive:nth-child(12n) {
     width: 75% !important;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-12perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-12perline
+    > .mr-widget-item.inactive {
     width: 2.272727272727273%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-11perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-11perline
+    > .mr-widget-item.inactive {
     width: 2.5%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-10perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-10perline
+    > .mr-widget-item.inactive {
     width: 2.777777777777778%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-9perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-9perline
+    > .mr-widget-item.inactive {
     width: 3.125%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-8perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-8perline
+    > .mr-widget-item.inactive {
     width: 3.571428571428571%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-7perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-7perline
+    > .mr-widget-item.inactive {
     width: 4.166666666666667%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-6perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-6perline
+    > .mr-widget-item.inactive {
     width: 5%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-5perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-5perline
+    > .mr-widget-item.inactive {
     width: 6.25%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-4perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-4perline
+    > .mr-widget-item.inactive {
     width: 8.333333333333333%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-3perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-3perline
+    > .mr-widget-item.inactive {
     width: 8.333333333333333%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-2perline
-    > .mr-item.inactive {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-2perline
+    > .mr-widget-item.inactive {
     width: 25%;
   }
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme > .mr-layout > .mr-pages.mr-1perline {
+  .mr-theme.mr-defaulttheme > .mr-layout > .mr-widget-pages.mr-1perline {
     flex-wrap: nowrap;
     flex-direction: column;
     width: 100%;
     margin: 0 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight:not(.mr-landscape):not(.mr-onlyactives)
-    > .mr-pages
-    > .mr-item:not(.active) {
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active) {
     height: 100%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item.active {
+    > .mr-widget-pages
+    > .mr-widget-item.active {
     height: 1600%;
     z-index: 1;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight:not(.mr-landscape).mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages
-    > .mr-item.inactive {
+    > .mr-widget-pages
+    > .mr-widget-item.inactive {
     display: inherit;
     height: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape.mr-portrait
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.active {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.active {
     width: 1600%;
     z-index: 1;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape.mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.inactive,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.inactive,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape.mr-portrait.mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.inactive {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.inactive {
     display: inherit;
     width: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape.mr-portrait
-    > .mr-pages
-    > .mr-item:not(.active) {
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active) {
     width: 100%;
     z-index: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape.mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages
-    > .mr-item.inactive,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.inactive,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape.mr-portrait.mr-hideinactives:not(.mr-subitemactive)
-    > .mr-pages
-    > .mr-item.inactive {
+    > .mr-widget-pages
+    > .mr-widget-item.inactive {
     width: 100%;
     z-index: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-landscape:not(.mr-portrait)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-landscape.mr-portrait
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight):not(.mr-landscape):not(.mr-portrait)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content
     * {
     margin-top: 0;
@@ -1252,25 +1250,25 @@
     opacity: 0;
     height: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-landscape:not(.mr-portrait)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight).mr-landscape.mr-portrait
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-windowheight):not(.mr-landscape):not(.mr-portrait)
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content
     * {
     -o-transition: all 0.5s ease-in-out;
@@ -1278,209 +1276,209 @@
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-expandactive:not(.mr-windowheight).mr-landscape:not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-expandactive:not(.mr-windowheight).mr-landscape.mr-portrait
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container
     > .mr-content
     *,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-expandactive:not(.mr-windowheight):not(.mr-landscape):not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container
     > .mr-content
     * {
     height: 100%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive:not(.mr-landscape)
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline)
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline)
+    > .mr-widget-item {
     width: 100%;
     overflow: hidden;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-windowheight:not(.mr-landscape)
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline)
-    > .mr-item.active
-    > .mr-item-container {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline)
+    > .mr-widget-item.active
+    > .mr-widget-item-container {
     overflow: auto;
   }
 }
 /*layoutoptions-expandopen*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-expandopen
-  > .mr-tabs
-  > .mr-tab.close {
+  > .mr-widget-tabs
+  > .mr-widget-tab.close {
   opacity: 0;
 }
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen:not(.mr-portrait)
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.close {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.close {
     width: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen:not(.mr-windowheight).mr-portrait:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item.close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen:not(.mr-windowheight).mr-portrait.mr-landscape
-    > .mr-pages
-    > .mr-item.close {
+    > .mr-widget-pages
+    > .mr-widget-item.close {
     -o-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
     transform-origin: top;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen.mr-windowheight.mr-portrait
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item:not(.active).close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item:not(.active).close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen.mr-windowheight.mr-portrait
-    > .mr-pages.mr-0perline
-    > .mr-item.active.close {
+    > .mr-widget-pages.mr-0perline
+    > .mr-widget-item.active.close {
     height: 0%;
   }
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen.mr-landscape
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.close {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.close {
     width: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-expandopen:not(.mr-windowheight).mr-landscape:not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-expandopen:not(.mr-windowheight).mr-landscape.mr-portrait
-    > .mr-pages
-    > .mr-item.close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-expandopen:not(.mr-windowheight):not(.mr-landscape):not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.close {
+    > .mr-widget-pages
+    > .mr-widget-item.close {
     -o-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
     transform-origin: top;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen.mr-windowheight:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item:not(.active).close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active).close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandopen.mr-windowheight:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item.active.close {
+    > .mr-widget-pages
+    > .mr-widget-item.active.close {
     height: 0%;
   }
 }
 /*layoutoptions-scaleactive*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-scaleactive
-  > .mr-pages
-  > .mr-item {
+  > .mr-widget-pages
+  > .mr-widget-item {
   transform-origin: center;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-scaleactive
-  > .mr-pages
-  > .mr-item.active {
+  > .mr-widget-pages
+  > .mr-widget-item.active {
   transform: scale(1.05);
 }
 /*layoutoptions-scaleopen*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-scaleopen
-  > .mr-pages
-  > .mr-item.open {
+  > .mr-widget-pages
+  > .mr-widget-item.open {
   transform: scale(1.08);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-scaleopen
-  > .mr-pages
-  > .mr-item.close {
+  > .mr-widget-pages
+  > .mr-widget-item.close {
   transform: scale(0);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-scaleopen
-  > .mr-tabs
-  > .mr-tab.close {
+  > .mr-widget-tabs
+  > .mr-widget-tab.close {
   opacity: 0;
 }
 /*layoutoptions-opaqueactive*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-opaqueactive
-  > .mr-tabs
-  > .mr-tab.inactive,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-tabs
+  > .mr-widget-tab.inactive,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-opaqueactive
-  > .mr-pages
-  > .mr-item.inactive {
+  > .mr-widget-pages
+  > .mr-widget-item.inactive {
   opacity: 0.5;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-opaqueactive
-  > .mr-tabs
-  > .mr-tab.active,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-tabs
+  > .mr-widget-tab.active,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-opaqueactive
-  > .mr-pages
-  > .mr-item.active {
+  > .mr-widget-pages
+  > .mr-widget-item.active {
   opacity: 1;
 }
 /*layoutoptions-opaqueopen*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-opaqueopen
-  > .mr-pages
-  > .mr-item.close {
+  > .mr-widget-pages
+  > .mr-widget-item.close {
   opacity: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-opaqueopen
-  > .mr-tabs
-  > .mr-tab.close {
+  > .mr-widget-tabs
+  > .mr-widget-tab.close {
   opacity: 0;
 }
 /*layoutoptions-fixactive*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive
-  > .mr-pages
-  > .mr-item.active {
+  > .mr-widget-pages
+  > .mr-widget-item.active {
   position: fixed;
   top: 0;
   z-index: 15;
   align-items: center;
   display: flex;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container {
   margin: 0 auto;
   width: calc(100% - 1.5rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:before {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1488,38 +1486,38 @@
   width: 100%;
   height: 100%;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive.mr-toggle03:not(.mr-hover)
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   opacity: 0.5;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item.active:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive.mr-defaultstyle:not(.mr-expandactive)
-  > .mr-pages:not(.mr-1perline)
-  > .mr-item.active:after {
+  > .mr-widget-pages:not(.mr-1perline)
+  > .mr-widget-item.active:after {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container {
   box-shadow: 0 0 0.3125rem 0;
   z-index: 2;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active:after {
   -webkit-backdrop-filter: brightness(0.5);
   backdrop-filter: brightness(0.5);
   opacity: 0.75;
@@ -1529,235 +1527,235 @@
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-fixactive.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:before {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:before {
   -webkit-backdrop-filter: blur(80px) brightness(1.5);
   backdrop-filter: blur(80px) brightness(1.5);
 }
 @media only screen and (min-width: 47.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-0perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-0perline
+    > .mr-widget-item.active {
     width: 100%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-0perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive
-    > .mr-pages.mr-1perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-1perline
+    > .mr-widget-item.active {
     left: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-2perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-2perline
+    > .mr-widget-item.active {
     left: 25%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-3perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-3perline
+    > .mr-widget-item.active {
     left: 33.33333333333333%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-4perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-4perline
+    > .mr-widget-item.active {
     left: 37.5%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-5perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-5perline
+    > .mr-widget-item.active {
     left: 40%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-6perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-6perline
+    > .mr-widget-item.active {
     left: 41.66666666666667%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-7perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-7perline
+    > .mr-widget-item.active {
     left: 42.85714285714286%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-8perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-8perline
+    > .mr-widget-item.active {
     left: 43.75%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-9perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-9perline
+    > .mr-widget-item.active {
     left: 44.44444444444445%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-10perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-10perline
+    > .mr-widget-item.active {
     left: 45%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-11perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-11perline
+    > .mr-widget-item.active {
     left: 45.45454545454545%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages.mr-12perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-12perline
+    > .mr-widget-item.active {
     left: 45.83333333333333%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive.mr-portrait
-    > .mr-pages
-    > .mr-item.active {
+    > .mr-widget-pages
+    > .mr-widget-item.active {
     width: 100%;
     left: 0;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.active {
+    > .mr-widget-pages
+    > .mr-widget-item.active {
     left: 25%;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive:not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.active {
+    > .mr-widget-pages
+    > .mr-widget-item.active {
     left: 0%;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive.mr-defaultstyle
-    > .mr-pages
-    > .mr-item.active:after {
+    > .mr-widget-pages
+    > .mr-widget-item.active:after {
     background: currentColor;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive.mr-defaultstyle
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:before {
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:before {
     background: currentColor;
     filter: invert(1);
   }
 }
 @supports not (backdrop-filter: blur(80px)) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive.mr-defaultstyle
-    > .mr-pages
-    > .mr-item.active:after {
+    > .mr-widget-pages
+    > .mr-widget-item.active:after {
     background: currentColor;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-fixactive.mr-defaultstyle
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:before {
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:before {
     background: currentColor;
     filter: invert(1);
   }
 }
 /*layoutoptions*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-contentpagination):not(.mr-verticaltitle).mr-toggle01
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-contentpagination):not(.mr-verticaltitle).mr-toggle02
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-contentpagination):not(.mr-verticaltitle).mr-toggle03
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   right: 0.85rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-contentpagination:not(.mr-verticaltitle).mr-toggle01
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-contentpagination:not(.mr-verticaltitle).mr-toggle02
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-contentpagination:not(.mr-verticaltitle).mr-toggle03
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   right: 2.6rem;
 }
 /*layoutoptions-toggle01*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle01:not(.mr-toggle02)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   position: absolute;
   font-size: 1.5rem;
   cursor: pointer;
   opacity: 0.25;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle01:not(.mr-toggle02):not(.mr-verticaltitle)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   top: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle01:not(.mr-toggle02)
-  > .mr-pages
-  > .mr-item:not(.active)
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item:not(.active)
+  > .mr-widget-item-container:after {
   content: "+";
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle01:not(.mr-hover):not(.mr-donotinactive):not(.mr-toggle02):not(.mr-toggle03)
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   content: "-";
   right: 0.98rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle01:not(.mr-toggle02)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-title {
   min-height: 1.5rem;
 }
 /*layoutoptions-toggle02*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle02:not(.mr-toggle01)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   position: absolute;
   width: 0;
   height: 0;
@@ -1765,87 +1763,87 @@
   cursor: pointer;
   opacity: 0.25;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle02:not(.mr-toggle01):not(.mr-verticaltitle)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   top: 0.85rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle02
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-title {
   min-height: 3.25rem;
 }
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after {
     content: "";
     border-width: var(--padding, 0.75rem) var(--padding, 0.75rem) 0
       var(--padding, 0.75rem);
     border-color: currentColor transparent transparent transparent;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover):not(.mr-toggle01):not(.mr-toggle03):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after {
     content: "";
     border-width: 0 var(--padding, 0.75rem) var(--padding, 0.75rem)
       var(--padding, 0.75rem);
     border-color: transparent transparent currentColor transparent;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-portrait).mr-expandactive.mr-toggle02:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-portrait).mr-verticaltitle.mr-toggle02:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-portrait).mr-hideinactives.mr-toggle02:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-portrait).mr-subitemactive.mr-toggle02:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after {
     content: "";
     border-width: var(--padding, 0.75rem) 0 var(--padding, 0.75rem)
       var(--padding, 0.75rem);
     border-color: transparent transparent transparent currentColor;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover):not(.mr-portrait).mr-expandactive.mr-toggle02:not(.mr-hover):not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover):not(.mr-portrait).mr-verticaltitle.mr-toggle02:not(.mr-hover):not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-portrait).mr-hideinactives.mr-toggle02:not(.mr-hover):not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover):not(.mr-portrait).mr-subitemactive.mr-toggle02:not(.mr-hover):not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after {
     content: "";
     border-width: var(--padding, 0.75rem) var(--padding, 0.75rem)
       var(--padding, 0.75rem) 0rem;
@@ -1853,71 +1851,71 @@
   }
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after {
     content: "";
     border-width: var(--padding, 0.75rem) var(--padding, 0.75rem) 0
       var(--padding, 0.75rem);
     border-color: currentColor transparent transparent transparent;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover):not(.mr-toggle01):not(.mr-toggle03):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after {
     content: "";
     border-width: 0 var(--padding, 0.75rem) var(--padding, 0.75rem)
       var(--padding, 0.75rem);
     border-color: transparent transparent currentColor transparent;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02.mr-landscape.mr-expandactive:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02.mr-verticaltitle:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02.mr-landscape.mr-hideinactives:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02.mr-landscape.mr-subitemactive:not(.mr-toggle01)
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container:after {
     content: "";
     border-width: var(--padding, 0.75rem) 0 var(--padding, 0.75rem)
       var(--padding, 0.75rem);
     border-color: transparent transparent transparent currentColor;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover).mr-landscape.mr-expandactive:not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover).mr-verticaltitle:not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover).mr-landscape.mr-hideinactives:not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-toggle02:not(.mr-hover).mr-landscape.mr-subitemactive:not(.mr-toggle01):not(.mr-donotinactive)
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container:after {
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container:after {
     content: "";
     border-width: var(--padding, 0.75rem) var(--padding, 0.75rem)
       var(--padding, 0.75rem) 0rem;
@@ -1925,11 +1923,11 @@
   }
 }
 /*layoutoptions-toggle03*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle03:not(.mr-hover)
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   position: absolute;
   font-size: 1.5rem;
   cursor: pointer;
@@ -1938,18 +1936,18 @@
   width: auto;
   height: auto;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle03:not(.mr-hover):not(.mr-verticaltitle)
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   top: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle03:not(.mr-hover):not(.mr-donotinactive)
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   content: "+" !important;
   border: 0;
   transform: rotate(45deg) scale(1.2);
@@ -1957,34 +1955,32 @@
   height: 0;
 }
 /*layoutoptions-verticaltitle*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-verticaltitle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-title {
   -webkit-writing-mode: tb-rl;
   writing-mode: tb-rl;
   writing-mode: vertical-rl;
   padding-bottom: calc(var(--padding, 0.75rem) * 4);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-verticaltitle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-content {
   height: 100%;
   padding-bottom: calc(var(--padding, 0.75rem) * 4);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
-  > .mr-layout.mr-verticaltitle
-  > .mr-pages {
+.mr-theme.mr-defaulttheme > .mr-layout.mr-verticaltitle > .mr-widget-pages {
   align-items: start;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-verticaltitle
-  > .mr-item-container {
+  > .mr-widget-item-container {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1992,143 +1988,143 @@
   display: flex;
   align-items: start;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-verticaltitle:not(.mr-windowheight)
-  > .mr-item-container {
+  > .mr-widget-item-container {
   height: auto;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-expandactive.mr-verticaltitle
-  > .mr-pages
-  > .mr-item:not(.active)
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item:not(.active)
+  > .mr-widget-item-container
   > .mr-image {
   width: 0%;
   height: 0%;
   opacity: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle01:not(.mr-toggle02).mr-verticaltitle:not(.mr-contentpagination)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   bottom: 0rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle02:not(.mr-toggle01).mr-verticaltitle:not(.mr-contentpagination)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   bottom: 0.85rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle03:not(.mr-hover).mr-verticaltitle:not(.mr-contentpagination)
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   bottom: 3rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle01:not(.mr-toggle02).mr-verticaltitle.mr-contentpagination
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   bottom: 4rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle02:not(.mr-toggle01).mr-verticaltitle.mr-contentpagination
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   bottom: 4.85rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-toggle03:not(.mr-hover).mr-verticaltitle.mr-contentpagination
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   bottom: 6.75rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-contentpagination).mr-verticaltitle.mr-toggle01
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-contentpagination).mr-verticaltitle.mr-toggle02
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   left: 1.25rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-verticaltitle.mr-toggle03
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   left: 2.25rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-contentpagination.mr-verticaltitle.mr-toggle01
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-contentpagination.mr-verticaltitle.mr-toggle02
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container:after {
   left: 3rem;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-contentpagination.mr-verticaltitle.mr-toggle03
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container:after {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container:after {
   left: 4rem;
 }
 /*layoutoptions-revealactive*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-revealactive
-  > .mr-pages
-  > .mr-item:not(.active)
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item:not(.active)
+  > .mr-widget-item-container
   > .mr-content {
   padding-top: 0;
   padding-bottom: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-windowheight.mr-revealactive
-  > .mr-pages
-  > .mr-item,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pages
+  > .mr-widget-item,
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-windowheight.mr-revealactive
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container {
   height: 100%;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-windowheight.mr-revealactive
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container {
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container {
   overflow: hidden;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-windowheight.mr-revealactive
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container {
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container {
   overflow: initial;
   min-height: 100%;
 }
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealactive
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content
     * {
     height: 0;
@@ -2138,11 +2134,11 @@
     padding-bottom: 0;
     opacity: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealactive
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content
     * {
     -o-transition: all 0.5s ease-in-out;
@@ -2152,11 +2148,11 @@
   }
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealactive
-    > .mr-pages
-    > .mr-item:not(.active)
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active)
+    > .mr-widget-item-container
     > .mr-content
     * {
     margin-top: 0;
@@ -2166,11 +2162,11 @@
     opacity: 0;
     height: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealactive
-    > .mr-pages
-    > .mr-item
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item
+    > .mr-widget-item-container
     > .mr-content
     * {
     -o-transition: all 0.5s ease-in-out;
@@ -2178,329 +2174,329 @@
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-revealactive
-    > .mr-pages
-    > .mr-item.active
-    > .mr-item-container
+    > .mr-widget-pages
+    > .mr-widget-item.active
+    > .mr-widget-item-container
     > .mr-content
     * {
     height: 100%;
   }
 }
 /*layoutoptions-revealopen*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-revealopen
-  > .mr-tabs
-  > .mr-tab.close {
+  > .mr-widget-tabs
+  > .mr-widget-tab.close {
   opacity: 0;
 }
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen:not(.mr-windowheight).mr-portrait:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item.close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen:not(.mr-windowheight).mr-portrait.mr-landscape
-    > .mr-pages
-    > .mr-item.close {
+    > .mr-widget-pages
+    > .mr-widget-item.close {
     -o-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
     transform-origin: top;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen.mr-windowheight.mr-portrait
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item:not(.active).close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item:not(.active).close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen.mr-windowheight.mr-portrait
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.active.close {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.active.close {
     height: 0%;
   }
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen.mr-landscape
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen.mr-landscape.mr-portrait
-    > .mr-pages.mr-0perline:not(.mr-1perline)
-    > .mr-item.close {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline)
+    > .mr-widget-item.close {
     width: 0%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-revealopen:not(.mr-windowheight).mr-landscape:not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-revealopen:not(.mr-windowheight).mr-landscape.mr-portrait
-    > .mr-pages
-    > .mr-item.close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item.close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout:not(.mr-autoscroll).mr-revealopen:not(.mr-windowheight):not(.mr-landscape):not(.mr-portrait)
-    > .mr-pages
-    > .mr-item.close {
+    > .mr-widget-pages
+    > .mr-widget-item.close {
     -o-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
     transform-origin: top;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen.mr-windowheight:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item:not(.active).close,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages
+    > .mr-widget-item:not(.active).close,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-revealopen.mr-windowheight:not(.mr-landscape)
-    > .mr-pages
-    > .mr-item.active.close {
+    > .mr-widget-pages
+    > .mr-widget-item.active.close {
     height: 0%;
   }
 }
 /*layoutoptions-landscape*/
 @media only screen and (max-width: 59.94em) and (min-width: 47.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages.mr-0perline:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline)
-    > .mr-item,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline)
+    > .mr-widget-item,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline).mr-1perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline).mr-1perline
+    > .mr-widget-item {
     width: 100%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-3perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-3perline
+    > .mr-widget-item {
     width: 33.33333333333333%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-4perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-4perline
+    > .mr-widget-item {
     width: 25%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-5perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-5perline
+    > .mr-widget-item {
     width: 20%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-6perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-6perline
+    > .mr-widget-item {
     width: 16.66666666666667%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-7perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-7perline
+    > .mr-widget-item {
     width: 14.28571428571429%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-8perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-8perline
+    > .mr-widget-item {
     width: 12.5%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-9perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-9perline
+    > .mr-widget-item {
     width: 11.11111111111111%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-10perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-10perline
+    > .mr-widget-item {
     width: 10%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-11perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-11perline
+    > .mr-widget-item {
     width: 9.090909090909091%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-12perline
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-3perline):not(.mr-2perline):not(.mr-1perline).mr-12perline
+    > .mr-widget-item {
     width: 8.333333333333333%;
   }
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape.mr-expandactive
-    > .mr-pages.mr-0perline:not(.mr-1perline) {
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline) {
     flex-direction: row;
   }
 }
 @media only screen and (orientation: portrait) and (max-width: 47.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-landscape
-    > .mr-pages:not(.mr-2perline):not(.mr-1perline)
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-2perline):not(.mr-1perline)
+    > .mr-widget-item {
     width: 50%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-2perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-2perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-3perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-3perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-4perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-4perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-5perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-5perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-6perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-6perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-7perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-7perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-8perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-8perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-9perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-9perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-10perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-10perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-11perline
-    > .mr-item:not(.active),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-11perline
+    > .mr-widget-item:not(.active),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-12perline
-    > .mr-item:not(.active) {
+    > .mr-widget-pages.mr-12perline
+    > .mr-widget-item:not(.active) {
     width: 50%;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-0perline:not(.mr-1perline),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-0perline:not(.mr-1perline),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-1perline,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-1perline,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-2perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-2perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-3perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-3perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-4perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-4perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-5perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-5perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-6perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-6perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-7perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-7perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-8perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-8perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-9perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-9perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-10perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-10perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-11perline
-    > .mr-item.active,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages.mr-11perline
+    > .mr-widget-item.active,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-expandactive.mr-landscape
-    > .mr-pages.mr-12perline
-    > .mr-item.active {
+    > .mr-widget-pages.mr-12perline
+    > .mr-widget-item.active {
     width: 100%;
   }
 }
 /*layoutoptions-portrait*/
 @media only screen and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme > .mr-layout.mr-portrait > .mr-pages {
+  .mr-theme.mr-defaulttheme > .mr-layout.mr-portrait > .mr-widget-pages {
     flex-wrap: nowrap;
     flex-direction: column;
     width: 100%;
     margin: 0 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-portrait
-    > .mr-pages
-    > .mr-item {
+    > .mr-widget-pages
+    > .mr-widget-item {
     width: 100%;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 47.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-portrait:not(.mr-expandactive):not(.mr-revealactive)
-    > .mr-pages:not(.mr-2perline):not(.mr-1perline)
-    > .mr-item {
+    > .mr-widget-pages:not(.mr-2perline):not(.mr-1perline)
+    > .mr-widget-item {
     width: 100%;
   }
 }
 /*layoutoptions-hambmob*/
 @media only screen and (min-width: 59.94em) and (orientation: landscape) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-portrait
-    > .mr-pages:hover,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:hover,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-landscape.mr-portrait
-    > .mr-pages:hover {
+    > .mr-widget-pages:hover {
     -o-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-portrait
-    > .mr-pages:not(:hover),
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(:hover),
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-landscape.mr-portrait
-    > .mr-pages:not(:hover) {
+    > .mr-widget-pages:not(:hover) {
     width: 2.5rem;
     height: 1.5rem;
     overflow: hidden;
     position: relative;
     margin: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-portrait
-    > .mr-pages:not(:hover):before,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(:hover):before,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-landscape.mr-portrait
-    > .mr-pages:not(:hover):before {
+    > .mr-widget-pages:not(:hover):before {
     content: "";
     position: absolute;
     top: 0;
@@ -2513,12 +2509,12 @@
     border-radius: 0.2rem;
     opacity: 0.25;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-portrait
-    > .mr-pages:not(:hover):after,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+    > .mr-widget-pages:not(:hover):after,
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-landscape.mr-portrait
-    > .mr-pages:not(:hover):after {
+    > .mr-widget-pages:not(:hover):after {
     content: "";
     position: absolute;
     top: 0;
@@ -2528,48 +2524,46 @@
     border-bottom: 0.2rem solid;
     opacity: 0.25;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-portrait
-    > .mr-pages:not(:hover)
+    > .mr-widget-pages:not(:hover)
     li,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-landscape.mr-portrait
-    > .mr-pages:not(:hover)
+    > .mr-widget-pages:not(:hover)
     li {
     opacity: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-portrait
-    > .mr-pages:not(:hover)
+    > .mr-widget-pages:not(:hover)
     li:first-child,
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob.mr-landscape.mr-portrait
-    > .mr-pages:not(:hover)
+    > .mr-widget-pages:not(:hover)
     li:first-child {
     margin-top: 1.5rem;
   }
 }
 @media only screen and (max-width: 59.94em), (orientation: portrait) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
-    > .mr-layout.mr-hambmob
-    > .mr-pages:hover {
+  .mr-theme.mr-defaulttheme > .mr-layout.mr-hambmob > .mr-widget-pages:hover {
     -o-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob
-    > .mr-pages:not(:hover) {
+    > .mr-widget-pages:not(:hover) {
     width: 2.5rem;
     height: 1.5rem;
     overflow: hidden;
     position: relative;
     margin: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob
-    > .mr-pages:not(:hover):before {
+    > .mr-widget-pages:not(:hover):before {
     content: "";
     position: absolute;
     top: 0;
@@ -2582,9 +2576,9 @@
     border-radius: 0.2rem;
     opacity: 0.25;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob
-    > .mr-pages:not(:hover):after {
+    > .mr-widget-pages:not(:hover):after {
     content: "";
     position: absolute;
     top: 0;
@@ -2594,21 +2588,21 @@
     border-bottom: 0.2rem solid;
     opacity: 0.25;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob
-    > .mr-pages:not(:hover)
+    > .mr-widget-pages:not(:hover)
     li {
     opacity: 0;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-hambmob
-    > .mr-pages:not(:hover)
+    > .mr-widget-pages:not(:hover)
     li:first-child {
     margin-top: 1.5rem;
   }
 }
 /*perpage*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle:not(.mr-contentpagination)
   > .mr-pagination {
   text-align: center;
@@ -2617,63 +2611,63 @@
   width: 100%;
 }
 /*globallayoutoptions-onlyactives*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-expandactive).mr-onlyactives
-  > .mr-pages:not(.mr-1perline)
-  > .mr-item:not(.active) {
+  > .mr-widget-pages:not(.mr-1perline)
+  > .mr-widget-item:not(.active) {
   padding: 0;
 }
 /*globallayoutoptions-contentpagination*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-contentpagination
   > .mr-pagination
-  > .mr-next,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-next,
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-defaultstyle.mr-contentpagination
   > .mr-pagination
-  > .mr-prev {
+  > .mr-widget-prev {
   top: calc(50% - var(--padding, 0.75rem));
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-contentpagination
   > .mr-pagination
-  > .mr-pageselect,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-pageselect,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-contentpagination
   > .mr-pagination
-  > .mr-below {
+  > .mr-widget-below {
   margin-left: calc(50% - var(--padding, 0.75rem));
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-defaultstyle.mr-contentpagination
   > .mr-pagination
-  > .mr-prev {
+  > .mr-widget-prev {
   left: var(--padding, 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-defaultstyle.mr-contentpagination
   > .mr-pagination
-  > .mr-next {
+  > .mr-widget-next {
   right: var(--padding, 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   .mr-layout.mr-defaultstyle.mr-contentpagination
   > .mr-pagination
-  > .mr-below {
+  > .mr-widget-below {
   bottom: var(--padding, 0.75rem);
 }
 /*pagetoggles-3*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-below:not(.loading)
+  > .mr-widget-below:not(.loading)
   span {
   display: none;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-below:not(.loading):after {
+  > .mr-widget-below:not(.loading):after {
   opacity: 1;
   border-width: var(--padding, 0.75rem) var(--padding, 0.75rem) 0
     var(--padding, 0.75rem);
@@ -2682,96 +2676,96 @@
   margin: 0 auto;
 }
 @media only screen and (max-width: 59.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-defaultstyle
     > .mr-pagination
-    > .mr-below:not(.loading) {
+    > .mr-widget-below:not(.loading) {
     height: 1rem;
     width: 2rem;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-defaultstyle
     > .mr-pagination
-    > .mr-below:not(.loading):after {
+    > .mr-widget-below:not(.loading):after {
     border-width: 1rem 1rem 0 1rem;
     width: 1rem;
   }
 }
 /*pagetoggles-0*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev,
-.mrdev-widget.mr-theme.mr-defaulttheme
+  > .mr-widget-prev,
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next {
+  > .mr-widget-next {
   background: transparent;
   border: 0;
   padding: 0;
   margin: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev
+  > .mr-widget-prev
   > span,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next
+  > .mr-widget-next
   > span {
   display: none;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev {
+  > .mr-widget-prev {
   float: left;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next {
+  > .mr-widget-next {
   float: right;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-prev:after {
+  > .mr-widget-prev:after {
   border-width: var(--padding, 0.75rem) var(--padding, 0.75rem)
     var(--padding, 0.75rem) 0rem;
   border-color: transparent currentColor transparent transparent;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
   > .mr-pagination
-  > .mr-next:after {
+  > .mr-widget-next:after {
   border-width: var(--padding, 0.75rem) 0 var(--padding, 0.75rem)
     var(--padding, 0.75rem);
   border-color: transparent transparent transparent currentColor;
 }
 @media only screen and (max-width: 59.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-defaultstyle
     > .mr-pagination
-    > .mr-prev:after {
+    > .mr-widget-prev:after {
     border-width: 1rem 1rem 1rem 0rem;
   }
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-defaultstyle
     > .mr-pagination
-    > .mr-next:after {
+    > .mr-widget-next:after {
     border-width: 1rem 0 1rem 1rem;
   }
 }
 /*pagetoggles-2*/
 @media only screen and (max-width: 59.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-defaultstyle
     > .mr-pagination
-    > .mr-radios
-    > .mr-radio {
+    > .mr-widget-radios
+    > .mr-widget-radio {
     width: 1.375rem;
     height: 1.375rem;
     margin: 0.325rem;
@@ -2779,10 +2773,10 @@
 }
 /*pagetoggles-1*/
 @media only screen and (max-width: 59.94em) {
-  .mrdev-widget.mr-theme.mr-defaulttheme
+  .mr-theme.mr-defaulttheme
     > .mr-layout.mr-defaultstyle
     .mr-pagination
-    > .mr-pageselect {
+    > .mr-widget-pageselect {
     transform: scale(1.2);
     transform-origin: center;
     margin-top: 0.5rem;
@@ -2790,26 +2784,26 @@
   }
 }
 /*itemimage*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image {
   margin: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item:not(.active)
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item:not(.active)
+  > .mr-widget-item-container
   > .mr-image
   figcaption,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item:not(.active)
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item:not(.active)
+  > .mr-widget-item-container
   > .mr-image
   > figcaption
   > small {
@@ -2817,107 +2811,107 @@
   font-size: 0;
   line-height: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container
   > .mr-image
   > figcaption,
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container
   > .mr-image
   > figcaption
   > small {
   opacity: 1;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-revealactive.mr-thumbnail:not(.mr-expandactive)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image {
   width: 30%;
   float: left;
   height: auto;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-revealactive.mr-thumbnail:not(.mr-expandactive)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image
   + .mr-title {
   padding-left: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-defaultstyle).mr-revealactive
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image {
   margin-right: var(--padding, 0.75rem);
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle:not(.mr-revealactive):not(.mr-expandactive)
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image {
   margin-left: auto;
   margin-right: auto;
   display: block;
   text-align: center;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle.mr-thumbnail
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image {
   position: relative;
   margin: 0;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item.active
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item.active
+  > .mr-widget-item-container
   > .mr-image {
   z-index: 2;
 }
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-defaultstyle
-  > .mr-pages
-  > .mr-item
-  > .mr-item-container
+  > .mr-widget-pages
+  > .mr-widget-item
+  > .mr-widget-item-container
   > .mr-image
   figcaption {
   word-break: break-word;
 }
 /*tabsposition-tabsleft*/
-.mrdev-widget.mr-theme.mr-defaulttheme
-  > .mr-layout.mr-tabsleft:not(.mr-expandactive)
-  > .mr-pages:not(.mr-1perline),
-.mrdev-widget.mr-theme.mr-defaulttheme
-  > .mr-layout.mr-tabsright:not(.mr-expandactive)
-  > .mr-pages:not(.mr-1perline) {
+.mr-theme.mr-defaulttheme
+  > .mr-layout.mr-widget-tabsleft:not(.mr-expandactive)
+  > .mr-widget-pages:not(.mr-1perline),
+.mr-theme.mr-defaulttheme
+  > .mr-layout.mr-widget-tabsright:not(.mr-expandactive)
+  > .mr-widget-pages:not(.mr-1perline) {
   width: calc(75% + var(--padding, 0.75rem) + var(--padding, 0.75rem));
 }
 /*globallayoutoptions-subitemactive*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout.mr-subitemactive.mr-opaqueactive
-  > .mr-pages
-  > .mr-item.mr-subitem {
+  > .mr-widget-pages
+  > .mr-widget-item.mr-subitem {
   opacity: 1;
 }
 /*globallayoutoptions-hideinactives*/
-.mrdev-widget.mr-theme.mr-defaulttheme
+.mr-theme.mr-defaulttheme
   > .mr-layout:not(.mr-expandactive).mr-hideinactives:not(.mr-subitemactive)
-  > .mr-pages
-  > .mr-item.inactive {
+  > .mr-widget-pages
+  > .mr-widget-item.inactive {
   display: none;
 }

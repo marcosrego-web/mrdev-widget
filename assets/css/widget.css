@@ -2,12 +2,12 @@
 .widget_yng_developer .widgettitle {
   text-transform: capitalize;
 }
-.mrdev-widget.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > * {
+.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-widget-tabs) > * {
   margin-left: 0;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *:not(.active):before {
   content: "";
   position: absolute;
@@ -19,295 +19,285 @@
   display: block;
   cursor: pointer;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout:not(.mr-hover)
-  > *:not(.mr-pagination):not(.mr-tabs)
+.mr-layout:not(.mr-hover)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *:not(.active),
-.mrdev-widget.mr-theme
-  > .mr-layout:not(.mr-hover):not(.mr-donotinactive)
-  > *:not(.mr-pagination):not(.mr-tabs)
+.mr-layout:not(.mr-hover):not(.mr-donotinactive)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *.active {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 .mr-layout:not(.mr-hover):not(.mr-donotinactive)
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *.active
   *.mr-content {
   cursor: initial;
 }
 @supports (-webkit-overflow-scrolling: touch) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout.mr-windowheight
-    > *:not(.mr-pagination):not(.mr-tabs),
-  .mrdev-widget.mr-theme
+    > *:not(.mr-pagination):not(.mr-widget-tabs),
+  .mr-theme
     > .mr-layout.mr-expandactive
-    > *:not(.mr-pagination):not(.mr-tabs).mr-0perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-0perline
     > *.active
-    > .mr-item-container {
+    > .mr-widget-item-container {
     overflow-y: scroll !important;
     -webkit-overflow-scrolling: touch !important;
   }
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs).inactive:not(.active) {
+  > *:not(.mr-pagination):not(.mr-widget-tabs).inactive:not(.active) {
   display: none;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-content
   > .mr-meta {
   flex-flow: column;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-content
   > .mr-meta {
   align-items: baseline;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-content
   > .mr-meta
   > .mr-date,
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-content
   > .mr-meta
   > .mr-author,
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-content
   > .mr-meta
   .mr-categories,
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-content
   > .mr-meta
   .mr-tags {
   margin-right: 0.25rem;
 }
-.mrdev-widget.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-tabs) > *,
-.mrdev-widget.mr-theme > .mr-layout .mr-title,
-.mrdev-widget.mr-theme
+.mr-theme > .mr-layout > *:not(.mr-pagination):not(.mr-widget-tabs) > *,
+.mr-theme > .mr-layout .mr-title,
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-content
   > .mr-meta,
-.mrdev-widget.mr-theme > .mr-layout .mr-content,
-.mrdev-widget.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
+.mr-theme > .mr-layout .mr-content,
+.mr-theme > .mr-layout > .mr-widget-tabs > .mr-widget-tab {
   position: relative;
 }
-.mrdev-widget.mr-theme > .mr-layout > .mr-tabs > .mr-tab {
+.mr-theme > .mr-layout > .mr-widget-tabs > .mr-widget-tab {
   text-align: center;
   cursor: pointer;
   word-break: break-word;
 }
-.mrdev-widget.mr-theme > .mr-layout > .mr-tabs > .mr-tab.active {
+.mr-theme > .mr-layout > .mr-widget-tabs > .mr-widget-tab.active {
   font-weight: 700;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout:not(.mr-none):not(.mr-windowheight)
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *,
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout:not(.mr-none):not(.mr-windowheight)
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container {
+  > .mr-widget-item-container {
   min-height: 100%;
 }
-.mr-tab {
+.mr-widget-tab {
   width: 100%;
 }
 @media only screen and (orientation: portrait) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout:not(.mr-landscape)
-    > *:not(.mr-pagination):not(.mr-tabs).mr-0perline {
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-0perline {
     flex-direction: column;
   }
 }
 @media only screen and (max-width: 960px) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-11perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-11perline
     > *,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-5perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-5perline
     > *,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-7perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-7perline
     > *,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-9perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-9perline
     > * {
     width: 33.333333%;
   }
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-10perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-10perline
     > *,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-12perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-12perline
     > *,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-4perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-4perline
     > *,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-6perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-6perline
     > *,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout
-    > *:not(.mr-pagination):not(.mr-tabs).mr-8perline
+    > *:not(.mr-pagination):not(.mr-widget-tabs).mr-8perline
     > * {
     width: 50%;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: landscape) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout:not(.mr-portrait)
-    > *:not(.mr-pagination):not(.mr-tabs):not(.mr-2perline):not(.mr-1perline)
+    > *:not(.mr-pagination):not(.mr-widget-tabs):not(.mr-2perline):not(.mr-1perline)
     > * {
     width: 50%;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: portrait) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout:not(.mr-landscape)
-    > *:not(.mr-pagination):not(.mr-tabs):not(.mr-1perline)
+    > *:not(.mr-pagination):not(.mr-widget-tabs):not(.mr-1perline)
     > * {
     width: 100%;
   }
 }
 /*tabsposition-tabstop*/
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-tabs:not(.mr-tabsleft):not(.mr-tabsright)
-  > .mr-tabs {
+.mr-theme
+  > .mr-layout.mr-widget-tabs:not(.mr-widget-tabsleft):not(.mr-widget-tabsright)
+  > .mr-widget-tabs {
   width: 100%;
 }
 /*tabsposition-tabsleft*/
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-tabsleft
-  > *:not(.mr-pagination):not(.mr-tabs) {
+.mr-theme
+  > .mr-layout.mr-widget-tabsleft
+  > *:not(.mr-pagination):not(.mr-widget-tabs) {
   flex-grow: 1;
   max-width: 75%;
 }
-.mrdev-widget.mr-theme > .mr-layout.mr-tabsleft > .mr-tabs {
+.mr-theme > .mr-layout.mr-widget-tabsleft > .mr-widget-tabs {
   width: 25%;
   flex-wrap: wrap;
 }
 /*tabsposition-tabsright*/
-.mrdev-widget.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
+.mr-theme > .mr-layout.mr-widget-tabsright > .mr-widget-tabs {
   order: 9999;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-tabsright
-  > *:not(.mr-pagination):not(.mr-tabs) {
+.mr-theme
+  > .mr-layout.mr-widget-tabsright
+  > *:not(.mr-pagination):not(.mr-widget-tabs) {
   flex-grow: 1;
   max-width: 75%;
 }
-.mrdev-widget.mr-theme > .mr-layout.mr-tabsright > .mr-tabs {
+.mr-theme > .mr-layout.mr-widget-tabsright > .mr-widget-tabs {
   width: 25%;
   flex-wrap: wrap;
 }
 /*tabsposition-tabsbottom*/
-.mrdev-widget.mr-theme > .mr-layout.mr-tabsbottom > .mr-tabs {
+.mr-theme > .mr-layout.mr-widget-tabsbottom > .mr-widget-tabs {
   order: 9999;
 }
 /*pagetoggles-4*/
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
   > .mr-pagination
-  > button.mr-scroll:not(.mr-below):not(.loading) {
+  > button.mr-widget-scroll:not(.mr-widget-below):not(.loading) {
   opacity: 0;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout
-  > .mr-pagination
-  > button.mr-scroll.loading
-  span {
+.mr-theme > .mr-layout > .mr-pagination > button.mr-widget-scroll.loading span {
   font-size: 0;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
   > .mr-pagination
-  > button.mr-scroll.loading
+  > button.mr-widget-scroll.loading
   span:after {
   content: "...";
   font-size: initial;
 }
 /*pagetoggles-3*/
-.mrdev-widget.mr-theme > .mr-layout > .mr-pagination > .mr-below.loading span {
+.mr-theme > .mr-layout > .mr-pagination > .mr-widget-below.loading span {
   font-size: 0;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout
-  > .mr-pagination
-  > .mr-below.loading
-  span:after {
+.mr-theme > .mr-layout > .mr-pagination > .mr-widget-below.loading span:after {
   content: "...";
   font-size: initial;
 }
 /*itemimage*/
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-image {
   overflow: hidden;
   min-height: 4.5rem;
   margin: 0;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-image
   img {
   object-fit: cover;
   width: auto;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout:not(.mr-thumbnail)
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container {
+  > .mr-widget-item-container {
   overflow: hidden;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout:not(.mr-thumbnail)
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-image {
   position: absolute;
   top: 0;
@@ -315,61 +305,61 @@
   width: 100%;
   height: 100%;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-image {
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout:not(.mr-parallax)
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-image {
   background-position-y: center;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container
+  > .mr-widget-item-container
   > .mr-image
   figcaption {
   display: inherit;
 }
 /*imagestype-parallax*/
 @media (prefers-reduced-motion: no-preference) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout.mr-parallax
-    > *:not(.mr-pagination):not(.mr-tabs)
+    > *:not(.mr-pagination):not(.mr-widget-tabs)
     > *
-    > .mr-item-container
+    > .mr-widget-item-container
     > .mr-image {
     background-attachment: fixed;
   }
   _:-ms-lang(x),
   _:-webkit-full-screen,
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout.mr-parallax
-    > *:not(.mr-pagination):not(.mr-tabs)
+    > *:not(.mr-pagination):not(.mr-widget-tabs)
     > *
-    > .mr-item-container
+    > .mr-widget-item-container
     > .mr-image {
     background-attachment: scroll !important;
     background-position-x: center !important;
     background-position-y: center !important;
   }
   @supports (-webkit-overflow-scrolling: touch) {
-    .mrdev-widget.mr-theme
+    .mr-theme
       > .mr-layout.mr-parallax
-      > *:not(.mr-pagination):not(.mr-tabs)
+      > *:not(.mr-pagination):not(.mr-widget-tabs)
       > *
-      > .mr-item-container
+      > .mr-widget-item-container
       > .mr-image {
       background-attachment: scroll !important;
       background-position-x: center !important;
@@ -378,190 +368,169 @@
   }
 }
 /*globallayoutoptions-windowheight*/
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-windowheight
-  > *:not(.mr-pagination):not(.mr-tabs) {
+  > *:not(.mr-pagination):not(.mr-widget-tabs) {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   overflow-x: hidden;
   overflow-y: auto;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout:not(.mr-list).mr-windowheight
-  > *:not(.mr-pagination):not(.mr-tabs).mr-0perline {
+  > *:not(.mr-pagination):not(.mr-widget-tabs).mr-0perline {
   overflow: auto;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-windowheight
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *,
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-windowheight
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container {
+  > .mr-widget-item-container {
   height: 100%;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-windowheight
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container {
+  > .mr-widget-item-container {
   overflow: hidden;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-windowheight
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *.active
-  > .mr-item-container {
+  > .mr-widget-item-container {
   overflow: auto;
 }
 /*perpage*/
-.mrdev-widget.mr-theme > .mr-layout > .mr-pagination {
+.mr-theme > .mr-layout > .mr-pagination {
   order: 9999;
 }
-.mrdev-widget.mr-theme > .mr-layout > .mr-pagination > .mr-radios > .mr-radio,
-.mrdev-widget.mr-theme
+.mr-theme > .mr-layout > .mr-pagination > .mr-widget-radios > .mr-widget-radio,
+.mr-theme
   > .mr-layout
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs) {
+  > *:not(.mr-pagination):not(.mr-widget-tabs)elect {
   cursor: pointer;
 }
 /*globallayoutoptions-contentpagination*/
-.mrdev-widget.mr-theme > .mr-layout.mr-contentpagination {
+.mr-theme > .mr-layout.mr-contentpagination {
   position: relative;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs),
-.mrdev-widget.mr-theme
+  > *:not(.mr-pagination):not(.mr-widget-tabs)elect,
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > .mr-radios,
-.mrdev-widget.mr-theme
+  > .mr-widget-radios,
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > .mr-below {
+  > .mr-widget-below {
   position: absolute;
   z-index: 2;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs),
-.mrdev-widget.mr-theme
+  > *:not(.mr-pagination):not(.mr-widget-tabs)elect,
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > .mr-radios,
-.mrdev-widget.mr-theme
+  > .mr-widget-radios,
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > .mr-below {
+  > .mr-widget-below {
   width: 100%;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
+.mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs) {
+  > *:not(.mr-pagination):not(.mr-widget-tabs)elect {
   bottom: 3.5rem;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > .mr-radios {
+  > .mr-widget-radios {
   text-align: center;
   bottom: 2rem;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-contentpagination
   > .mr-pagination
-  > .mr-below {
+  > .mr-widget-below {
   bottom: 0;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
-  > .mr-pagination
-  > .mr-next,
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
-  > .mr-pagination
-  > .mr-prev {
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-widget-next,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-widget-prev {
   position: absolute;
   top: 50%;
   float: inherit;
   z-index: 3;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
+.mr-layout.mr-contentpagination
   > .mr-pagination
-  > *:not(.mr-pagination):not(.mr-tabs),
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
-  > .mr-pagination
-  > .mr-radios,
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
-  > .mr-pagination
-  > .mr-below,
-.mrdev-widget.mr-theme
-  > .mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
-  > .mr-pagination
-  > .mr-prev {
+  > *:not(.mr-pagination):not(.mr-widget-tabs)elect,
+.mr-layout.mr-contentpagination > .mr-pagination > .mr-widget-radios,
+.mr-layout.mr-contentpagination > .mr-pagination > .mr-widget-below,
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-widget-prev {
   left: 0;
 }
-.mrdev-widget.mr-theme
-  > .mr-layout.mr-contentpagination
-  > .mr-pagination
-  > .mr-next {
+.mr-theme > .mr-layout.mr-contentpagination > .mr-pagination > .mr-widget-next {
   right: 0;
 }
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-contentpagination
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
-  > .mr-item-container {
+  > .mr-widget-item-container {
   padding: 0 1.75rem 4rem 1.75rem;
 }
 @media only screen and (max-width: 59.94em) and (min-width: 47.94em) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout.mr-contentpagination
-    > *:not(.mr-pagination):not(.mr-tabs)
+    > *:not(.mr-pagination):not(.mr-widget-tabs)
     > *
-    > .mr-item-container {
+    > .mr-widget-item-container {
     padding-bottom: 5.4rem;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: landscape) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout.mr-contentpagination
-    > *:not(.mr-pagination):not(.mr-tabs)
+    > *:not(.mr-pagination):not(.mr-widget-tabs)
     > *
-    > .mr-item-container {
+    > .mr-widget-item-container {
     padding-bottom: 7.4rem;
   }
 }
 @media only screen and (max-width: 47.94em) and (orientation: portrait) {
-  .mrdev-widget.mr-theme
+  .mr-theme
     > .mr-layout.mr-contentpagination
-    > *:not(.mr-pagination):not(.mr-tabs)
+    > *:not(.mr-pagination):not(.mr-widget-tabs)
     > *
-    > .mr-item-container {
+    > .mr-widget-item-container {
     padding-bottom: 7.4rem;
   }
 }
 /*globallayoutoptions-hideinactives*/
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-hideinactives:not(.mr-onlyactives)
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *.inactive {
   display: none;
 }
 /*globallayoutoptions-onlyactives*/
-.mrdev-widget.mr-theme
+.mr-theme
   > .mr-layout.mr-onlyactives
-  > *:not(.mr-pagination):not(.mr-tabs)
+  > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *:not(.active) {
   opacity: 0;
   width: 0;
