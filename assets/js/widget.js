@@ -519,7 +519,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mrGetCookie("mrRemember") != "") {
       const mrRemembered = mrGetCookie("mrRemember");
       for (id = 0; id < mrwids.length; id++) {
-        console.log(mrwids.length);
         if (
           !mrwids[id].classList.contains(mrRemembered) ||
           (mrwids[id].classList.contains(mrRemembered) &&
