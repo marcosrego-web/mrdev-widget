@@ -46,7 +46,7 @@ defined('ABSPATH') or die;
 					if($autoplay === 0) {
 						$autoplayclass = '';
 					} else if($autoplay > 0) {
-						$autoplayclass = ' mr-widget-autoplay'.$autoplay."s mr-transitionright";
+						$autoplayclass = ' mr-autoplay'.$autoplay."s mr-transitionright";
 					}
 					/*
 					Images size inline styles
