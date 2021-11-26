@@ -392,7 +392,7 @@ function mrAutoPlay() {
         .call(currentElement.classList)
         .toString();
       const mrwidAutoPlayClass = mrwidAutoPlayClasses.substring(
-        mrwidAutoPlayClasses.lastIndexOf("mr-widget-autoplay") + 11,
+        mrwidAutoPlayClasses.lastIndexOf("mr-widget-autoplay") + 18,
         mrwidAutoPlayClasses.lastIndexOf("s")
       );
       if (!currentElement.classList.contains("mr-hovering")) {
@@ -582,7 +582,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .call(mrwidAutoPlay.classList)
       .toString();
     const mrwidAutoPlayClass = mrwidAutoPlayClasses.substring(
-      mrwidAutoPlayClasses.lastIndexOf("mr-widget-autoplay") + 14,
+      mrwidAutoPlayClasses.lastIndexOf("mr-widget-autoplay") + 21,
       mrwidAutoPlayClasses.lastIndexOf("s")
     );
     setTimeout(mrAutoPlay, parseInt(mrwidAutoPlayClass) * 1000);
