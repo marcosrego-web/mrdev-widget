@@ -162,7 +162,7 @@ defined('ABSPATH') or die;
 					//print_r($itemlist);
 					if ( !empty( $itemlist ) ) {
 							if($is_admin === false) {
-								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).'theme mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).'layout '.(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs))?' mr-hastabs':" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
+								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).'theme mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).'layout '.(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs))?' mr-hastabs':" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-widget-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
 								if($tabs === 1) { //Items Tabs
 									$content .= '<ul class="mr-widget-tabs mr-widget-items mr-flex mr-widget-scroll mr-nobullets">';
 									foreach ( $itemlist as $key => $tab) {
