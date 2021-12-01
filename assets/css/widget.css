@@ -126,11 +126,11 @@
   font-weight: 700;
 }
 .mr-theme
-  > .mr-layout:not(.mr-none):not(.mr-windowheight)
+  > .mr-layout:not(.mr-nonetheme):not(.mr-windowheight)
   > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *,
 .mr-theme
-  > .mr-layout:not(.mr-none):not(.mr-windowheight)
+  > .mr-layout:not(.mr-nonetheme):not(.mr-windowheight)
   > *:not(.mr-pagination):not(.mr-widget-tabs)
   > *
   > .mr-widget-item-container {
