@@ -74,10 +74,10 @@ document.addEventListener("click", function (event) {
     }
   } else if (event.target.matches(".mr-admin .mr-editoverride")) {
     mrSlideDown(event.target.nextElementSibling);
-    event.target.closest(".mr-item").classList.add("mr-openedpanel");
+    event.target.closest(".mr-widget-item").classList.add("mr-openedpanel");
   } else if (event.target.matches(".mr-admin .mr-closeeditoverride")) {
     mrSlideUp(event.target.closest(".mr-overridepanel"));
-    event.target.closest(".mr-item").classList.remove("mr-openedpanel");
+    event.target.closest(".mr-widget-item").classList.remove("mr-openedpanel");
   } else if (event.target.matches(".mr-themes")) {
     event.target.addEventListener("change", function (event) {
       mrSlideUp(
