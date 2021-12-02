@@ -15,18 +15,18 @@ function mrwidMain(mrwidThis) {
     const mrtabs = mrwidTabs.querySelectorAll(".mr-widget-tab");
     for (id = 0; id < mrtabs.length; id++) {
       const mrtab = mrtabs[id];
-      mrtab.classList.remove("active", "inactive", "open");
+      mrtab.classList.remove("mr-active", "mr-inactive", "open");
     }
   }
   /*end*/
-  if (mrwidThis.classList.contains("active")) {
+  if (mrwidThis.classList.contains("mr-active")) {
     mrCloseActive(
       mrwidThis,
       mrwidLayout,
       mrwidPage /*tabs*/,
       mrwidItemsTabs /*end*/
     );
-  } else if (!mrwidThis.classList.contains("active")) {
+  } else if (!mrwidThis.classList.contains("mr-active")) {
     mrChangeStatus(
       mrwidThis,
       mrwidLayout,
@@ -56,23 +56,23 @@ function mrChangeStatus(
   for (id = 0; id < mrwids.length; id++) {
     /*globallayoutoptions-keepactive*/
     if (mrwidLayout.classList.contains("mr-keepactive")) {
-      if (!mrwids[id].classList.contains("active")) {
-        mrwids[id].classList.add("inactive");
+      if (!mrwids[id].classList.contains("mr-active")) {
+        mrwids[id].classList.add("mr-inactive");
       }
     } /*end*/ else if (!mrwidLayout.classList.contains("mr-keepactive")) {
-      mrwids[id].classList.remove("active", "open", "mr-widget-scroll");
-      mrwids[id].classList.add("inactive");
+      mrwids[id].classList.remove("mr-active", "open", "mr-widget-scroll");
+      mrwids[id].classList.add("mr-inactive");
     }
     /*tabs*/
     if (mrwidItemsTabs) {
       if (mrwidLayout.classList.contains("mr-keepactive")) {
-        if (!mrwids[id].classList.contains("active")) {
+        if (!mrwids[id].classList.contains("mr-active")) {
           const mrwidTabId = mrwids[id].className.split(" ")[0];
           const mrwidTab = mrwidItemsTabs.querySelector(
             ".mr-widget-tab." + mrwidTabId
           );
           if (mrwidTab) {
-            mrwidTab.classList.add("inactive");
+            mrwidTab.classList.add("mr-inactive");
           }
         }
       } else if (!mrwidLayout.classList.contains("mr-keepactive")) {
@@ -81,15 +81,15 @@ function mrChangeStatus(
           ".mr-widget-tab." + mrwidTabId
         );
         if (mrwidTab) {
-          mrwidTab.classList.remove("active", "open", "mr-widget-scroll");
-          mrwidTab.classList.add("inactive");
+          mrwidTab.classList.remove("mr-active", "open", "mr-widget-scroll");
+          mrwidTab.classList.add("mr-inactive");
         }
       }
     }
     /*end*/
   }
-  mrwidThis.classList.remove("inactive");
-  mrwidThis.classList.add("active");
+  mrwidThis.classList.remove("mr-inactive");
+  mrwidThis.classList.add("mr-active");
   /*tabs*/
   if (mrwidItemsTabs) {
     const mrwidTabId = mrwidThis.className.split(" ")[0];
@@ -97,8 +97,8 @@ function mrChangeStatus(
       ".mr-widget-tab." + mrwidTabId
     );
     if (mrwidTab) {
-      mrwidTab.classList.remove("inactive");
-      mrwidTab.classList.add("active");
+      mrwidTab.classList.remove("mr-inactive");
+      mrwidTab.classList.add("mr-active");
     }
   }
   /*end*/
@@ -138,7 +138,7 @@ function mrChangeStatus(
           mrwidSubCats[id].classList.contains("parent" + mrwidThis.classList[0])
         ) {
           mrwidSubCats[id].classList.remove("mr-hide");
-          mrwidSubCats[id].classList.remove("inactive");
+          mrwidSubCats[id].classList.remove("mr-inactive");
         }
       }
     }
@@ -152,8 +152,8 @@ function mrCloseActive(
   mrwidItemsTabs /*end*/
 ) {
   if (!mrwidLayout.classList.contains("mr-donotinactive")) {
-    mrwidThis.classList.remove("active", "open");
-    mrwidThis.classList.add("inactive");
+    mrwidThis.classList.remove("mr-active", "open");
+    mrwidThis.classList.add("mr-inactive");
     /*tabs*/
     if (mrwidItemsTabs) {
       const mrwidTabId = mrwidThis.className.split(" ")[0];
@@ -161,8 +161,8 @@ function mrCloseActive(
         ".mr-widget-tab." + mrwidTabId
       );
       if (mrwidTab) {
-        mrwidTab.classList.remove("active", "inactive", "open");
-        mrwidTab.classList.add("inactive");
+        mrwidTab.classList.remove("mr-active", "mr-inactive", "open");
+        mrwidTab.classList.add("mr-inactive");
       }
     }
     /*end*/
@@ -177,7 +177,7 @@ function mrCloseActive(
         if (mrwids[id].classList.contains("mr-subitem")) {
           mrwids[id].classList.add("mr-hide");
         }
-        mrwids[id].classList.remove("active", "inactive", "open");
+        mrwids[id].classList.remove("mr-active", "mr-inactive", "open");
         /*tabs*/
         if (mrwidItemsTabs) {
           const mrwidTabId = mrwids[id].className.split(" ")[0];
@@ -185,7 +185,7 @@ function mrCloseActive(
             ".mr-widget-tab." + mrwidTabId
           );
           if (mrwidTab) {
-            mrwidTab.classList.remove("active", "inactive", "open");
+            mrwidTab.classList.remove("mr-active", "mr-inactive", "open");
           }
         }
         /*end*/
@@ -194,23 +194,23 @@ function mrCloseActive(
   }
 }
 function mrConfirmStatus(mrwidPage /*tabs*/, mrwidItemsTabs /*end*/) {
-  const mrwidCheckState = mrwidPage.querySelectorAll(".active");
+  const mrwidCheckState = mrwidPage.querySelectorAll(".mr-active");
   if (!mrwidCheckState.length) {
     const mrwids = mrwidPage.querySelectorAll(".mr-widget-item");
     for (id = 0; id < mrwids.length; id++) {
-      mrwids[id].classList.remove("inactive");
+      mrwids[id].classList.remove("mr-inactive");
     }
   }
   /*tabs*/
   if (mrwidItemsTabs) {
     const mrwidCheckState = mrwidItemsTabs.querySelectorAll(
-      ".mr-widget-tab.active"
+      ".mr-widget-tab.mr-active"
     );
     if (!mrwidCheckState.length) {
       const mrtabs = mrwidItemsTabs.querySelectorAll(".mr-widget-tab");
       if (mrtabs) {
         for (id = 0; id < mrtabs.length; id++) {
-          mrtabs[id].classList.remove("inactive");
+          mrtabs[id].classList.remove("mr-inactive");
         }
       }
     }
@@ -256,23 +256,23 @@ function mrwidChangePage(currentElement, mrwidLayout, mrwidPage) {
     }
     const mrwidPages = mrwidLayout.querySelectorAll(".mr-widget-pages");
     const mrwidActivePages = mrwidLayout.querySelectorAll(
-      ".mr-widget-pages.active"
+      ".mr-widget-pages.mr-active"
     );
     const mrwidNewPage = mrwidLayout.querySelector(
       ".mr-widget-page" + mrwidPage
     );
     for (id = 0; id < mrwidActivePages.length; id++) {
       const mrwidActivePage = mrwidActivePages[id];
-      mrwidActivePage.classList.remove("active", "inactive", "open");
+      mrwidActivePage.classList.remove("mr-active", "mr-inactive", "open");
     }
     setTimeout(function () {
       for (id = 0; id < mrwidPages.length; id++) {
         const mrwidPage = mrwidPages[id];
-        mrwidPage.classList.remove("active");
-        mrwidPage.classList.add("inactive");
+        mrwidPage.classList.remove("mr-active");
+        mrwidPage.classList.add("mr-inactive");
       }
-      mrwidNewPage.classList.remove("inactive");
-      mrwidNewPage.classList.add("active");
+      mrwidNewPage.classList.remove("mr-inactive");
+      mrwidNewPage.classList.add("mr-active");
       if (
         mrwidLayout.querySelector(
           ".mr-widget-page" + (parseInt(mrwidPage) + 1)
@@ -343,15 +343,15 @@ function mrwidBelow(currentElement) {
   );
   mrwidLayout.classList.remove("mr-transitionright", "mr-transitionleft");
   if (!mrwidNewPage) {
-    mrwidLayout.querySelector(".mr-widget-page1").classList.add("active");
+    mrwidLayout.querySelector(".mr-widget-page1").classList.add("mr-active");
     currentElement.style.classList.remove("mr-hide");
   } else {
     if (mrwidNewPage.querySelector(".mr-noscript")) {
       mrwidNewPage.innerHTML =
         mrwidNewPage.querySelector(".mr-noscript").textContent;
     }
-    mrwidNewPage.classList.remove("inactive");
-    mrwidNewPage.classList.add("active");
+    mrwidNewPage.classList.remove("mr-inactive");
+    mrwidNewPage.classList.add("mr-active");
     if (mrwidPageSelect) {
       mrwidPageSelect.value = parseInt(mrwidPage) + 1;
     }
@@ -413,7 +413,7 @@ function mrwidTabs() {
       const mrwidTabId = mrwidItemTab.className.split(" ")[0];
       const mrwidLayout = mrwidItemTab.closest(".mr-layout");
       const mrwidThis = mrwidLayout.querySelector(
-        ".mr-widget-pages.active .mr-widget-item." + mrwidTabId
+        ".mr-widget-pages.mr-active .mr-widget-item." + mrwidTabId
       );
       if (mrwidThis) {
         if (mrwidItemTab.classList.contains("mr-hide")) {
@@ -435,66 +435,68 @@ function mrwidTabsChange(mrwidThis) {
     ".mr-widget-tab." + mrwidTabId
   );
   const mrWids = mrwidLayout.querySelectorAll(
-    ".mr-widget-pages.active .mr-widget-item"
+    ".mr-widget-pages.mr-active .mr-widget-item"
   );
   const mrWidsInactive = mrwidLayout.querySelectorAll(
-    ".mr-widget-pages.active .mr-widget-item.inactive"
+    ".mr-widget-pages.mr-active .mr-widget-item.mr-inactive"
   );
   if (mrwidThis.classList.contains("active")) {
     if (mrwidTabs) {
       for (id = 0; id < mrwidTabs.length; id++) {
         const mrwidTab = mrwidTabs[id];
-        mrwidTab.classList.remove("active", "inactive");
+        mrwidTab.classList.remove("mr-active", "mr-inactive");
       }
     }
     if (mrWids) {
       for (id = 0; id < mrWids.length; id++) {
         const mrWid = mrWids[id];
-        mrWid.classList.remove("active", "inactive");
+        mrWid.classList.remove("mr-active", "mr-inactive");
       }
     }
   } else {
     if (mrwidTabs && !mrwidLayout.classList.contains("mr-keepactive")) {
       for (id = 0; id < mrwidTabs.length; id++) {
         const mrwidTab = mrwidTabs[id];
-        mrwidTab.classList.remove("active");
-        mrwidTab.classList.add("inactive");
+        mrwidTab.classList.remove("mr-active");
+        mrwidTab.classList.add("mr-inactive");
       }
     }
     if (mrWids) {
       for (id = 0; id < mrWids.length; id++) {
         const mrWid = mrWids[id];
         if (mrWid.classList.contains(mrwidTabId)) {
-          mrWid.classList.remove("inactive");
-          mrWid.classList.add("active");
+          mrWid.classList.remove("mr-inactive");
+          mrWid.classList.add("mr-active");
           if (mrwidActiveTab) {
-            mrwidActiveTab.classList.remove("inactive");
-            mrwidActiveTab.classList.add("active");
+            mrwidActiveTab.classList.remove("mr-inactive");
+            mrwidActiveTab.classList.add("mr-active");
           }
         } else {
           if (
             !mrWidsInactive.length ||
             !mrwidLayout.classList.contains("mr-keepactive")
           ) {
-            mrWid.classList.remove("active");
-            mrWid.classList.add("inactive");
+            mrWid.classList.remove("mr-active");
+            mrWid.classList.add("mr-inactive");
           }
         }
       }
     }
   }
-  const mrwidCheckState = mrwidLayout.querySelectorAll(".mr-widget-tab.active");
+  const mrwidCheckState = mrwidLayout.querySelectorAll(
+    ".mr-widget-tab.mr-active"
+  );
   if (!mrwidCheckState.length) {
     if (mrwidTabs) {
       for (id = 0; id < mrwidTabs.length; id++) {
         const mrwidTab = mrwidTabs[id];
-        mrwidTab.classList.remove("active", "inactive");
+        mrwidTab.classList.remove("mr-active", "mr-inactive");
       }
     }
     if (mrWids) {
       for (id = 0; id < mrWids.length; id++) {
         const mrWid = mrWids[id];
-        mrWid.classList.remove("active", "inactive");
+        mrWid.classList.remove("mr-active", "mr-inactive");
       }
     }
   }
@@ -513,7 +515,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /*end*/
   /*itemoptions-remember*/
   const mrwids = document.querySelectorAll(
-    ".mr-remember .mr-widget-pages.active .mr-widget-item"
+    ".mr-remember .mr-widget-pages.mr-active .mr-widget-item"
   );
   if (mrwids) {
     if (mrGetCookie("mrRemember") != "") {
@@ -523,18 +525,18 @@ document.addEventListener("DOMContentLoaded", function () {
           !mrwids[id].classList.contains(mrRemembered) ||
           (mrwids[id].classList.contains(mrRemembered) &&
             mrwids.length == 1 &&
-            mrwids[id].classList.contains("active"))
+            mrwids[id].classList.contains("mr-active"))
         ) {
-          mrwids[id].classList.remove("active");
-          mrwids[id].classList.add("inactive");
+          mrwids[id].classList.remove("mr-active");
+          mrwids[id].classList.add("mr-inactive");
         } else {
-          mrwids[id].classList.remove("inactive");
-          mrwids[id].classList.add("active");
+          mrwids[id].classList.remove("mr-inactive");
+          mrwids[id].classList.add("mr-active");
         }
       }
     } else {
       for (id = 0; id < mrwids.length; id++) {
-        if (mrwids[id].classList.contains("active")) {
+        if (mrwids[id].classList.contains("mr-active")) {
           mrCreateCookie(mrwids[id]);
         }
       }
@@ -551,11 +553,11 @@ document.addEventListener("DOMContentLoaded", function () {
           const getWidUrl = getWidUrl.replace("./", "");
         }
         if (window.location.href.indexOf(getWidUrl) > -1) {
-          checkattr[id].classList.remove("inactive");
-          checkattr[id].classList.add("active");
+          checkattr[id].classList.remove("mr-inactive");
+          checkattr[id].classList.add("mr-active");
         } else {
-          checkattr[id].classList.remove("active");
-          checkattr[id].classList.add("inactive");
+          checkattr[id].classList.remove("mr-active");
+          checkattr[id].classList.add("mr-inactive");
         }
       }
     }
@@ -596,7 +598,7 @@ document.addEventListener("DOMContentLoaded", function () {
         /*itemoptions-hover*/
         if (
           event.target.matches(
-            ".mr-layout.mr-hover > .mr-widget-pages.active > .mr-widget-item"
+            ".mr-layout.mr-hover > .mr-widget-pages.mr-active > .mr-widget-item"
           )
         ) {
           mrwidMain(event.target);
@@ -637,15 +639,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         /*itemoptions-hover*/
         const mrwid = event.target.querySelectorAll(
-          ".mr-layout.mr-hover > .mr-widget-pages.active > .mr-widget-item"
+          ".mr-layout.mr-hover > .mr-widget-pages.mr-active > .mr-widget-item"
         );
         if (mrwid) {
           for (id = 0; id < mrwid.length; id++) {
-            mrwid[id].classList.remove("active", "inactive");
+            mrwid[id].classList.remove("mr-active", "mr-inactive");
           }
           if (event.target.classList.contains("mr-subitemactive")) {
             const mrwidSubcats = event.target.querySelectorAll(
-              ".mr-widget-pages.active > .mr-subitem"
+              ".mr-widget-pages.mr-active > .mr-subitem"
             );
             if (mrwidSubcats) {
               for (id = 0; id < mrwidSubcats.length; id++) {
@@ -703,7 +705,7 @@ document.addEventListener("click", function (event) {
     event.target.matches(".mr-layout:not(.mr-hover) .mr-image") ||
     event.target.matches(".mr-layout:not(.mr-hover) .mr-title") ||
     event.target.matches(
-      ".mr-layout:not(.mr-hover) .mr-widget-item:not(.active) .mr-content, .mr-layout:not(.mr-hover) .mr-widget-item:not(.active) .mr-content *"
+      ".mr-layout:not(.mr-hover) .mr-widget-item:not(.mr-active) .mr-content, .mr-layout:not(.mr-hover) .mr-widget-item:not(.mr-active) .mr-content *"
     )
   ) {
     const mrwidThis = event.target;
@@ -712,7 +714,7 @@ document.addEventListener("click", function (event) {
   } /*tabs*/ else if (
     event.target.matches(".mr-widget-tabs .mr-widget-tab") &&
     !event.target.matches(
-      ".mr-layout.mr-donotinactive .mr-widget-tabs .mr-widget-tab.active"
+      ".mr-layout.mr-donotinactive .mr-widget-tabs .mr-widget-tab.mr-active"
     )
   ) {
     const mrwidThis = event.target;
@@ -890,12 +892,12 @@ window.addEventListener("scroll", function (event) {
   /*end*/
   /*imagestype-parallax*/
   mrParallax(
-    ".mr-theme .mr-layout.mr-parallax.mr-background .mr-widget-pages.active .mr-image"
+    ".mr-theme .mr-layout.mr-parallax.mr-background .mr-widget-pages.mr-active .mr-image"
   );
   const st = window.pageYOffset;
   mrInitst = st;
   const mrthumbparElements = document.querySelectorAll(
-    ".mr-theme .mr-layout.mr-parallax.mr-thumbnail:not(.mr-background) .mr-widget-pages.active .mr-image img"
+    ".mr-theme .mr-layout.mr-parallax.mr-thumbnail:not(.mr-background) .mr-widget-pages.mr-active .mr-image img"
   );
   if (mrthumbparElements) {
     for (id = 0; id < mrthumbparElements.length; id++) {
