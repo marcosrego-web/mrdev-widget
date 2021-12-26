@@ -240,12 +240,6 @@ function mrwidChangePage(currentElement, mrwidLayout, mrwidPage) {
     if (mrwidCurrentRadio) {
       mrwidCurrentRadio.setAttribute("checked", "checked");
     }
-    mrwidLayout.classList.remove("mr-transitionright", "mr-transitionleft");
-    if (currentElement.classList.contains("mr-widget-next")) {
-      mrwidLayout.classList.add("mr-transitionright");
-    } else if (currentElement.classList.contains("mr-widget-prev")) {
-      mrwidLayout.classList.add("mr-transitionleft");
-    }
     if (
       mrwidLayout.querySelector(".mr-widget-page" + mrwidPage + " .mr-noscript")
     ) {
@@ -263,7 +257,17 @@ function mrwidChangePage(currentElement, mrwidLayout, mrwidPage) {
     );
     for (id = 0; id < mrwidActivePages.length; id++) {
       const mrwidActivePage = mrwidActivePages[id];
+
       mrwidActivePage.classList.remove("mr-active", "mr-inactive", "open");
+      mrwidActivePage.classList.remove(
+        "mr-transitionright",
+        "mr-transitionleft"
+      );
+      if (currentElement.classList.contains("mr-widget-next")) {
+        mrwidActivePage.classList.add("mr-transitionleft");
+      } else if (currentElement.classList.contains("mr-widget-prev")) {
+        mrwidActivePage.classList.add("mr-transitionright");
+      }
     }
     setTimeout(function () {
       for (id = 0; id < mrwidPages.length; id++) {
@@ -271,7 +275,16 @@ function mrwidChangePage(currentElement, mrwidLayout, mrwidPage) {
         mrwidPage.classList.remove("mr-active");
         mrwidPage.classList.add("mr-inactive");
       }
-      mrwidNewPage.classList.remove("mr-inactive");
+      mrwidNewPage.classList.remove(
+        "mr-inactive",
+        "mr-transitionright",
+        "mr-transitionleft"
+      );
+      if (currentElement.classList.contains("mr-widget-next")) {
+        mrwidNewPage.classList.add("mr-transitionright");
+      } else if (currentElement.classList.contains("mr-widget-prev")) {
+        mrwidNewPage.classList.add("mr-transitionleft");
+      }
       mrwidNewPage.classList.add("mr-active");
       if (
         mrwidLayout.querySelector(
