@@ -354,7 +354,6 @@ function mrwidBelow(currentElement) {
   let mrwidNewPage = mrwidLayout.querySelector(
     ".mr-widget-page" + (parseInt(mrwidPage) + 1)
   );
-  mrwidLayout.classList.remove("mr-transitionright", "mr-transitionleft");
   if (!mrwidNewPage) {
     mrwidLayout.querySelector(".mr-widget-page1").classList.add("mr-active");
     currentElement.style.classList.remove("mr-hide");
@@ -363,7 +362,11 @@ function mrwidBelow(currentElement) {
       mrwidNewPage.innerHTML =
         mrwidNewPage.querySelector(".mr-noscript").textContent;
     }
-    mrwidNewPage.classList.remove("mr-inactive");
+    mrwidNewPage.classList.remove(
+      "mr-inactive",
+      "mr-transitionright",
+      "mr-transitionleft"
+    );
     mrwidNewPage.classList.add("mr-active");
     if (mrwidPageSelect) {
       mrwidPageSelect.value = parseInt(mrwidPage) + 1;
