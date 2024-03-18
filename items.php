@@ -423,6 +423,7 @@ defined('ABSPATH') or die;
 										$itemlinktargetrel = $itemlinktargetrel.' rel="noopener noreferrer"';
 									}
 								}
+								/*
 								if(!empty($itemurl) && strpos($itemurl,'/') == false && strpos($itemurl,'add-to-cart') !== false) {
 									if ( class_exists( 'WooCommerce' ) ) {
 										$itemurl_components = parse_url(esc_url($itemurl));
@@ -430,6 +431,7 @@ defined('ABSPATH') or die;
 										$itemlinktargetrel .= ' data-product_id="'.$itemurl_params['add-to-cart'].'"';
 									}
 								}
+								*/
 								/*
 								Check if current item belongs to the selected parents
 								*/
@@ -842,11 +844,13 @@ defined('ABSPATH') or die;
 																if($bottomlink === "") {
 																	$bottomlink = "Know more...";
 																}
+																/*
 																if(!empty($itemurl) && strpos($itemurl,'/') == false && strpos($itemurl,'add-to-cart') !== false) {
 																	if ( class_exists( 'WooCommerce' ) ) {
 																		$bottomlinkclasses .= ' add_to_cart_button ajax_add_to_cart';
 																	}
 																}
+																*/
 																$bottomlinktext = '<div class="mr-link"><a class="'.$bottomlinkclasses.'" href="'.esc_url($itemurl).'" '.$itemlinktargetrel.' title="'. strip_tags($itemtitle) .'">'.((!empty($bottomlinkoverride) && !empty($bottomlinkoverride[$itemid]))?$bottomlinkoverride[$itemid]:$bottomlink).'</a></div>';
 															}
 															/*
