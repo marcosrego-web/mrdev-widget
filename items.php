@@ -423,15 +423,15 @@ defined('ABSPATH') or die;
 										$itemlinktargetrel = $itemlinktargetrel.' rel="noopener noreferrer"';
 									}
 								}
-								/*
 								if(!empty($itemurl) && strpos($itemurl,'/') == false && strpos($itemurl,'add-to-cart') !== false) {
 									if ( class_exists( 'WooCommerce' ) ) {
 										$itemurl_components = parse_url(esc_url($itemurl));
 										parse_str($itemurl_components['query'], $itemurl_params);
-										$itemlinktargetrel .= ' data-product_id="'.$itemurl_params['add-to-cart'].'"';
+										if(strpos($itemurl_params['add-to-cart'],',') == false) { //Not compatible with multiple products
+											$itemlinktargetrel .= ' data-product_id="'.$itemurl_params['add-to-cart'].'"';
+										}
 									}
 								}
-								*/
 								/*
 								Check if current item belongs to the selected parents
 								*/
@@ -680,12 +680,16 @@ defined('ABSPATH') or die;
 															/*
 															Title starts here
 															*/
+															$itemtitleclasses = 'mr-title';
 															if($itemstitle === 1)  { //No title
-																$showitemtitle = ''.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?'<'.$titletag.' class="mr-title">('.$num_articles.')</'.$titletag.'>':"");
+																$showitemtitle = ''.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?'<'.$titletag.' class="'.$itemtitleclasses.'">('.$num_articles.')</'.$titletag.'>':"");
 															} else if($itemurl === null || $itemstitle === 2) { //Item title
-																$showitemtitle = '<'.$titletag.' class="mr-title">'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</'.$titletag.'>';
+																$showitemtitle = '<'.$titletag.' class="'.$itemtitleclasses.'">'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</'.$titletag.'>';
 															} else { //Linked item title
-																$showitemtitle = '<'.$titletag.' class="mr-title">'.'<a href="'.esc_url($itemurl).'" '.$itemlinktargetrel.'>'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</a>'.'</'.$titletag.'>';
+																if(strpos($itemlinktargetrel,'data-product_id') !== false) {
+																	$itemtitleclasses .= ' add_to_cart_button ajax_add_to_cart';
+																}
+																$showitemtitle = '<'.$titletag.' class="'.$itemtitleclasses.'">'.'<a href="'.esc_url($itemurl).'" '.$itemlinktargetrel.'>'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</a>'.'</'.$titletag.'>';
 															}
 															/*
 															Date starts here
@@ -844,13 +848,9 @@ defined('ABSPATH') or die;
 																if($bottomlink === "") {
 																	$bottomlink = "Know more...";
 																}
-																/*
-																if(!empty($itemurl) && strpos($itemurl,'/') == false && strpos($itemurl,'add-to-cart') !== false) {
-																	if ( class_exists( 'WooCommerce' ) ) {
-																		$bottomlinkclasses .= ' add_to_cart_button ajax_add_to_cart';
-																	}
+																if(strpos($itemlinktargetrel,'data-product_id') !== false) {
+																	$bottomlinkclasses .= ' add_to_cart_button ajax_add_to_cart';
 																}
-																*/
 																$bottomlinktext = '<div class="mr-link"><a class="'.$bottomlinkclasses.'" href="'.esc_url($itemurl).'" '.$itemlinktargetrel.' title="'. strip_tags($itemtitle) .'">'.((!empty($bottomlinkoverride) && !empty($bottomlinkoverride[$itemid]))?$bottomlinkoverride[$itemid]:$bottomlink).'</a></div>';
 															}
 															/*
