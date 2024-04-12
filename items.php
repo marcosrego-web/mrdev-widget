@@ -425,10 +425,19 @@ defined('ABSPATH') or die;
 								}
 								if(!empty($itemurl) && strpos($itemurl,'/') == false && strpos($itemurl,'add-to-cart') !== false) {
 									if ( class_exists( 'WooCommerce' ) ) {
-										$itemurl_components = parse_url(esc_url($itemurl));
+										$itemurl_components = parse_url($itemurl);
 										parse_str($itemurl_components['query'], $itemurl_params);
-										if(strpos($itemurl_params['add-to-cart'],',') == false) { //Not compatible with multiple products
-											$itemlinktargetrel .= ' data-product_id="'.$itemurl_params['add-to-cart'].'"';
+										$itemurl_addcart = $itemurl_params['add-to-cart'];
+										if(empty($itemurl_addcart)) {
+											$itemurl_addcart = $itemurl_params['amp;add-to-cart'];
+										}
+										$itemlinktargetrel .= ' data-product_id="'.$itemurl_addcart.'"';
+										if(strpos($itemurl,'apply_coupon') !== false) {
+											$itemurl_coupon = $itemurl_params['apply_coupon'];
+											if(empty($itemurl_coupon)) {
+												$itemurl_coupon = $itemurl_params['amp;apply_coupon'];
+											}
+											$itemlinktargetrel .= ' data-coupon="'.$itemurl_coupon.'"';
 										}
 									}
 								}
@@ -686,7 +695,8 @@ defined('ABSPATH') or die;
 															} else if($itemurl === null || $itemstitle === 2) { //Item title
 																$showitemtitle = '<'.$titletag.' class="'.$itemtitleclasses.'">'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</'.$titletag.'>';
 															} else { //Linked item title
-																if(strpos($itemlinktargetrel,'data-product_id') !== false) {
+																if(strpos($itemlinktargetrel,'data-product_id') !== false && strpos($itemlinktargetrel,'data-coupon') == false) {
+																	//Not compatible with adding coupons
 																	$itemtitleclasses .= ' add_to_cart_button ajax_add_to_cart';
 																}
 																$showitemtitle = '<'.$titletag.' class="'.$itemtitleclasses.'">'.'<a href="'.esc_url($itemurl).'" '.$itemlinktargetrel.'>'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</a>'.'</'.$titletag.'>';
@@ -848,7 +858,8 @@ defined('ABSPATH') or die;
 																if($bottomlink === "") {
 																	$bottomlink = "Know more...";
 																}
-																if(strpos($itemlinktargetrel,'data-product_id') !== false) {
+																if(strpos($itemlinktargetrel,'data-product_id') !== false && strpos($itemlinktargetrel,'data-coupon') == false) {
+																	//Not compatible with adding coupons
 																	$bottomlinkclasses .= ' add_to_cart_button ajax_add_to_cart';
 																}
 																$bottomlinktext = '<div class="mr-link"><a class="'.$bottomlinkclasses.'" href="'.esc_url($itemurl).'" '.$itemlinktargetrel.' title="'. strip_tags($itemtitle) .'">'.((!empty($bottomlinkoverride) && !empty($bottomlinkoverride[$itemid]))?$bottomlinkoverride[$itemid]:$bottomlink).'</a></div>';

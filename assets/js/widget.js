@@ -822,7 +822,35 @@ document.addEventListener("click", function (event) {
       mrwidBelow(currentElement);
     }
     event.stopPropagation();
-  } /*end*/
+  } /*end*/ else if (
+    event.target.matches(".add_to_cart_button.ajax_add_to_cart")
+  ) {
+    if (event.target.getAttribute("data-product_id").includes(",")) {
+      let productIDs = event.target.getAttribute("data-product_id").split(",");
+      let initialProductIDs = event.target
+        .getAttribute("data-product_id")
+        .split(",");
+      if (productIDs) {
+        for (id = 0; id < productIDs.length; id++) {
+          productIDs = productIDs.slice(1);
+          event.target.setAttribute("data-product_id", productIDs);
+          event.target.click();
+        }
+        event.target.setAttribute("data-product_id", initialProductIDs);
+        if (
+          event.target.getAttribute("data-coupon") &&
+          document.getElementById("fkcart-coupon__input")
+        ) {
+          document.getElementById("fkcart-coupon__input").value =
+            event.target.getAttribute("data-coupon");
+          document
+            .getElementById("fkcart-coupon__input")
+            .setAttribute("value", event.target.getAttribute("data-coupon"));
+          document.querySelector(".fkcart-coupon-button").click();
+        }
+      }
+    }
+  }
 });
 /*pagetoggles-5*/
 document.addEventListener("keydown", function (event) {
