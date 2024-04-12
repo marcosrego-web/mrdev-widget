@@ -46,7 +46,7 @@ defined('ABSPATH') or die;
 					if($autoplay === 0) {
 						$autoplayclass = '';
 					} else if($autoplay > 0) {
-						$autoplayclass = ' mr-autoplay'.$autoplay."s mr-transitionright";
+						$autoplayclass = ' mr-widget-autoplay'.$autoplay."s mr-transitionright";
 					}
 					/*
 					Images size inline styles
@@ -162,9 +162,9 @@ defined('ABSPATH') or die;
 					//print_r($itemlist);
 					if ( !empty( $itemlist ) ) {
 							if($is_admin === false) {
-								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).'theme mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).'layout '.(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs))?' mr-hastabs':" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
+								$content .= '<div class="mrdev-widget mr-'.$contenttype.' mr-theme mr-'.strtolower($theme).'theme mr-boxsize '.$widgetclasses.'"><div class="mr-layout mr-'.strtolower($layout).'layout '.(($layoutoptions)?' mr-'.implode(" mr-", $layoutoptions):" ").(($globallayoutoptions)?' mr-'.implode(" mr-", $globallayoutoptions):" ").(($itemoptions)?' mr-'.implode(" mr-", $itemoptions):" ").((!empty($tabs))?' mr-hastabs':" ").((!empty($tabs) && $tabsposition != 'tabstop')?' mr-widget-'.$tabsposition:" ").(($imagestypes)?' mr-'.implode(" mr-", $imagestypes):" ").$autoplayclass.' mr-flex mr-wrap mr-relative mr-top mr-noscroll">';
 								if($tabs === 1) { //Items Tabs
-									$content .= '<ul class="mr-tabs mr-items mr-flex mr-scroll mr-nobullets">';
+									$content .= '<ul class="mr-widget-tabs mr-widget-items mr-flex mr-widget-scroll mr-nobullets">';
 									foreach ( $itemlist as $key => $tab) {
 										if (strpos($contenttypes, 'taxonomy_') !== false) {
 											$tabid = $tab->term_id;
@@ -184,9 +184,9 @@ defined('ABSPATH') or die;
 										if(empty($pin)) {
 											$pinned = null;
 										} else if(in_array($tabid, $pin)) {
-											$pinned = ' active';
+											$pinned = ' mr-active';
 										} else if(!in_array($tabid, $pin)) {
-											$pinned = ' inactive';
+											$pinned = ' mr-inactive';
 										}
 										/*
 										Get the manual order also for the tabs
@@ -196,11 +196,11 @@ defined('ABSPATH') or die;
 										} else {
 											$manualorder = '-ms-flex-order: 0; -webkit-order: 0; order: 0;';
 										}
-										$content .= '<li class="itemid-'.$tabid.' '.$tabslug.' mr-tab'.$pinned.'" style="'.$manualorder.'">'.$tabname.'</li>';
+										$content .= '<li class="itemid-'.$tabid.' '.$tabslug.' mr-widget-tab'.$pinned.'" style="'.$manualorder.'">'.$tabname.'</li>';
 									}
 									$content .= '</ul>';
 								} else if($tabs === 2 && $contenttypes != 'custom_items') { //Items Parent Tabs
-									$content .= '<ul class="mr-tabs mr-parentitems mr-flex mr-scroll mr-nobullets">';
+									$content .= '<ul class="mr-widget-tabs mr-parentitems mr-flex mr-widget-scroll mr-nobullets">';
 									foreach ( $itemlist as $key => $tab) {
 										if (strpos($contenttypes, 'taxonomy_') !== false) {
 											$tabid = $tab->term_id;
@@ -219,7 +219,7 @@ defined('ABSPATH') or die;
 										} else {
 											$manualorder = '-ms-flex-order: 0; -webkit-order: 0; order: 0;';
 										}
-										$content .= '<li class="parentitemid-'.$tabid.' '.$tabslug.' mr-tab" style="'.$manualorder.'">'.$tabname.'</li>';
+										$content .= '<li class="parentitemid-'.$tabid.' '.$tabslug.' mr-widget-tab" style="'.$manualorder.'">'.$tabname.'</li>';
 									}
 									$content .= '</ul>';
 								} else if($tabs === 3 && $contenttypes != 'custom_items') { //Categories Tabs
@@ -230,12 +230,12 @@ defined('ABSPATH') or die;
 									}
 									$catlist = get_terms(array('taxonomy' => $taxonomy, 'hide_empty' => true, 'lang' => '', 'hierarchical' => true,'no_found_rows' => true, 'suppress_filter' => false));
 									if ( !empty( $catlist ) ) {
-										$content .= '<ul class="mr-tabs mr-categories mr-flex mr-scroll mr-nobullets">';
+										$content .= '<ul class="mr-widget-tabs mr-categories mr-flex mr-widget-scroll mr-nobullets">';
 										foreach ( $catlist as $key => $tab) {
 											$tabid = $tab->term_id;
 											$tabname = $tab->name;
 											$tabslug = $tab->slug;
-											$content .= '<li class="catid-'.$tabid.' '.$tabslug.' mr-tab">'.$tabname.'</li>';
+											$content .= '<li class="catid-'.$tabid.' '.$tabslug.' mr-widget-tab">'.$tabname.'</li>';
 										}
 										$content .= '</ul>';
 									}
@@ -247,12 +247,12 @@ defined('ABSPATH') or die;
 									}
 									$taglist = get_terms(array('taxonomy' => $taxonomy, 'hide_empty' => true, 'lang' => '', 'hierarchical' => true,'no_found_rows' => true, 'suppress_filter' => false));
 									if ( !empty( $taglist ) ) {
-										$content .= '<ul class="mr-tabs mr-tags mr-flex mr-scroll mr-nobullets">';
+										$content .= '<ul class="mr-widget-tabs mr-tags mr-flex mr-widget-scroll mr-nobullets">';
 										foreach ( $taglist as $key => $tab) {
 											$tabid = $tab->term_id;
 											$tabname = $tab->name;
 											$tabslug = $tab->slug;
-											$content .= '<li class="tagid-'.$tabid.' '.$tabslug.' mr-tab">'.$tabname.'</li>';
+											$content .= '<li class="tagid-'.$tabid.' '.$tabslug.' mr-widget-tab">'.$tabname.'</li>';
 										}
 										$content .= '</ul>';
 									}
@@ -423,6 +423,24 @@ defined('ABSPATH') or die;
 										$itemlinktargetrel = $itemlinktargetrel.' rel="noopener noreferrer"';
 									}
 								}
+								if(!empty($itemurl) && strpos($itemurl,'/') == false && strpos($itemurl,'add-to-cart') !== false) {
+									if ( class_exists( 'WooCommerce' ) ) {
+										$itemurl_components = parse_url($itemurl);
+										parse_str($itemurl_components['query'], $itemurl_params);
+										$itemurl_addcart = $itemurl_params['add-to-cart'];
+										if(empty($itemurl_addcart)) {
+											$itemurl_addcart = $itemurl_params['amp;add-to-cart'];
+										}
+										$itemlinktargetrel .= ' data-product_id="'.$itemurl_addcart.'"';
+										if(strpos($itemurl,'apply_coupon') !== false) {
+											$itemurl_coupon = $itemurl_params['apply_coupon'];
+											if(empty($itemurl_coupon)) {
+												$itemurl_coupon = $itemurl_params['amp;apply_coupon'];
+											}
+											$itemlinktargetrel .= ' data-coupon="'.$itemurl_coupon.'"';
+										}
+									}
+								}
 								/*
 								Check if current item belongs to the selected parents
 								*/
@@ -452,7 +470,7 @@ defined('ABSPATH') or die;
 												/*----- PAGES ORDER -----*/
 												echo '<div class="mr-list-container" style="-ms-flex-order:'.(!empty($pageorder[$pagecount]) ? $pageorder[$pagecount] : $pagecount).'; -webkit-order:'.(!empty($pageorder[$pagecount]) ? $pageorder[$pagecount] : $pagecount).'; order:'.(!empty($pageorder[$pagecount]) ? $pageorder[$pagecount] : $pagecount).';">';
 												?>
-												<div class="mr-page">
+												<div class="mr-widget-page">
 													<?php
 													if(!isset($mrdev_get_user)) {
 														$mrdev_get_user = wp_get_current_user();
@@ -470,12 +488,12 @@ defined('ABSPATH') or die;
 														$mrdev_widget_content_access = 'Allowed';
 													}
 													?>
-													<input <?php if($mrdev_widget_content_access === 'Denied') { echo 'disabled'; } ?> type="number" name="<?php echo esc_attr( $this->get_field_name( 'pageorder' ) ); ?>[<?php echo $pagecount; ?>]" min="1" class="mr-input mr-pageinput" placeholder="<?php echo $pagecount; ?>" <?php if(in_array($pagecount,$pageorder) && !empty($pageorder[$pagecount] )) { echo 'value="'.esc_attr( $pageorder[$pagecount]).'"'; } else { echo 'value="'.$pagecount.'"'; } if(in_array($pagecount,$pageorder) && $pageorder[$pagecount] !== $pagecount && $pageorder[$pagecount] !== 0) { echo 'style="border-right-width: 3px;"'; }  ?> title="Reorder page by number. Leave empty to return to its original number. Repeated values are not allowed for pages.">
+													<input <?php if($mrdev_widget_content_access === 'Denied') { echo 'disabled'; } ?> type="number" name="<?php echo esc_attr( $this->get_field_name( 'pageorder' ) ); ?>[<?php echo $pagecount; ?>]" min="1" class="mr-input mr-widget-pageinput" placeholder="<?php echo $pagecount; ?>" <?php if(in_array($pagecount,$pageorder) && !empty($pageorder[$pagecount] )) { echo 'value="'.esc_attr( $pageorder[$pagecount]).'"'; } else { echo 'value="'.$pagecount.'"'; } if(in_array($pagecount,$pageorder) && $pageorder[$pagecount] !== $pagecount && $pageorder[$pagecount] !== 0) { echo 'style="border-right-width: 3px;"'; }  ?> title="Reorder page by number. Leave empty to return to its original number. Repeated values are not allowed for pages.">
 													<hr>
 												</div>
 												<?php
 											}
-											echo '<div class="mr-item" style="'.$manualorder.'">';
+											echo '<div class="mr-widget-item" style="'.$manualorder.'">';
 												if(file_exists(trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/orderpin.php')) {
 													include trailingslashit(plugin_dir_path( __DIR__ )).'mrdev-framework_wp/settings/widget/orderpin.php';
 												}
@@ -671,12 +689,17 @@ defined('ABSPATH') or die;
 															/*
 															Title starts here
 															*/
+															$itemtitleclasses = 'mr-title';
 															if($itemstitle === 1)  { //No title
-																$showitemtitle = ''.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?'<'.$titletag.' class="mr-title">('.$num_articles.')</'.$titletag.'>':"");
+																$showitemtitle = ''.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?'<'.$titletag.' class="'.$itemtitleclasses.'">('.$num_articles.')</'.$titletag.'>':"");
 															} else if($itemurl === null || $itemstitle === 2) { //Item title
-																$showitemtitle = '<'.$titletag.' class="mr-title">'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</'.$titletag.'>';
+																$showitemtitle = '<'.$titletag.' class="'.$itemtitleclasses.'">'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</'.$titletag.'>';
 															} else { //Linked item title
-																$showitemtitle = '<'.$titletag.' class="mr-title">'.'<a href="'.esc_url($itemurl).'" '.$itemlinktargetrel.'>'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</a>'.'</'.$titletag.'>';
+																if(strpos($itemlinktargetrel,'data-product_id') !== false && strpos($itemlinktargetrel,'data-coupon') == false) {
+																	//Not compatible with adding coupons
+																	$itemtitleclasses .= ' add_to_cart_button ajax_add_to_cart';
+																}
+																$showitemtitle = '<'.$titletag.' class="'.$itemtitleclasses.'">'.'<a href="'.esc_url($itemurl).'" '.$itemlinktargetrel.'>'.$itemtitle.((in_array("artcount", $itemoptions) && is_numeric($num_articles))?' <small>('.$num_articles.')</small>':"").'</a>'.'</'.$titletag.'>';
 															}
 															/*
 															Date starts here
@@ -835,6 +858,10 @@ defined('ABSPATH') or die;
 																if($bottomlink === "") {
 																	$bottomlink = "Know more...";
 																}
+																if(strpos($itemlinktargetrel,'data-product_id') !== false && strpos($itemlinktargetrel,'data-coupon') == false) {
+																	//Not compatible with adding coupons
+																	$bottomlinkclasses .= ' add_to_cart_button ajax_add_to_cart';
+																}
 																$bottomlinktext = '<div class="mr-link"><a class="'.$bottomlinkclasses.'" href="'.esc_url($itemurl).'" '.$itemlinktargetrel.' title="'. strip_tags($itemtitle) .'">'.((!empty($bottomlinkoverride) && !empty($bottomlinkoverride[$itemid]))?$bottomlinkoverride[$itemid]:$bottomlink).'</a></div>';
 															}
 															/*
@@ -843,9 +870,9 @@ defined('ABSPATH') or die;
 															if(empty($pin)) {
 																$pinned = null;
 															} else if(in_array($itemid, $pin)) {
-																$pinned = ' active';
+																$pinned = ' mr-active';
 															} else if(!in_array($itemid, $pin)) {
-																$pinned = ' inactive';
+																$pinned = ' mr-inactive';
 															}
 															/*
 															Check front for active category/link and adds a class if it's the current category/link.
@@ -901,12 +928,12 @@ defined('ABSPATH') or die;
 																} else {
 																	$pagenumber = $pagecount;
 																}
-																$content .= '<ul class="pageid-'.$pagecount.' mr-'.$perline.'perline mr-page'.$pagenumber.' mr-pages mr-'.$perpage.'perpage mr-nobullets mr-'.$pagetransition.''.($pagenumber == 1 ? " active" : " inactive").'" style="-ms-flex-order: '.$pagenumber.'; -webkit-order: '.$pagenumber.'; order: '.$pagenumber.';">';
+																$content .= '<ul class="pageid-'.$pagecount.' mr-'.$perline.'perline mr-widget-page'.$pagenumber.' mr-widget-pages mrwidget-'.$perpage.'perpage mr-nobullets mr-'.$pagetransition.''.($pagenumber == 1 ? " mr-active" : " mr-inactive").'" style="-ms-flex-order: '.$pagenumber.'; -webkit-order: '.$pagenumber.'; order: '.$pagenumber.';">';
 																if($pagenumber != 1 && in_array(1,$technical)) {
 																	$content .= '<noscript class="mr-noscript">';
 																}
 															}
-															$content .= '<li class="itemid-'.$itemid.' '.$itemslug.' '.$mrclasses.' mr-item '.$mrcurrent.$pinned.'" '.((in_array("url", $itemoptions))?'url='.esc_url($itemurl):"").' style="'.$manualorder.'"><div class="mr-item-container"'.$showimage.'>'.$showitemtitle.'<div class="mr-content">'.$showitemmeta.$showitemdesc.$showitemspecs.$bottomlinktext.'</div></div></li>';
+															$content .= '<li class="itemid-'.$itemid.' '.$itemslug.' '.$mrclasses.' mr-widget-item '.$mrcurrent.$pinned.'" '.((in_array("url", $itemoptions))?'url='.esc_url($itemurl):"").' style="'.$manualorder.'"><div class="mr-widget-item-container"'.$showimage.'>'.$showitemtitle.'<div class="mr-content">'.$showitemmeta.$showitemdesc.$showitemspecs.$bottomlinktext.'</div></div></li>';
 															$itemcount = ($itemcount + 1);
 															/*
 															If the option 'only show subitems of active' is enabled and this item is a subcategory, it should not close the page yet.
@@ -951,31 +978,31 @@ defined('ABSPATH') or die;
 								if($pagecount > 1) {
 									$content .= '<div class="mr-pagination '.((in_array(5, $pagetoggles))?'mr-keyboard':"").'">';
 									if( in_array( 0, $pagetoggles ) || empty($pagetoggles) && $autoplay === 0) {
-										$content .= '<button class="mr-arrows mr-prev"><span><</span></button>';
+										$content .= '<button class="mr-widget-arrows mr-widget-prev"><span><</span></button>';
 									}
 									if( in_array( 0, $pagetoggles ) || empty($pagetoggles) && $autoplay === 0) {
-										$content .= '<button class="mr-arrows mr-next"><span>></span></button>';
+										$content .= '<button class="mr-widget-arrows mr-widget-next"><span>></span></button>';
 									}
 									$hideelement = null;
 									if( empty( $pagetoggles ) || !in_array( 1, $pagetoggles )) {
 										$hideelement = 'mr-hide';
 									}
-									$content .= '<select class="mr-pageselect '.$hideelement.'" title="/'.$pagecount.'">';
+									$content .= '<select class="mr-widget-pageselect '.$hideelement.'" title="/'.$pagecount.'">';
 									$pageselect = 0;
 									while ($pageselect++ < $pagecount) {
 										$content .= '<option value="'.$pageselect.'">'.$pageselect.'</option>';
 									}
 									$content .= '</select>';
 									if( in_array( 2, $pagetoggles )) {
-										$content .= '<div class="mr-radios">';
+										$content .= '<div class="mr-widget-radios">';
 										$pageselect = 0;
 										while ($pageselect++ < $pagecount) {
-											$content .= '<input name="mr-radio" title="'.$pageselect.'/'.$pagecount.'" class="mr-radio" type="radio" value="'.$pageselect.'"'.(($pageselect==1)?' checked="checked" ':'').'>';
+											$content .= '<input name="mr-widget-radio" title="'.$pageselect.'/'.$pagecount.'" class="mr-widget-radio" type="radio" value="'.$pageselect.'"'.(($pageselect==1)?' checked="checked" ':'').'>';
 										}
 										$content .= '</div>';
 									}
 									if( in_array( 3, $pagetoggles ) || in_array( 4, $pagetoggles )) {
-										$content .=  '<button class="'.((in_array(3, $pagetoggles))?'mr-below':"").' '.((in_array(4, $pagetoggles))?'mr-scroll':"").'"><span>+</span></button>';
+										$content .=  '<button class="'.((in_array(3, $pagetoggles))?'mr-widget-below':"").' '.((in_array(4, $pagetoggles))?'mr-widget-scroll':"").'"><span>+</span></button>';
 									}
 									$content .= '</div>';
 								}
